@@ -37,7 +37,6 @@ class NewsModel {
                 closure(nil)
                 return
             }
-            
             self.parseJson(data: responseData, completionHandler: closure)
         }
         task.resume()

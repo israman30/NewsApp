@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgh-qB-n8F" id="Jhp-3E-3cy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5B2-zU-J94">
@@ -94,7 +94,7 @@
                                             <outlet property="newsImage" destination="5B2-zU-J94" id="1TO-M5-7Fa"/>
                                             <outlet property="timeLabel" destination="rIF-tg-Sg9" id="pXJ-RY-Ehd"/>
                                             <outlet property="titleLabel" destination="EIq-6W-XAv" id="ErQ-9Q-pLB"/>
-                                            <segue destination="dfv-JK-iau" kind="show" id="7WP-c4-nEt"/>
+                                            <segue destination="dfv-JK-iau" kind="show" identifier="ToWebView" id="7WP-c4-nEt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -117,6 +117,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My New News" id="7p1-of-GHP"/>
                     <connections>
+                        <outlet property="searchBar" destination="3JS-yT-Y7B" id="Twr-qK-tF6"/>
                         <outlet property="tableView" destination="CeP-LZ-pep" id="fx4-PO-Cll"/>
                     </connections>
                 </viewController>
@@ -124,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="1124" y="-543.77811094452773"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View View Controller-->
         <scene sceneID="CCv-7D-d5y">
             <objects>
-                <viewController id="dfv-JK-iau" sceneMemberID="viewController">
+                <viewController id="dfv-JK-iau" customClass="WebViewViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1LL-Ja-3ca"/>
                         <viewControllerLayoutGuide type="bottom" id="wSR-AT-fPi"/>
@@ -137,34 +138,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-sM-ft5">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rkm-sM-ft5" firstAttribute="top" secondItem="1LL-Ja-3ca" secondAttribute="bottom" id="6bY-AU-MWh"/>
+                            <constraint firstItem="rkm-sM-ft5" firstAttribute="top" secondItem="1LL-Ja-3ca" secondAttribute="bottom" constant="-64" id="6bY-AU-MWh"/>
                             <constraint firstAttribute="trailing" secondItem="rkm-sM-ft5" secondAttribute="trailing" id="WxL-LY-zXz"/>
                             <constraint firstItem="rkm-sM-ft5" firstAttribute="leading" secondItem="fBM-u8-Niy" secondAttribute="leading" id="XU4-A2-wkN"/>
                             <constraint firstItem="wSR-AT-fPi" firstAttribute="top" secondItem="rkm-sM-ft5" secondAttribute="bottom" id="Zlw-WY-4OG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="rkm-sM-ft5" id="4fD-na-pLr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xq8-Ih-ihR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="-544"/>
+            <point key="canvasLocation" x="1829.5999999999999" y="-545.57721139430294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TNw-ox-gfa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v0j-00-Oq5" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="v0j-00-Oq5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bNz-iQ-UTO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bNz-iQ-UTO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1R7-Gl-K7u">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BGS-i9-kIP"/>
                     </connections>

@@ -15,6 +15,7 @@
 		8D14E9921E2C1F70003A354F /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E9911E2C1F70003A354F /* NewsModel.swift */; };
 		8D14E9941E2C201F003A354F /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E9931E2C201F003A354F /* NewsArticle.swift */; };
 		8D14E9961E2C3CC2003A354F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E9951E2C3CC2003A354F /* NewsTableViewCell.swift */; };
+		8DCA32411E2D24080033F0CE /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA32401E2D24080033F0CE /* WebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8D14E9911E2C1F70003A354F /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		8D14E9931E2C201F003A354F /* NewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		8D14E9951E2C3CC2003A354F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		8DCA32401E2D24080033F0CE /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +62,11 @@
 		8D14E97E1E2C1CD8003A354F /* My News */ = {
 			isa = PBXGroup;
 			children = (
+				8DCA32421E2D2CA40033F0CE /* UIs */,
 				8D14E99A1E2C43C8003A354F /* Newtwork */,
 				8D14E9991E2C4327003A354F /* Outlets */,
 				8D14E9981E2C3F64003A354F /* Logic */,
 				8D14E9971E2C3F57003A354F /* Model */,
-				8D14E9831E2C1CD8003A354F /* Main.storyboard */,
-				8D14E9861E2C1CD8003A354F /* Assets.xcassets */,
-				8D14E9881E2C1CD8003A354F /* LaunchScreen.storyboard */,
 				8D14E98B1E2C1CD8003A354F /* Info.plist */,
 			);
 			path = "My News";
@@ -85,6 +85,7 @@
 			children = (
 				8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */,
 				8D14E9811E2C1CD8003A354F /* ViewController.swift */,
+				8DCA32401E2D24080033F0CE /* WebViewViewController.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -103,6 +104,16 @@
 				8D14E9911E2C1F70003A354F /* NewsModel.swift */,
 			);
 			name = Newtwork;
+			sourceTree = "<group>";
+		};
+		8DCA32421E2D2CA40033F0CE /* UIs */ = {
+			isa = PBXGroup;
+			children = (
+				8D14E9831E2C1CD8003A354F /* Main.storyboard */,
+				8D14E9861E2C1CD8003A354F /* Assets.xcassets */,
+				8D14E9881E2C1CD8003A354F /* LaunchScreen.storyboard */,
+			);
+			name = UIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +148,7 @@
 				TargetAttributes = {
 					8D14E97B1E2C1CD8003A354F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6DC9LP75VX;
+						DevelopmentTeam = G9TBJCK73T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -182,6 +193,7 @@
 				8D14E9941E2C201F003A354F /* NewsArticle.swift in Sources */,
 				8D14E9961E2C3CC2003A354F /* NewsTableViewCell.swift in Sources */,
 				8D14E9821E2C1CD8003A354F /* ViewController.swift in Sources */,
+				8DCA32411E2D24080033F0CE /* WebViewViewController.swift in Sources */,
 				8D14E9801E2C1CD8003A354F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6DC9LP75VX;
+				DEVELOPMENT_TEAM = G9TBJCK73T;
 				INFOPLIST_FILE = "My News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.inclass.My-News";
@@ -316,7 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6DC9LP75VX;
+				DEVELOPMENT_TEAM = G9TBJCK73T;
 				INFOPLIST_FILE = "My News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.inclass.My-News";
@@ -344,6 +356,7 @@
 				8D14E9901E2C1CD8003A354F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
