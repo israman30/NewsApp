@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     var newsArticle = [NewsArticle]()
     
@@ -18,12 +18,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var timer: Timer!
     var isAnimating = false
     
-//    var filterNews:[NewsArticle] = []
-    var searchController: UISearchController!
-    var resultsController = UITableViewController()
+    var filterNews:[NewsArticle] = []
+    var searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    func filterContentSearch(searchext: String, scoope: String = "All"){
+        filterNews = newsArticle.filter({ (car) -> Bool in
+            return (car.description?.lowercased().contains(searchext.lowercased()))!
+        })
+        tableView.reloadData()
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,39 +38,50 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.newsArticle = listArticles!
             self.tableView.reloadData()
         })
-        // searchController
-        searchController = UISearchController(searchResultsController: self.resultsController)
-        self.tableView.tableHeaderView = self.searchController.searchBar
-        self.searchController.searchResultsUpdater = self
         
         tableView.delegate = self
         tableView.dataSource = self
-        searchBar.delegate = self
+        //        searchBar.delegate = self
         refreshControl = UIRefreshControl()
         tableView.addSubview(refreshControl)
         
-        
-        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-//        self.filterNews.filter { (news:[NewsArticle]) -> Bool in
-//            if (news as AnyObject).contains(self.searchController.searchBar.text!) { return true}
-//            else {return false}
-//        }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterNews = newsArticle.filter({ (articles) -> Bool in
+            return (articles.title?.lowercased().contains(searchText.lowercased()))!
+        })
+        self.tableView.reloadData()
     }
     
     
     // MARK: Delegates functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filterNews.count
+        }
         return newsArticle.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
-        let articles = newsArticle[indexPath.row]
+        let articles: NewsArticle
         
+        if searchController.isActive && searchController.searchBar.text != "" {
+            
+            articles = filterNews[indexPath.row]
+        } else {
+            
+            articles  = newsArticle[indexPath.row]
+        }
+
         cell.titleLabel.text = articles.title
         cell.timeLabel.text = articles.publishedAt
         cell.descriptionLabel.text = articles.description
@@ -99,5 +117,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
+}
+
+//MARK: extension
+extension ViewController: UISearchResultsUpdating {
+    @available(iOS 8.0, *)
+    public func updateSearchResults(for searchController: UISearchController) {
+        filterContentSearch(searchext: searchController.searchBar.text!)
+    }
+    
 }
 
