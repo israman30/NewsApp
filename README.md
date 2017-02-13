@@ -11,6 +11,6 @@ Israel Manzo
 ##This app will provide only late news
 ###Launch Storyboard
 ![Alt Image Text](images/Screen-shot.png)
-
-###Main Storyboard
 ![Alt Image Text](images/Screen-shotMain.png)
+![Alt Image Text](images/Screen-shotNews.png)
+![Alt Image Text](images/Screen-shotSearch.png)
