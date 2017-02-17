@@ -21,30 +21,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news-image" translatesAutoresizingMaskIntoConstraints="NO" id="7Oq-20-k1Z">
-                                <rect key="frame" x="112" y="258" width="150" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news-image" translatesAutoresizingMaskIntoConstraints="NO" id="VmF-r3-HCl">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="ryn-Dr-2dD"/>
-                                    <constraint firstAttribute="height" constant="150" id="xh9-73-U59"/>
+                                    <constraint firstAttribute="width" constant="240" id="B3Y-2l-Vqd"/>
+                                    <constraint firstAttribute="height" constant="240" id="wqz-Pu-4SS"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5C-P7-0U2">
-                                <rect key="frame" x="112" y="197" width="97" height="53"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="xRd-wW-cU8">
+                                <rect key="frame" x="74" y="224" width="77" height="79"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="GW7-nj-Zjg"/>
-                                    <constraint firstAttribute="height" constant="53" id="znj-Zx-eZg"/>
+                                    <constraint firstAttribute="height" constant="79" id="qts-Uk-4o8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
-                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_logo" translatesAutoresizingMaskIntoConstraints="NO" id="aSK-3t-3dQ">
+                                <rect key="frame" x="60" y="213" width="53" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="ti0-Cb-s5a"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="x5C-P7-0U2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-27" id="Ezy-dh-j6E"/>
-                            <constraint firstItem="7Oq-20-k1Z" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="R78-T9-wtA"/>
-                            <constraint firstItem="7Oq-20-k1Z" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nqM-4W-HoM"/>
-                            <constraint firstItem="7Oq-20-k1Z" firstAttribute="top" secondItem="x5C-P7-0U2" secondAttribute="bottom" constant="8" id="oLg-25-nZy"/>
+                            <constraint firstItem="aSK-3t-3dQ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="193" id="4HY-RZ-k0a"/>
+                            <constraint firstItem="VmF-r3-HCl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DYp-FX-oEq"/>
+                            <constraint firstItem="xRd-wW-cU8" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="204" id="eIR-D7-2wB"/>
+                            <constraint firstItem="xRd-wW-cU8" firstAttribute="leading" secondItem="aSK-3t-3dQ" secondAttribute="trailing" constant="-39" id="epO-vY-WER"/>
+                            <constraint firstItem="VmF-r3-HCl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="syg-4d-U90"/>
+                            <constraint firstItem="aSK-3t-3dQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="60" id="vdf-Zu-Ad6"/>
+                            <constraint firstItem="xRd-wW-cU8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="74" id="wzO-At-Z2E"/>
+                            <constraint firstItem="VmF-r3-HCl" firstAttribute="leading" secondItem="xRd-wW-cU8" secondAttribute="trailing" constant="-84" id="zPA-22-jiS"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -54,6 +60,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="my_logo" width="2500" height="2500"/>
+        <image name="new" width="128" height="128"/>
         <image name="news-image" width="256" height="256"/>
     </resources>
 </document>
