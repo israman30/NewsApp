@@ -10,8 +10,6 @@ Israel Manzo
 
 *For download click [My New News](https://itunes.apple.com/us/app/my-new-news/id1210234219?mt=8).*
 
-https://itunes.apple.com/us/app/my-new-news/id1210234219?mt=8
-
 ## This app will provide only late news
 
 The main storyboard show a list of news where it can be tap and show  description of the cell new.
