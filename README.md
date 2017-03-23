@@ -6,9 +6,9 @@ Israel Manzo
 
 <israelmanzo814@gmail.com>
 
-Developer info click [here](https://www.linkedin.com/in/israel-manzo/).
+*Developer info click [here](https://www.linkedin.com/in/israel-manzo/).*
 
-For download click [My New News](https://itunes.apple.com/us/app/my-new-news/id1210234219?mt=8).
+*For download click [My New News](https://itunes.apple.com/us/app/my-new-news/id1210234219?mt=8).*
 
 https://itunes.apple.com/us/app/my-new-news/id1210234219?mt=8
 
