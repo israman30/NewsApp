@@ -18,7 +18,7 @@ My New News presents you with the latest news stories. Tap a story to see and re
 
 
 ### Description news
-This section will shows the detail of the news tapped on the prior storyboard.
+This section will show the detail of the news tapped on the prior storyboard.
 
 ![Alt Image Text](images/DesScreenShot.png)
 
