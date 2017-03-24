@@ -12,7 +12,7 @@ Israel Manzo
 
 ## This app provides the latest news
 
-The main storyboard show a list of news where it can be tap and show  description of the cell new.
+My New News presents you with the latest news stories. Tap a story to see and read the full news article. It's an easy and convenient way to stay up to date with the latest breaking news.
 
 ![Alt Image Text](images/MainScreenShot.png)
 
