@@ -49,6 +49,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.barTintColor = UIColor.black
     }
     
     override func viewWillAppear(_ animated: Bool) {
