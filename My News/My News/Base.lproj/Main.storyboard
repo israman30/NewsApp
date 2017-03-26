@@ -46,13 +46,19 @@
                                                         <constraint firstAttribute="height" constant="221" id="04r-pL-6qd"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xm1-LR-ZQ9">
+                                                    <rect key="frame" x="0.0" y="124" width="375" height="58"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="58" id="86K-JX-dEX"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-oP-dnt">
-                                                    <rect key="frame" x="8" y="148.5" width="359" height="30"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.48180650684931509" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="8" y="147.5" width="359" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="qNo-Dn-o86"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="11"/>
                                                     <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,9 +74,8 @@
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIq-6W-XAv">
-                                                    <rect key="frame" x="8" y="129.5" width="359" height="19"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.48180650684931509" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                    <rect key="frame" x="8" y="129" width="359" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,9 +84,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="KFP-oP-dnt" firstAttribute="leading" secondItem="Jhp-3E-3cy" secondAttribute="leading" constant="8" id="FkW-Uc-EaF"/>
+                                                <constraint firstItem="Xm1-LR-ZQ9" firstAttribute="top" secondItem="5B2-zU-J94" secondAttribute="bottom" constant="-72" id="Gdl-ov-YbX"/>
                                                 <constraint firstItem="5B2-zU-J94" firstAttribute="top" secondItem="Jhp-3E-3cy" secondAttribute="top" constant="-25" id="I6a-mG-5nd"/>
                                                 <constraint firstAttribute="trailing" secondItem="EIq-6W-XAv" secondAttribute="trailing" constant="8" id="Lcu-N4-S9Q"/>
+                                                <constraint firstItem="Xm1-LR-ZQ9" firstAttribute="leading" secondItem="Jhp-3E-3cy" secondAttribute="leading" id="NPe-xz-ZFJ"/>
                                                 <constraint firstItem="EIq-6W-XAv" firstAttribute="leading" secondItem="Jhp-3E-3cy" secondAttribute="leading" constant="8" id="Ofg-Qy-heM"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xm1-LR-ZQ9" secondAttribute="trailing" id="WsY-PE-RSK"/>
                                                 <constraint firstAttribute="trailing" secondItem="5B2-zU-J94" secondAttribute="trailing" id="h9s-x2-pk8"/>
                                                 <constraint firstItem="KFP-oP-dnt" firstAttribute="top" secondItem="EIq-6W-XAv" secondAttribute="bottom" id="nQc-oX-9ac"/>
                                                 <constraint firstItem="EIq-6W-XAv" firstAttribute="centerY" secondItem="Jhp-3E-3cy" secondAttribute="centerY" constant="40" id="tyF-2p-532"/>
