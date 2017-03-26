@@ -34,6 +34,8 @@ class NewsTableViewCell: UITableViewCell {
         }
     }
     
+        
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

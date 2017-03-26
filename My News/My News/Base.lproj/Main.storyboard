@@ -28,7 +28,7 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="197" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CeP-LZ-pep">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="197" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CeP-LZ-pep">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -36,14 +36,14 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgh-qB-n8F" id="Jhp-3E-3cy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5B2-zU-J94">
-                                                    <rect key="frame" x="0.0" y="-25" width="375" height="221"/>
+                                                    <rect key="frame" x="0.0" y="-20" width="375" height="216"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="221" id="04r-pL-6qd"/>
+                                                        <constraint firstAttribute="height" constant="216" id="04r-pL-6qd"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xm1-LR-ZQ9">
@@ -85,7 +85,7 @@
                                             <constraints>
                                                 <constraint firstItem="KFP-oP-dnt" firstAttribute="leading" secondItem="Jhp-3E-3cy" secondAttribute="leading" constant="8" id="FkW-Uc-EaF"/>
                                                 <constraint firstItem="Xm1-LR-ZQ9" firstAttribute="top" secondItem="5B2-zU-J94" secondAttribute="bottom" constant="-72" id="Gdl-ov-YbX"/>
-                                                <constraint firstItem="5B2-zU-J94" firstAttribute="top" secondItem="Jhp-3E-3cy" secondAttribute="top" constant="-25" id="I6a-mG-5nd"/>
+                                                <constraint firstItem="5B2-zU-J94" firstAttribute="top" secondItem="Jhp-3E-3cy" secondAttribute="top" constant="-20" id="I6a-mG-5nd"/>
                                                 <constraint firstAttribute="trailing" secondItem="EIq-6W-XAv" secondAttribute="trailing" constant="8" id="Lcu-N4-S9Q"/>
                                                 <constraint firstItem="Xm1-LR-ZQ9" firstAttribute="leading" secondItem="Jhp-3E-3cy" secondAttribute="leading" id="NPe-xz-ZFJ"/>
                                                 <constraint firstItem="EIq-6W-XAv" firstAttribute="leading" secondItem="Jhp-3E-3cy" secondAttribute="leading" constant="8" id="Ofg-Qy-heM"/>

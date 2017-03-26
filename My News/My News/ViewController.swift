@@ -50,13 +50,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor.black
+        
     }
     
     // MARK: Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
-        
     }
 
     // MARK: Search bar function
@@ -81,6 +81,17 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
+        cell.newsImage.layer.cornerRadius = 8
+        
+        cell.newsImage.layer.masksToBounds = true
+        
+        cell.layer.cornerRadius = 8
+        cell.layer.borderWidth = 1.5
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.clipsToBounds = true
+        cell.layer.shadowOpacity = 0.23
+        cell.layer.shadowRadius = 4
+
         let articles: NewsArticle
         
         if searchController.isActive && searchController.searchBar.text != "" {
