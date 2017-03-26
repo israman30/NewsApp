@@ -52,13 +52,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         searchController.searchBar.barTintColor = UIColor.black
     }
     
+    // MARK: Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
         
     }
 
-    
+    // MARK: Search bar function
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterNews = newsArticle.filter({ (articles) -> Bool in
             return (articles.title?.lowercased().contains(searchText.lowercased()))!
@@ -99,6 +100,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+    // MARK: Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToWebView" {
             let destinationVC = segue.destination as! WebViewViewController
@@ -108,6 +110,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
     }
     
+    // MARK: Refresh controller functions
     func doSomething() {
         timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(ViewController.endWork), userInfo: nil, repeats: true)
     }
