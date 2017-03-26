@@ -41,7 +41,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         tableView.delegate = self
         tableView.dataSource = self
-        //        searchBar.delegate = self
+        
         refreshControl = UIRefreshControl()
         tableView.addSubview(refreshControl)
         
@@ -81,6 +81,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
+        // MARK: Cell design
         cell.layer.cornerRadius = 8
         cell.layer.borderWidth = 2.5
         cell.layer.borderColor = UIColor.black.cgColor
