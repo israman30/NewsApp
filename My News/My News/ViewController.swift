@@ -51,7 +51,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor.black
         
+        
+        
     }
+    
     
     // MARK: Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
@@ -88,6 +91,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         cell.clipsToBounds = true
         cell.layer.shadowOpacity = 0.23
         cell.layer.shadowRadius = 4
+        
+        
 
         let articles: NewsArticle
         
@@ -146,4 +151,6 @@ extension ViewController: UISearchResultsUpdating {
     }
     
 }
+
+
 
