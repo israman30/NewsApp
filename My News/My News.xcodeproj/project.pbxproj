@@ -16,6 +16,7 @@
 		8D14E9941E2C201F003A354F /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E9931E2C201F003A354F /* NewsArticle.swift */; };
 		8D14E9961E2C3CC2003A354F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E9951E2C3CC2003A354F /* NewsTableViewCell.swift */; };
 		8DCA32411E2D24080033F0CE /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA32401E2D24080033F0CE /* WebViewViewController.swift */; };
+		8DFEF53E1E8852FB0093B6A7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFEF53D1E8852FB0093B6A7 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8D14E9931E2C201F003A354F /* NewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		8D14E9951E2C3CC2003A354F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		8DCA32401E2D24080033F0CE /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		8DFEF53D1E8852FB0093B6A7 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				8D14E9911E2C1F70003A354F /* NewsModel.swift */,
+				8DFEF53D1E8852FB0093B6A7 /* Date.swift */,
 			);
 			name = Newtwork;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				8D14E9921E2C1F70003A354F /* NewsModel.swift in Sources */,
 				8D14E9941E2C201F003A354F /* NewsArticle.swift in Sources */,
+				8DFEF53E1E8852FB0093B6A7 /* Date.swift in Sources */,
 				8D14E9961E2C3CC2003A354F /* NewsTableViewCell.swift in Sources */,
 				8D14E9821E2C1CD8003A354F /* ViewController.swift in Sources */,
 				8DCA32411E2D24080033F0CE /* WebViewViewController.swift in Sources */,
