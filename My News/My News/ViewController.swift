@@ -51,6 +51,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.tableHeaderView = searchController.searchBar
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
+        
+    }
+
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterNews = newsArticle.filter({ (articles) -> Bool in
             return (articles.title?.lowercased().contains(searchText.lowercased()))!
