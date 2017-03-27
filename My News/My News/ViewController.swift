@@ -25,15 +25,15 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var searchBar: UISearchBar!
     
     func filterContentSearch(searchext: String, scoope: String = "All"){
-        filterNews = newsArticle.filter({ (car) -> Bool in
-            return (car.description?.lowercased().contains(searchext.lowercased()))!
+        filterNews = newsArticle.filter({ (news) -> Bool in
+            return (news.description?.lowercased().contains(searchext.lowercased()))!
         })
         tableView.reloadData()
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         closure.fetchData(with: {listArticles in
             self.newsArticle = listArticles!
             self.tableView.reloadData()
@@ -50,11 +50,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor.black
-        
-        
-        
     }
-    
     
     // MARK: Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +66,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         self.tableView.reloadData()
     }
     
-    
     // MARK: Delegates functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -80,19 +75,16 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         return newsArticle.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
-        // MARK: Cell design
+        // MARK: This block gives the degin to the table view cell
         cell.layer.cornerRadius = 8
         cell.layer.borderWidth = 2.5
         cell.layer.borderColor = UIColor.black.cgColor
         cell.clipsToBounds = true
         cell.layer.shadowOpacity = 0.23
         cell.layer.shadowRadius = 4
-        
-        
 
         let articles: NewsArticle
         
@@ -143,7 +135,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     }
 }
 
-//MARK: extension
+//MARK: Search extension
 extension ViewController: UISearchResultsUpdating {
     @available(iOS 8.0, *)
     public func updateSearchResults(for searchController: UISearchController) {
