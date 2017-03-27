@@ -95,14 +95,29 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             
             articles  = newsArticle[indexPath.row]
         }
-
+        
+        
+        // MARK: Date formatting
+        // String to Date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-mm-yyyy" //Your date format
+        let date = dateFormatter.date(from: "01-01-2017") //according to date format your date string
+        print(date ?? "")
+        
+        // Date to String
+        dateFormatter.dateFormat = "MMM d, yyyy" //Your New Date format as per requirement change it own
+        let newDate = dateFormatter.string(from: date!)
+        print(newDate)
+        
+        cell.timeLabel.text = newDate
         cell.titleLabel.text = articles.title
-        cell.timeLabel.text = articles.publishedAt
         cell.descriptionLabel.text = articles.description
+        
         let newPhoto = articles
         cell.updateImageCell(cellData: newPhoto)
-  
         return cell
+        
+        
     }
     
     // MARK: Prepare for segue
@@ -140,6 +155,23 @@ extension ViewController: UISearchResultsUpdating {
     @available(iOS 8.0, *)
     public func updateSearchResults(for searchController: UISearchController) {
         filterContentSearch(searchext: searchController.searchBar.text!)
+    }
+    
+}
+
+//MARK: Date Extension
+extension Date {
+    
+    var prettyLocaleFormatted : String {
+        return DateFormatter.localizedString(from: self, dateStyle: .medium, timeStyle: .none)
+    }
+    
+    var prettyLocaleFormattedWithTime : String {
+        return DateFormatter.localizedString(from: self, dateStyle: .long, timeStyle: .short)
+    }
+    
+    var prettyLocaleFormattedShortWithTime : String {
+        return DateFormatter.localizedString(from: self, dateStyle: .short, timeStyle: .short)
     }
     
 }
