@@ -151,25 +151,7 @@ extension ViewController: UISearchResultsUpdating {
     @available(iOS 8.0, *)
     public func updateSearchResults(for searchController: UISearchController) {
         filterContentSearch(searchext: searchController.searchBar.text!)
-    }
-    
-}
-
-//MARK: Date Extension
-extension Date {
-    
-    var prettyLocaleFormatted : String {
-        return DateFormatter.localizedString(from: self, dateStyle: .medium, timeStyle: .none)
-    }
-    
-    var prettyLocaleFormattedWithTime : String {
-        return DateFormatter.localizedString(from: self, dateStyle: .long, timeStyle: .short)
-    }
-    
-    var prettyLocaleFormattedShortWithTime : String {
-        return DateFormatter.localizedString(from: self, dateStyle: .short, timeStyle: .short)
-    }
-    
+    }    
 }
 
 
