@@ -101,15 +101,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         // String to Date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-mm-yyyy" //Your date format
-        let date = dateFormatter.date(from: "01-01-2017") //according to date format your date string
-        print(date ?? "")
         
-        // Date to String
-        dateFormatter.dateFormat = "MMM d, yyyy" //Your New Date format as per requirement change it own
-        let newDate = dateFormatter.string(from: date!)
-        print(newDate)
+        let date2 = Date()
         
-        cell.timeLabel.text = newDate
+        cell.timeLabel.text = date2.prettyLocaleFormatted
+        
         cell.titleLabel.text = articles.title
         cell.descriptionLabel.text = articles.description
         
