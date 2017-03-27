@@ -79,8 +79,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
         // MARK: This block gives the degin to the table view cell
-        cell.layer.cornerRadius = 8
-        cell.layer.borderWidth = 2.5
+        cell.layer.cornerRadius = 9
+        cell.layer.borderWidth = 3.5
         cell.layer.borderColor = UIColor.black.cgColor
         cell.clipsToBounds = true
         cell.layer.shadowOpacity = 0.23
