@@ -43,6 +43,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.dataSource = self
         
         refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.white
+        refreshControl.backgroundColor = UIColor.black
         tableView.addSubview(refreshControl)
         
         searchController.searchResultsUpdater = self
