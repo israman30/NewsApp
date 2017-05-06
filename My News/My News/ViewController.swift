@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     var newsArticle = [NewsArticle]()
@@ -21,8 +22,30 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var filterNews:[NewsArticle] = []
     var searchController = UISearchController(searchResultsController: nil)
     
+    var menuIsOpen = false
+    
+    
     @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var searchBar: UISearchBar!
+   
+    @IBOutlet weak var leadingConstrain: NSLayoutConstraint!
+    
+    @IBOutlet weak var menuView: UIView!
+    
+    @IBAction func menuBtn(_ sender: Any) {
+        
+        if menuIsOpen {
+            leadingConstrain.constant = -270
+        } else {
+            leadingConstrain.constant = 0
+        }
+        UIView.animate(withDuration: 0.3) { 
+            self.view.layoutIfNeeded()
+        }
+        menuIsOpen = !menuIsOpen
+        
+    }
     
     func filterContentSearch(searchext: String, scoope: String = "All"){
         filterNews = newsArticle.filter({ (news) -> Bool in
@@ -52,6 +75,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor.black
+        
+        menuView.layer.shadowOpacity = 8
+        menuView.layer.shadowRadius = 30
+        menuView.layer.shadowColor = UIColor.black.cgColor
+        menuView.layer.shadowOffset = CGSize(width: -1, height: 1)
     }
     
     // MARK: Navigaton controller edit font and color text

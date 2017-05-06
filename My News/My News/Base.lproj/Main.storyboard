@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v0j-00-Oq5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v0j-00-Oq5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -111,27 +111,45 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="yWa-G8-ve6"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9u-D8-E5J" userLabel="Menu">
+                                <rect key="frame" x="-270" y="64" width="240" height="603"/>
+                                <color key="backgroundColor" red="0.14508149027824402" green="0.14510864019393921" blue="0.14507558941841125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7lP-Fq-fgn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CeP-LZ-pep" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4ov-I4-GgI"/>
                             <constraint firstAttribute="trailing" secondItem="3JS-yT-Y7B" secondAttribute="trailing" id="G2a-Vp-1tj"/>
                             <constraint firstItem="3JS-yT-Y7B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nk3-Hh-WdH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z9u-D8-E5J" secondAttribute="bottom" id="Xq7-Xe-KTd"/>
+                            <constraint firstItem="z9u-D8-E5J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cLF-ee-UjI"/>
                             <constraint firstItem="CeP-LZ-pep" firstAttribute="top" secondItem="3JS-yT-Y7B" secondAttribute="bottom" constant="-44" id="d1P-sq-dcw"/>
                             <constraint firstAttribute="trailing" secondItem="CeP-LZ-pep" secondAttribute="trailing" id="moU-y7-dCT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CeP-LZ-pep" secondAttribute="bottom" id="ngL-Tb-iOw"/>
+                            <constraint firstItem="z9u-D8-E5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-270" id="pnp-Ce-gDf"/>
                             <constraint firstItem="3JS-yT-Y7B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zIE-Gb-qz4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My New News" id="7p1-of-GHP"/>
+                    <navigationItem key="navigationItem" title="My New News" id="7p1-of-GHP">
+                        <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="NoZ-aG-RJQ">
+                            <connections>
+                                <action selector="menuBtn:" destination="BYZ-38-t0r" id="6T2-bE-OZg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="leadingConstrain" destination="pnp-Ce-gDf" id="iGR-00-ELt"/>
+                        <outlet property="menuView" destination="z9u-D8-E5J" id="E3h-G1-Hb3"/>
                         <outlet property="searchBar" destination="3JS-yT-Y7B" id="Twr-qK-tF6"/>
                         <outlet property="tableView" destination="CeP-LZ-pep" id="fx4-PO-Cll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="1080.8" y="-545.57721139430294"/>
         </scene>
         <!--Web View View Controller-->
         <scene sceneID="CCv-7D-d5y">
@@ -190,7 +208,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3I-Ex-HmO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="62" y="-546"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-menu_filled" width="32" height="32"/>
+    </resources>
 </document>

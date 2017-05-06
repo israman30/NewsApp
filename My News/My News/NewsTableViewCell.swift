@@ -18,6 +18,8 @@ class NewsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var timeLabel: UILabel!
     
+    
+   
     // MARK: Converting data to image
     func updateImageCell(cellData: NewsArticle){
         let url = URL(string: cellData.imageURL!)
