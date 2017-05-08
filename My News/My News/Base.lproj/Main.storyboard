@@ -113,9 +113,34 @@
                             </tableView>
                             <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9u-D8-E5J" userLabel="Menu">
                                 <rect key="frame" x="0.0" y="64" width="240" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5k-Cw-fAm">
+                                        <rect key="frame" x="65" y="26" width="110" height="110"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqs-a9-5do">
+                                                <rect key="frame" x="-4" y="44" width="114" height="23"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="blp-N3-Xo6"/>
+                                            <constraint firstItem="Lqs-a9-5do" firstAttribute="top" secondItem="x5k-Cw-fAm" secondAttribute="top" constant="44" id="fI1-oa-yGw"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lqs-a9-5do" secondAttribute="bottom" constant="43" id="iOa-Mj-AoK"/>
+                                            <constraint firstItem="Lqs-a9-5do" firstAttribute="leading" secondItem="x5k-Cw-fAm" secondAttribute="leading" constant="-4" id="iqK-TA-F4B"/>
+                                            <constraint firstAttribute="height" constant="110" id="qt4-Us-Fk6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lqs-a9-5do" secondAttribute="trailing" id="tQA-ZP-YCJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.14508149027824402" green="0.14510864019393921" blue="0.14507558941841125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="7lP-Fq-fgn"/>
+                                    <constraint firstItem="x5k-Cw-fAm" firstAttribute="top" secondItem="z9u-D8-E5J" secondAttribute="top" constant="26" id="Ovq-W1-i1a"/>
+                                    <constraint firstAttribute="trailing" secondItem="x5k-Cw-fAm" secondAttribute="trailing" constant="65" id="aY9-ci-oif"/>
+                                    <constraint firstItem="x5k-Cw-fAm" firstAttribute="leading" secondItem="z9u-D8-E5J" secondAttribute="leading" constant="65" id="wTn-kU-AZh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -143,6 +168,7 @@
                     <connections>
                         <outlet property="leadingConstrain" destination="pnp-Ce-gDf" id="iGR-00-ELt"/>
                         <outlet property="menuView" destination="z9u-D8-E5J" id="E3h-G1-Hb3"/>
+                        <outlet property="myNewsIcon" destination="x5k-Cw-fAm" id="RpR-UT-fkC"/>
                         <outlet property="searchBar" destination="3JS-yT-Y7B" id="Twr-qK-tF6"/>
                         <outlet property="tableView" destination="CeP-LZ-pep" id="fx4-PO-Cll"/>
                     </connections>

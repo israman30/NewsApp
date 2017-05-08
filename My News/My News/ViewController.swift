@@ -33,6 +33,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var menuView: UIView!
     
+    @IBOutlet weak var myNewsIcon: UIView!
+    
+    
     @IBAction func menuBtn(_ sender: Any) {
         
         if menuIsOpen {
@@ -80,6 +83,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         menuView.layer.shadowRadius = 30
         menuView.layer.shadowColor = UIColor.black.cgColor
         menuView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        
+        myNewsIcon.layer.cornerRadius = 55
+//        myNewsIcon.layer.borderWidth = 2
+//        myNewsIcon.layer.borderColor = UIColor.white.cgColor
     }
     
     // MARK: Navigaton controller edit font and color text
