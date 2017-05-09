@@ -40,14 +40,15 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         if menuIsOpen {
             leadingConstrain.constant = -270
+            
         } else {
             leadingConstrain.constant = 0
+            
         }
         UIView.animate(withDuration: 0.3) { 
             self.view.layoutIfNeeded()
         }
         menuIsOpen = !menuIsOpen
-        
     }
     
     func filterContentSearch(searchext: String, scoope: String = "All"){
@@ -87,8 +88,23 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         myNewsIcon.layer.cornerRadius = 55
 //        myNewsIcon.layer.borderWidth = 2
 //        myNewsIcon.layer.borderColor = UIColor.white.cgColor
+        
+        
+        
     }
     
+    func swipeMenu(gesture: UISwipeGestureRecognizer){
+        switch gesture.direction {
+        case UISwipeGestureRecognizerDirection.right:
+            print("Swiped Rigt")
+        case UISwipeGestureRecognizerDirection.left:
+            print("Swiped Left")
+        default:
+            break
+        }
+    }
+    
+        
     // MARK: Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
