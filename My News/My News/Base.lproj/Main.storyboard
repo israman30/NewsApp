@@ -134,6 +134,11 @@
                                             <constraint firstAttribute="trailing" secondItem="Lqs-a9-5do" secondAttribute="trailing" id="tQA-ZP-YCJ"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHp-ZG-Nec">
+                                        <rect key="frame" x="8" y="161" width="284" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.14508149027824402" green="0.14510864019393921" blue="0.14507558941841125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -146,6 +151,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CeP-LZ-pep" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4ov-I4-GgI"/>
                             <constraint firstAttribute="trailing" secondItem="3JS-yT-Y7B" secondAttribute="trailing" id="G2a-Vp-1tj"/>
@@ -158,6 +164,10 @@
                             <constraint firstItem="z9u-D8-E5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-300" id="pnp-Ce-gDf"/>
                             <constraint firstItem="3JS-yT-Y7B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zIE-Gb-qz4"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tTg-WL-TsA" appends="YES" id="QVA-cC-RR7"/>
+                            <outletCollection property="gestureRecognizers" destination="f5T-rZ-Lgf" appends="YES" id="HSe-8T-hUC"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="My New News" id="7p1-of-GHP">
                         <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="NoZ-aG-RJQ">
@@ -175,6 +185,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="tTg-WL-TsA"/>
+                <swipeGestureRecognizer direction="right" id="f5T-rZ-Lgf"/>
             </objects>
             <point key="canvasLocation" x="1080.8" y="-545.57721139430294"/>
         </scene>
