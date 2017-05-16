@@ -89,8 +89,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
 //        myNewsIcon.layer.borderWidth = 2
 //        myNewsIcon.layer.borderColor = UIColor.white.cgColor
         
-        
-        
     }
     
     func swipeMenu(gesture: UISwipeGestureRecognizer){
