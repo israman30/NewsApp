@@ -111,11 +111,11 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="yWa-G8-ve6"/>
                                 </connections>
                             </tableView>
-                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9u-D8-E5J" userLabel="Menu">
-                                <rect key="frame" x="-270" y="64" width="240" height="603"/>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9u-D8-E5J" userLabel="Menu">
+                                <rect key="frame" x="0.0" y="64" width="300" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5k-Cw-fAm">
-                                        <rect key="frame" x="65" y="26" width="110" height="110"/>
+                                        <rect key="frame" x="95" y="26" width="110" height="110"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqs-a9-5do">
                                                 <rect key="frame" x="-4" y="44" width="114" height="23"/>
@@ -138,10 +138,10 @@
                                 <color key="backgroundColor" red="0.14508149027824402" green="0.14510864019393921" blue="0.14507558941841125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="7lP-Fq-fgn"/>
+                                    <constraint firstAttribute="width" constant="300" id="7lP-Fq-fgn"/>
                                     <constraint firstItem="x5k-Cw-fAm" firstAttribute="top" secondItem="z9u-D8-E5J" secondAttribute="top" constant="26" id="Ovq-W1-i1a"/>
-                                    <constraint firstAttribute="trailing" secondItem="x5k-Cw-fAm" secondAttribute="trailing" constant="65" id="aY9-ci-oif"/>
-                                    <constraint firstItem="x5k-Cw-fAm" firstAttribute="leading" secondItem="z9u-D8-E5J" secondAttribute="leading" constant="65" id="wTn-kU-AZh"/>
+                                    <constraint firstAttribute="trailing" secondItem="x5k-Cw-fAm" secondAttribute="trailing" constant="95" id="aY9-ci-oif"/>
+                                    <constraint firstItem="x5k-Cw-fAm" firstAttribute="leading" secondItem="z9u-D8-E5J" secondAttribute="leading" constant="95" id="wTn-kU-AZh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -155,7 +155,7 @@
                             <constraint firstItem="CeP-LZ-pep" firstAttribute="top" secondItem="3JS-yT-Y7B" secondAttribute="bottom" constant="-44" id="d1P-sq-dcw"/>
                             <constraint firstAttribute="trailing" secondItem="CeP-LZ-pep" secondAttribute="trailing" id="moU-y7-dCT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CeP-LZ-pep" secondAttribute="bottom" id="ngL-Tb-iOw"/>
-                            <constraint firstItem="z9u-D8-E5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-270" id="pnp-Ce-gDf"/>
+                            <constraint firstItem="z9u-D8-E5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-300" id="pnp-Ce-gDf"/>
                             <constraint firstItem="3JS-yT-Y7B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zIE-Gb-qz4"/>
                         </constraints>
                     </view>

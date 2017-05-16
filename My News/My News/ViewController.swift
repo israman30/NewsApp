@@ -39,7 +39,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     @IBAction func menuBtn(_ sender: Any) {
         
         if menuIsOpen {
-            leadingConstrain.constant = -270
+            leadingConstrain.constant = -300
             
         } else {
             leadingConstrain.constant = 0
