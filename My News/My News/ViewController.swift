@@ -89,6 +89,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
 //        myNewsIcon.layer.borderWidth = 2
 //        myNewsIcon.layer.borderColor = UIColor.white.cgColor
         
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeMenu(gesture:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeMenu(gesture:)))
+        leftSwipe.direction = .left
+        rightSwipe.direction = .right
+        menuView.addGestureRecognizer(leftSwipe)
+        menuView.addGestureRecognizer(rightSwipe)
+        
     }
     
     func swipeMenu(gesture: UISwipeGestureRecognizer){
