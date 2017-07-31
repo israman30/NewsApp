@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D04436D1F2EAF69007B081D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04436C1F2EAF69007B081D /* SWRevealViewController.m */; };
+		8D0443701F2EB7C7007B081D /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04436F1F2EB7C7007B081D /* NextViewController.swift */; };
 		8D14E9801E2C1CD8003A354F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */; };
 		8D14E9821E2C1CD8003A354F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E9811E2C1CD8003A354F /* ViewController.swift */; };
 		8D14E9851E2C1CD8003A354F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D14E9831E2C1CD8003A354F /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		8D04436A1F2EAF69007B081D /* My News-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My News-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D04436B1F2EAF69007B081D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8D04436C1F2EAF69007B081D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8D04436F1F2EB7C7007B081D /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		8D14E97C1E2C1CD8003A354F /* My News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D14E9811E2C1CD8003A354F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */,
 				8D14E9811E2C1CD8003A354F /* ViewController.swift */,
 				8DCA32401E2D24080033F0CE /* WebViewViewController.swift */,
+				8D04436F1F2EB7C7007B081D /* NextViewController.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				8D14E9961E2C3CC2003A354F /* NewsTableViewCell.swift in Sources */,
 				8D14E9821E2C1CD8003A354F /* ViewController.swift in Sources */,
 				8DCA32411E2D24080033F0CE /* WebViewViewController.swift in Sources */,
+				8D0443701F2EB7C7007B081D /* NextViewController.swift in Sources */,
 				8D14E9801E2C1CD8003A354F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
