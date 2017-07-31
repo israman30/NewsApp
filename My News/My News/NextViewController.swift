@@ -35,6 +35,7 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: titles[indexPath.row])
         
         cell?.textLabel?.text = titles[indexPath.row]
+        cell?.textLabel?.textColor = UIColor.white
         
         return cell!
     }
