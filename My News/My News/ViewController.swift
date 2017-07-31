@@ -64,23 +64,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor.black
         
-        
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeMenu(gesture:)))
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeMenu(gesture:)))
-        leftSwipe.direction = .left
-        rightSwipe.direction = .right
-        
-    }
-    
-    func swipeMenu(gesture: UISwipeGestureRecognizer){
-        switch gesture.direction {
-        case UISwipeGestureRecognizerDirection.right:
-            print("Swiped Rigt")
-        case UISwipeGestureRecognizerDirection.left:
-            print("Swiped Left")
-        default:
-            break
-        }
     }
     
         
