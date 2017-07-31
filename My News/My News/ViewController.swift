@@ -42,11 +42,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: - Slide Menu block
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
+        // MARK: - Closure: Articles Data
         closure.fetchData(with: {listArticles in
             self.newsArticle = listArticles!
             self.tableView.reloadData()
@@ -55,6 +57,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.delegate = self
         tableView.dataSource = self
         
+        // MARK: - Create a Refresh Controller block
         refreshControl = UIRefreshControl()
         refreshControl.tintColor = UIColor.white
         refreshControl.backgroundColor = UIColor.black
@@ -69,7 +72,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     }
     
         
-    // MARK: Navigaton controller edit font and color text
+    // MARK: View Will Appear - Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
@@ -83,7 +86,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         self.tableView.reloadData()
     }
     
-    // MARK: Delegates functions
+    // MARK: - Delegates functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if searchController.isActive && searchController.searchBar.text != "" {
@@ -113,14 +116,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             articles  = newsArticle[indexPath.row]
         }
         
-        
         // MARK: Date formatting
-        // String to Date
+        // String to Date block
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-mm-yyyy" //Your date format
         
         let date2 = Date()
         
+        // MARK: - cell config info to table view
         cell.timeLabel.text = date2.prettyLocaleFormatted
         
         cell.titleLabel.text = articles.title
