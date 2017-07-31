@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v0j-00-Oq5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5uM-dV-IRz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -125,13 +125,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My New News" id="7p1-of-GHP">
-                        <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="NoZ-aG-RJQ">
-                            <connections>
-                                <action selector="menuBtn:" destination="BYZ-38-t0r" id="Bzq-b1-5sd"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="NoZ-aG-RJQ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="menu" destination="NoZ-aG-RJQ" id="wRY-36-bIn"/>
                         <outlet property="searchBar" destination="3JS-yT-Y7B" id="Twr-qK-tF6"/>
                         <outlet property="tableView" destination="CeP-LZ-pep" id="fx4-PO-Cll"/>
                     </connections>
@@ -185,6 +182,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="aHi-0g-Wl9" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="9BI-Uv-ItO"/>
+                        <segue destination="v0j-00-Oq5" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="ApA-DY-Vlh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmo-zY-i4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

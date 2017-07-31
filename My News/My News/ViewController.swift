@@ -29,10 +29,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    @IBAction func menuBtn(_ sender: Any) {
-        
-        
-    }
+    @IBOutlet weak var menu: UIBarButtonItem!
+    
     
     func filterContentSearch(searchext: String, scoope: String = "All"){
         filterNews = newsArticle.filter({ (news) -> Bool in
@@ -43,6 +41,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menu.target = revealViewController()
+        menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
         closure.fetchData(with: {listArticles in
             self.newsArticle = listArticles!
