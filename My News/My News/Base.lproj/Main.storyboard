@@ -123,15 +123,11 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CeP-LZ-pep" secondAttribute="bottom" id="ngL-Tb-iOw"/>
                             <constraint firstItem="3JS-yT-Y7B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zIE-Gb-qz4"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="tTg-WL-TsA" appends="YES" id="QVA-cC-RR7"/>
-                            <outletCollection property="gestureRecognizers" destination="f5T-rZ-Lgf" appends="YES" id="HSe-8T-hUC"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="My New News" id="7p1-of-GHP">
                         <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="NoZ-aG-RJQ">
                             <connections>
-                                <action selector="menuBtn:" destination="BYZ-38-t0r" id="6T2-bE-OZg"/>
+                                <action selector="menuBtn:" destination="BYZ-38-t0r" id="Bzq-b1-5sd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -141,8 +137,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="tTg-WL-TsA"/>
-                <swipeGestureRecognizer direction="right" id="f5T-rZ-Lgf"/>
             </objects>
             <point key="canvasLocation" x="1080.8" y="-545.57721139430294"/>
         </scene>
@@ -178,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="1829.5999999999999" y="-545.57721139430294"/>
         </scene>
-        <!--View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="uwC-IA-yLI">
             <objects>
-                <viewController id="5uM-dV-IRz" sceneMemberID="viewController">
+                <viewController id="5uM-dV-IRz" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1NM-Sk-Uk8"/>
                         <viewControllerLayoutGuide type="bottom" id="4oQ-qC-1xU"/>

@@ -28,27 +28,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
-   
-    @IBOutlet weak var leadingConstrain: NSLayoutConstraint!
-    
-    @IBOutlet weak var menuView: UIView!
-    
-    @IBOutlet weak var myNewsIcon: UIView!
-    
     
     @IBAction func menuBtn(_ sender: Any) {
         
-        if menuIsOpen {
-            leadingConstrain.constant = -300
-            
-        } else {
-            leadingConstrain.constant = 0
-            
-        }
-        UIView.animate(withDuration: 0.3) { 
-            self.view.layoutIfNeeded()
-        }
-        menuIsOpen = !menuIsOpen
+        
     }
     
     func filterContentSearch(searchext: String, scoope: String = "All"){
@@ -80,21 +63,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor.black
         
-        menuView.layer.shadowOpacity = 8
-        menuView.layer.shadowRadius = 30
-        menuView.layer.shadowColor = UIColor.black.cgColor
-        menuView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        
-        myNewsIcon.layer.cornerRadius = 55
-//        myNewsIcon.layer.borderWidth = 2
-//        myNewsIcon.layer.borderColor = UIColor.white.cgColor
         
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeMenu(gesture:)))
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeMenu(gesture:)))
         leftSwipe.direction = .left
         rightSwipe.direction = .right
-        menuView.addGestureRecognizer(leftSwipe)
-        menuView.addGestureRecognizer(rightSwipe)
         
     }
     
