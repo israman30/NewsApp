@@ -48,7 +48,7 @@
                                                 </imageView>
                                                 <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xm1-LR-ZQ9">
                                                     <rect key="frame" x="0.0" y="124" width="375" height="58"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.7052386558219178" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="58" id="86K-JX-dEX"/>
                                                     </constraints>

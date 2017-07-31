@@ -128,6 +128,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         let newPhoto = articles
         cell.updateImageCell(cellData: newPhoto)
+        
         return cell
         
         
