@@ -14,6 +14,8 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let cell = "cell"
     
+    var titles = ["Home", "Contact", "Web"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,13 +28,13 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return titles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cell)
+        let cell = tableView.dequeueReusableCell(withIdentifier: titles[indexPath.row])
         
-        cell?.textLabel?.text = "Menu Show"
+        cell?.textLabel?.text = titles[indexPath.row]
         
         return cell!
     }
