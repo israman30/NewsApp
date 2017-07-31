@@ -45,6 +45,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
+        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        
         closure.fetchData(with: {listArticles in
             self.newsArticle = listArticles!
             self.tableView.reloadData()
