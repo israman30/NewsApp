@@ -64,6 +64,16 @@
 			name = "OC-MenuFiles";
 			sourceTree = "<group>";
 		};
+		8D0443751F3000A4007B081D /* MenuVC's */ = {
+			isa = PBXGroup;
+			children = (
+				8D04436F1F2EB7C7007B081D /* NextViewController.swift */,
+				8D0443711F2EBDE4007B081D /* NextVC.swift */,
+				8D0443731F2EC311007B081D /* SecondViewController.swift */,
+			);
+			name = "MenuVC's";
+			sourceTree = "<group>";
+		};
 		8D14E9731E2C1CD8003A354F = {
 			isa = PBXGroup;
 			children = (
@@ -109,9 +119,7 @@
 				8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */,
 				8D14E9811E2C1CD8003A354F /* ViewController.swift */,
 				8DCA32401E2D24080033F0CE /* WebViewViewController.swift */,
-				8D04436F1F2EB7C7007B081D /* NextViewController.swift */,
-				8D0443711F2EBDE4007B081D /* NextVC.swift */,
-				8D0443731F2EC311007B081D /* SecondViewController.swift */,
+				8D0443751F3000A4007B081D /* MenuVC's */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
