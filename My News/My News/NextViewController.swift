@@ -14,7 +14,9 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let cell = "cell"
     
-    var titles = ["Home", "Contact", "Web"]
+    
+    var icons = ["home.png", "contact.png", "web.png" ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +30,19 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titles.count
+        return icons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: titles[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.cell) as! NextTableViewCell
         
-        cell?.textLabel?.text = titles[indexPath.row]
-        cell?.textLabel?.textColor = UIColor.white
+//        cell?.textLabel?.text = titles[indexPath.row]
+//        cell?.textLabel?.textColor = UIColor.white
+        let menuTitle = icons[indexPath.row]
         
-        return cell!
+        cell.photoImage.image = UIImage(named:menuTitle)
+        
+        return cell
     }
 
 }
