@@ -36,8 +36,6 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cell) as! NextTableViewCell
         
-//        cell?.textLabel?.text = titles[indexPath.row]
-//        cell?.textLabel?.textColor = UIColor.white
         let menuTitle = icons[indexPath.row]
         
         cell.photoImage.image = UIImage(named:menuTitle)
