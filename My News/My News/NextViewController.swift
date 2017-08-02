@@ -16,6 +16,7 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     var icons = ["home.png", "contact.png", "web.png" ]
+    var titleNames = ["Home", "Contact", "Website"]
     
     
     override func viewDidLoad() {
@@ -30,7 +31,7 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return icons.count
+        return titleNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
