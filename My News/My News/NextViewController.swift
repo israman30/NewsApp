@@ -39,13 +39,14 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let menuTitle = icons[indexPath.row]
         
+        cell.title1Lbl.text = titleNames[indexPath.row]
         cell.photoImage.image = UIImage(named:menuTitle)
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
     }
 }
 
