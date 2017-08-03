@@ -45,6 +45,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         // MARK: - Slide Menu block
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
+        menu.tintColor = UIColor.white
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         

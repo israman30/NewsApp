@@ -128,7 +128,7 @@
                         <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="NoZ-aG-RJQ"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="menu" destination="NoZ-aG-RJQ" id="wRY-36-bIn"/>
+                        <outlet property="menu" destination="NoZ-aG-RJQ" id="UWV-1z-3Tu"/>
                         <outlet property="searchBar" destination="3JS-yT-Y7B" id="Twr-qK-tF6"/>
                         <outlet property="tableView" destination="CeP-LZ-pep" id="fx4-PO-Cll"/>
                     </connections>
