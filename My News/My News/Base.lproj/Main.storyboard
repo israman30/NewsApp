@@ -12,7 +12,7 @@
         <!--My New News-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -266,7 +266,6 @@
                                         <connections>
                                             <outlet property="photoImage" destination="IgJ-Sf-BMI" id="36o-rk-rv1"/>
                                             <outlet property="title1Lbl" destination="e0N-Qg-IQW" id="asD-mD-GDi"/>
-                                            <segue destination="v0j-00-Oq5" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="TmU-yn-XCZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -375,6 +374,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="day-Dn-nek">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -390,9 +391,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wv7-5H-Jda" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GQy-oQ-UKc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="GQy-oQ-UKc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -407,7 +410,4 @@
     <resources>
         <image name="icons8-menu_filled" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="TmU-yn-XCZ"/>
-    </inferredMetricsTieBreakers>
 </document>

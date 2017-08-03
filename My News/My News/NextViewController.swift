@@ -49,6 +49,14 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell:NextTableViewCell = tableView.cellForRow(at: indexPath) as! NextTableViewCell
         
+        if cell.title1Lbl.text! == "Home" {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as! ViewController
+            let frontController = UINavigationController.init(rootViewController: viewController)
+            revealVC.pushFrontViewController(frontController, animated: true)
+            
+        }
+        
         if cell.title1Lbl.text! == "Contact" {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "NextVC") as! NextVC

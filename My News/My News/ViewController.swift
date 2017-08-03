@@ -76,6 +76,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        
     }
 
     // MARK: Search bar function

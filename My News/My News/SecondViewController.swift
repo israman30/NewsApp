@@ -18,6 +18,9 @@ class SecondViewController: UIViewController {
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        menu.tintColor = UIColor.white
+        
     }
 
    
