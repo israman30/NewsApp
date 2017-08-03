@@ -14,10 +14,9 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let cell = "cell"
     
-    
     var icons = ["home.png", "contact.png", "web.png" ]
-    var titleNames = ["Home", "Contact", "Website"]
     
+    var titleNames = ["Home", "Contact", "Website"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,14 +49,6 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell:NextTableViewCell = tableView.cellForRow(at: indexPath) as! NextTableViewCell
         
-//        if cell.title1Lbl.text! == "Home" {
-//            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-//            let frontController = UINavigationController.init(rootViewController: viewController)
-//            revealVC.pushFrontViewController(frontController, animated: true)
-//            
-//        }
-        
         if cell.title1Lbl.text! == "Contact" {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "NextVC") as! NextVC
@@ -73,8 +64,6 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
             revealVC.pushFrontViewController(frontController, animated: true)
             
         }
-
-
     }
 }
 

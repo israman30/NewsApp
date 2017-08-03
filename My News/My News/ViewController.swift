@@ -165,9 +165,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             }
         }
     }
-    
-   
-    
 }
 
 //MARK: Search extension
