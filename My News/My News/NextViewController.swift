@@ -46,7 +46,17 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let revealVC:SWRevealViewController = revealViewController()
         
+        let cell:NextTableViewCell = tableView.cellForRow(at: indexPath) as! NextTableViewCell
+        
+        if cell.title1Lbl.text! == "Home" {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let frontController = UINavigationController.init(rootViewController: viewController)
+            revealVC.pushFrontViewController(frontController, animated: true)
+            
+        }
     }
 }
 
