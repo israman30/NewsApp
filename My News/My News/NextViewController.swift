@@ -50,13 +50,31 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell:NextTableViewCell = tableView.cellForRow(at: indexPath) as! NextTableViewCell
         
-        if cell.title1Lbl.text! == "Home" {
+//        if cell.title1Lbl.text! == "Home" {
+//            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//            let frontController = UINavigationController.init(rootViewController: viewController)
+//            revealVC.pushFrontViewController(frontController, animated: true)
+//            
+//        }
+        
+        if cell.title1Lbl.text! == "Contact" {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "NextVC") as! NextVC
             let frontController = UINavigationController.init(rootViewController: viewController)
             revealVC.pushFrontViewController(frontController, animated: true)
             
         }
+        
+        if cell.title1Lbl.text! == "Website" {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SecondVC") as! SecondViewController
+            let frontController = UINavigationController.init(rootViewController: viewController)
+            revealVC.pushFrontViewController(frontController, animated: true)
+            
+        }
+
+
     }
 }
 

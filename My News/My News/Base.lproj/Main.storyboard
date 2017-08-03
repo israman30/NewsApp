@@ -217,7 +217,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-Sf-BMI">
-                                                    <rect key="frame" x="19" y="2" width="70" height="70"/>
+                                                    <rect key="frame" x="19" y="2" width="69" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0N-Qg-IQW">
@@ -277,7 +277,7 @@
         <!--Second View Controller-->
         <scene sceneID="ecI-bm-oc8">
             <objects>
-                <viewController id="XOc-iQ-Eft" customClass="SecondViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="XOc-iQ-Eft" customClass="SecondViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PZY-NT-83x"/>
                         <viewControllerLayoutGuide type="bottom" id="Bro-Ql-Ssj"/>
@@ -285,6 +285,15 @@
                     <view key="view" contentMode="scaleToFill" id="7il-A4-CKI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Web" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pt-L4-clE">
+                                <rect key="frame" x="52" y="102" width="270" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.60792657839999997" green="0.59919943740000003" blue="0.0038394204370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ycO-G0-Kg6">
@@ -301,7 +310,7 @@
         <!--NextVC-->
         <scene sceneID="CKb-Ub-1Hs">
             <objects>
-                <viewController id="ujk-7t-dga" customClass="NextVC" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NextVC" id="ujk-7t-dga" customClass="NextVC" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jbi-vf-OEo"/>
                         <viewControllerLayoutGuide type="bottom" id="QH8-ug-Fok"/>
@@ -309,6 +318,15 @@
                     <view key="view" contentMode="scaleToFill" id="D0F-vN-G4W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo5-Jt-N2h">
+                                <rect key="frame" x="52" y="136" width="270" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kcF-gc-Org">
@@ -320,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oz6-SL-1Yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="-2216"/>
+            <point key="canvasLocation" x="2008.8" y="-2216.0419790104947"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TNw-ox-gfa">
