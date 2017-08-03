@@ -25,6 +25,7 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
     }
     
+    // MARK: - Delegates functions
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

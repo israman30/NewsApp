@@ -21,6 +21,8 @@ class NextVC: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.black
         menu.tintColor = UIColor.white
         
+        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        
     }
 
 }
