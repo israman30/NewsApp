@@ -24,13 +24,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     var menuIsOpen = false
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var menu: UIBarButtonItem!
-    
     
     func filterContentSearch(searchext: String, scoope: String = "All"){
         filterNews = newsArticle.filter({ (news) -> Bool in
@@ -72,7 +70,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
     }
     
-        
     // MARK: View Will Appear - Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -136,8 +133,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         cell.updateImageCell(cellData: newPhoto)
         
         return cell
-        
-        
     }
     
     // MARK: Prepare for segue

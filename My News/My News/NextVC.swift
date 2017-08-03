@@ -24,5 +24,4 @@ class NextVC: UIViewController {
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
     }
-
 }
