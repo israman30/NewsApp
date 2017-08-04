@@ -67,6 +67,14 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         }
         
+        if cell.title1Lbl.text! == "Entertainment" {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "EntVC") as! EntertainmentViewController
+            let frontController = UINavigationController.init(rootViewController: viewController)
+            revealVC.pushFrontViewController(frontController, animated: true)
+            
+        }
+        
         if cell.title1Lbl.text! == "Contact" {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "NextVC") as! NextVC

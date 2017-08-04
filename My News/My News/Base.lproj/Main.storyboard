@@ -248,7 +248,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff2-2k-8jT">
-                                            <rect key="frame" x="53" y="50" width="175" height="30"/>
+                                            <rect key="frame" x="57" y="49" width="175" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -385,10 +385,10 @@
             </objects>
             <point key="canvasLocation" x="1980" y="-1966.8665667166417"/>
         </scene>
-        <!--View Controller-->
+        <!--Entertainment View Controller-->
         <scene sceneID="AYm-XK-o8g">
             <objects>
-                <viewController id="fnY-3V-o6c" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntVC" id="fnY-3V-o6c" customClass="EntertainmentViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CHD-ht-i1L"/>
                         <viewControllerLayoutGuide type="bottom" id="quG-E4-jVG"/>
@@ -410,6 +410,9 @@
                     <navigationItem key="navigationItem" id="mB6-7x-CZN">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="uac-Da-vJ8"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menu" destination="uac-Da-vJ8" id="drv-fB-bs4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZO-Zq-G9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
