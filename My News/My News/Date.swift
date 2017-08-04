@@ -20,5 +20,4 @@ extension Date {
     var prettyLocaleFormattedShortWithTime : String {
         return DateFormatter.localizedString(from: self, dateStyle: .short, timeStyle: .short)
     }
-    
 }

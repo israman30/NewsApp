@@ -23,6 +23,5 @@ class SecondViewController: UIViewController {
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
-    }
-   
+    }   
 }
