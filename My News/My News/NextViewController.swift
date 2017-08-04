@@ -23,6 +23,8 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.isScrollEnabled = false
     }
     
     // MARK: - Delegates functions
