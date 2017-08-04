@@ -14,9 +14,9 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let cell = "cell"
     
-    var icons = ["home.png", "contact.png", "web.png" ]
+    var icons = ["home.png", "contact.png", "web.png", "soccer.png", "tv.png"]
     
-    var titleNames = ["Home", "Contact", "Website"]
+    var titleNames = ["Home", "Contact", "Website", "Sports", "Entertainment"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
