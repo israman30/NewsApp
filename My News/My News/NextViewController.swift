@@ -14,17 +14,16 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let cell = "cell"
     
-    var icons = ["home.png", "soccer.png", "tv.png","gaming.png", "a.png", "contact.png", "web.png"]
+    var icons = ["home.png", "soccer.png", "tv.png","gaming.png", "a.png", "contact.png"]
     
-    var titleNames = ["Home", "Sports", "Entertainment", "Gaming", "More News", "Contact", "Website"]
+    var titleNames = ["Home", "Sports", "Entertainment", "Gaming", "More News", "Contact"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
-        
-        tableView.isScrollEnabled = false
+    
     }
     
     // MARK: - Delegates functions
