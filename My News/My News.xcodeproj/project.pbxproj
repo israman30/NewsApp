@@ -71,8 +71,8 @@
 			children = (
 				8D04436F1F2EB7C7007B081D /* NextViewController.swift */,
 				8D0443761F300117007B081D /* NextTableViewCell.swift */,
-				8D0443711F2EBDE4007B081D /* NextVC.swift */,
-				8D0443731F2EC311007B081D /* SecondViewController.swift */,
+				8D4099971F34E2CE004B0622 /* Contact */,
+				8D4099961F34E2B3004B0622 /* Sports */,
 			);
 			name = "MenuVC's";
 			sourceTree = "<group>";
@@ -142,6 +142,22 @@
 				8DFEF53D1E8852FB0093B6A7 /* Date.swift */,
 			);
 			name = Newtwork;
+			sourceTree = "<group>";
+		};
+		8D4099961F34E2B3004B0622 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+				8D0443731F2EC311007B081D /* SecondViewController.swift */,
+			);
+			name = Sports;
+			sourceTree = "<group>";
+		};
+		8D4099971F34E2CE004B0622 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				8D0443711F2EBDE4007B081D /* NextVC.swift */,
+			);
+			name = Contact;
 			sourceTree = "<group>";
 		};
 		8DCA32421E2D2CA40033F0CE /* UIs */ = {
