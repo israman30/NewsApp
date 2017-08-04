@@ -318,15 +318,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5K-5n-b4V">
-                                <rect key="frame" x="77" y="121" width="220" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Monkey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5K-5n-b4V">
+                                <rect key="frame" x="95.5" y="130" width="183" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="UDv-pM-wdP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@israman3000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="577-gf-mM3">
+                                <rect key="frame" x="141" y="168" width="92" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="G0x-CQ-Jch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="®" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uto-rD-Uth">
+                                <rect key="frame" x="280" y="134" width="10.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zT4-s8-YR1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="xbw-EG-REs">
+                                <rect key="frame" x="119" y="171" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="T3g-Na-nay"/>
+                                    <constraint firstAttribute="width" constant="20" id="hfU-AH-4QO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uto-rD-Uth" firstAttribute="leading" secondItem="E5K-5n-b4V" secondAttribute="trailing" constant="1.5" id="4o8-X5-G6b"/>
+                            <constraint firstItem="E5K-5n-b4V" firstAttribute="centerX" secondItem="bNC-Io-0fg" secondAttribute="centerX" id="8v4-oq-h5t"/>
+                            <constraint firstItem="xbw-EG-REs" firstAttribute="top" secondItem="E5K-5n-b4V" secondAttribute="bottom" constant="3" id="Cmj-AD-QCq"/>
+                            <constraint firstItem="uto-rD-Uth" firstAttribute="top" secondItem="ySQ-cL-eRm" secondAttribute="bottom" constant="70" id="JUG-2x-33Y"/>
+                            <constraint firstItem="E5K-5n-b4V" firstAttribute="top" secondItem="ySQ-cL-eRm" secondAttribute="bottom" constant="66" id="hcQ-Kp-7Zv"/>
+                            <constraint firstItem="577-gf-mM3" firstAttribute="leading" secondItem="xbw-EG-REs" secondAttribute="trailing" constant="2" id="m8S-Ur-QHV"/>
+                            <constraint firstItem="577-gf-mM3" firstAttribute="top" secondItem="E5K-5n-b4V" secondAttribute="bottom" id="ntH-oO-gUQ"/>
+                            <constraint firstItem="577-gf-mM3" firstAttribute="centerX" secondItem="bNC-Io-0fg" secondAttribute="centerX" id="uia-7b-Cg9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gso-ii-eTS">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="L5W-tk-kc9"/>
@@ -408,6 +445,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="facebook" width="1097" height="1097"/>
         <image name="icons8-menu_filled" width="32" height="32"/>
     </resources>
 </document>
