@@ -26,6 +26,8 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
             self.collectionView.reloadData()
         }
         
+        
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -37,6 +39,12 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Entertainment"
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
