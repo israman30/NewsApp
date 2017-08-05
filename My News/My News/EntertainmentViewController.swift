@@ -71,7 +71,9 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // TODO
+    }
     
     
-
 }
