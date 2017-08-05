@@ -448,6 +448,7 @@
                                             <outlet property="descriptionLbl" destination="efp-5p-OvN" id="SMS-fQ-QXf"/>
                                             <outlet property="photoImage" destination="ZPD-Yf-nVf" id="mvZ-Ku-g38"/>
                                             <outlet property="titleLbl" destination="ID7-iS-D20" id="Ive-gf-eWu"/>
+                                            <segue destination="MTW-PV-FRh" kind="push" identifier="entWeb" id="2hS-rm-TU8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -466,6 +467,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZO-Zq-G9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3760.8000000000002" y="-1967.7661169415294"/>
+        </scene>
+        <!--Web Ent View Controller-->
+        <scene sceneID="lHk-ws-oSi">
+            <objects>
+                <viewController id="MTW-PV-FRh" customClass="WebEntViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GvN-Sh-e8Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="W6S-uo-Vmk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4JL-fU-hy3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OdC-TR-T8T">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dwv-RR-qhx"/>
+                    <connections>
+                        <outlet property="webView" destination="OdC-TR-T8T" id="AvD-wA-HWi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvK-Dv-vPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4674.3999999999996" y="-1967.7661169415294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TNw-ox-gfa">
