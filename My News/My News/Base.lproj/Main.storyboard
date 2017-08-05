@@ -388,7 +388,7 @@
         <!--Entertainment View Controller-->
         <scene sceneID="AYm-XK-o8g">
             <objects>
-                <viewController storyboardIdentifier="EntVC" id="fnY-3V-o6c" customClass="EntertainmentViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntVC" automaticallyAdjustsScrollViewInsets="NO" id="fnY-3V-o6c" customClass="EntertainmentViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CHD-ht-i1L"/>
                         <viewControllerLayoutGuide type="bottom" id="quG-E4-jVG"/>
@@ -402,21 +402,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="HeV-B9-72c">
-                                    <size key="itemSize" width="350" height="350"/>
+                                    <size key="itemSize" width="360" height="350"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hbl-8y-skh" customClass="EntCollectionViewCell" customModule="My_News" customModuleProvider="target">
-                                        <rect key="frame" x="12.5" y="0.0" width="350" height="350"/>
+                                        <rect key="frame" x="7.5" y="0.0" width="360" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZPD-Yf-nVf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="360" height="350"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OdY-5j-DdN">
