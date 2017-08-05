@@ -49,6 +49,9 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! EntCollectionViewCell
+        
+        cell.layer.cornerRadius = 5
+        
         cell.titleLbl.text = entertainmentArticles[indexPath.row].title
         cell.descriptionLbl.text = entertainmentArticles[indexPath.row].description
         
