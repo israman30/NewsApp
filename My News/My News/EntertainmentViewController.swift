@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class EntertainmentViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -68,6 +69,11 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let safariFV = SFSafariViewController(url: URL(string: entertainmentArticles[indexPath.row].url!)!)
+        present(safariFV, animated: true, completion: nil)
     }
 
 }
