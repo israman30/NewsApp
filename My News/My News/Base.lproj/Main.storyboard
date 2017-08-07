@@ -271,17 +271,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-Sf-BMI">
-                                                    <rect key="frame" x="15" y="2" width="73" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0N-Qg-IQW">
-                                                    <rect key="frame" x="97" y="17" width="148" height="41"/>
+                                                    <rect key="frame" x="73" y="17" width="153" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-Sf-BMI">
+                                                    <rect key="frame" x="17" y="17" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -415,22 +415,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="363" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZPD-Yf-nVf">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZPD-Yf-nVf">
                                                     <rect key="frame" x="0.0" y="0.0" width="363" height="200"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-v6-Q8t">
-                                                    <rect key="frame" x="10" y="159" width="342" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-v6-Q8t">
+                                                    <rect key="frame" x="10" y="159" width="343" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="rXk-3v-q8F"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXz-go-Ilc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXz-go-Ilc">
                                                     <rect key="frame" x="196" y="6" width="157" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="157" id="ufL-Qx-5Oq"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -439,6 +442,17 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ZPD-Yf-nVf" secondAttribute="trailing" id="8hP-IM-9ka"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZPD-Yf-nVf" secondAttribute="bottom" id="AIZ-xb-IMI"/>
+                                            <constraint firstItem="ibD-v6-Q8t" firstAttribute="leading" secondItem="hbl-8y-skh" secondAttribute="leading" constant="10" id="DoB-KI-dTo"/>
+                                            <constraint firstItem="ZPD-Yf-nVf" firstAttribute="top" secondItem="hbl-8y-skh" secondAttribute="top" id="YSA-Fn-P4Q"/>
+                                            <constraint firstAttribute="trailing" secondItem="ibD-v6-Q8t" secondAttribute="trailing" constant="10" id="aah-ZU-MLt"/>
+                                            <constraint firstAttribute="bottom" secondItem="ibD-v6-Q8t" secondAttribute="bottom" constant="6" id="bIS-4Z-0mL"/>
+                                            <constraint firstItem="ZPD-Yf-nVf" firstAttribute="leading" secondItem="hbl-8y-skh" secondAttribute="leading" id="cHi-nW-zgj"/>
+                                            <constraint firstItem="bXz-go-Ilc" firstAttribute="top" secondItem="hbl-8y-skh" secondAttribute="top" constant="6" id="cMs-Yi-wTt"/>
+                                            <constraint firstAttribute="trailing" secondItem="bXz-go-Ilc" secondAttribute="trailing" constant="10" id="m1L-O4-axG"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="dateLbl" destination="bXz-go-Ilc" id="bSj-no-2GT"/>
                                             <outlet property="photoImage" destination="ZPD-Yf-nVf" id="mvZ-Ku-g38"/>
