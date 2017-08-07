@@ -14,6 +14,8 @@ class EntCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLbl: UILabel!
     
+    @IBOutlet weak var dateLbl: UILabel!
+    
     func updateImageCell(cellData: EntArticle){
         let url = URL(string: cellData.imageURL!)
         

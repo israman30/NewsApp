@@ -62,6 +62,8 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         cell.layer.cornerRadius = 9
         
         cell.titleLbl.text = entertainmentArticles[indexPath.row].title
+        
+        cell.dateLbl.text = entertainmentArticles[indexPath.row].publishedAt
     
         let photo = entertainmentArticles[indexPath.row]
         cell.updateImageCell(cellData: photo)

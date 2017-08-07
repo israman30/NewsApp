@@ -429,7 +429,7 @@
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXz-go-Ilc">
-                                                    <rect key="frame" x="311" y="6" width="42" height="16"/>
+                                                    <rect key="frame" x="196" y="6" width="157" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -440,6 +440,7 @@
                                             </subviews>
                                         </view>
                                         <connections>
+                                            <outlet property="dateLbl" destination="bXz-go-Ilc" id="bSj-no-2GT"/>
                                             <outlet property="photoImage" destination="ZPD-Yf-nVf" id="mvZ-Ku-g38"/>
                                             <outlet property="titleLbl" destination="ibD-v6-Q8t" id="HVx-46-fBG"/>
                                             <segue destination="MTW-PV-FRh" kind="push" identifier="entWeb" id="2hS-rm-TU8"/>
