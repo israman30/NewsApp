@@ -118,13 +118,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         // MARK: Date formatting
         // String to Date block
+        let publishDate = newsArticle[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-mm-yyyy" //Your date format
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
+        let date = dateFormatter.date(from: publishDate!)
         let date2 = Date()
         
-        // MARK: - cell config info to table view
-        cell.timeLabel.text = date2.prettyLocaleFormatted
+        cell.timeLabel.text = date2.offset(from: date!) + " " + "ago."
         
         cell.titleLabel.text = articles.title
         cell.descriptionLabel.text = articles.description

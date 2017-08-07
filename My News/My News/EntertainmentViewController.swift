@@ -64,7 +64,18 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         cell.titleLbl.text = entertainmentArticles[indexPath.row].title
         
         cell.dateLbl.text = entertainmentArticles[indexPath.row].publishedAt
-    
+        
+        // MARK: Date formatting
+        // String to Date block
+gi        let publishDate = entertainmentArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+        
+        let date = dateFormatter.date(from: publishDate!)
+        
+        let date2 = Date()
+        cell.dateLbl.text = date2.offset(from: date!) + " " + "ago."
+        
         let photo = entertainmentArticles[indexPath.row]
         cell.updateImageCell(cellData: photo)
         
@@ -88,3 +99,5 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
     
     
 }
+
+
