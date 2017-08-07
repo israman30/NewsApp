@@ -27,8 +27,6 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
             self.collectionView.reloadData()
         }
         
-        
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -39,7 +37,7 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         menu.tintColor = UIColor.white
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,12 +63,12 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         
         cell.dateLbl.text = entertainmentArticles[indexPath.row].publishedAt
         
-        // MARK: Date formatting
-        // String to Date block
+        // MARK: Date formatting - String to Date block
         let publishDate = entertainmentArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
+        //"2016-12-15T22:05:24Z"
         let date = dateFormatter.date(from: publishDate!)
         
         let date2 = Date()
@@ -79,12 +77,10 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         let photo = entertainmentArticles[indexPath.row]
         cell.updateImageCell(cellData: photo)
         
-        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "entWeb" {
             if let indexPath = self.collectionView.indexPath(for: sender as! UICollectionViewCell) {
                 let detailVC = segue.destination as! WebEntViewController
@@ -92,12 +88,6 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
             }
         }
     }
-  
-    
-    
-    
-    
-    
 }
 
 
