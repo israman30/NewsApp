@@ -67,7 +67,7 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         
         // MARK: Date formatting
         // String to Date block
-gi        let publishDate = entertainmentArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
+        let publishDate = entertainmentArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
