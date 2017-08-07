@@ -160,7 +160,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="UvE-YX-5Do">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="ZBo-AW-h8c"/>
+                        <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="ZBo-AW-h8c"/>
                     </navigationItem>
                     <connections>
                         <outlet property="menu" destination="ZBo-AW-h8c" id="tHK-ji-hrP"/>
@@ -375,7 +375,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gso-ii-eTS">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="L5W-tk-kc9"/>
+                        <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="L5W-tk-kc9"/>
                     </navigationItem>
                     <connections>
                         <outlet property="menu" destination="L5W-tk-kc9" id="ICc-8W-CLj"/>
@@ -466,7 +466,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="mB6-7x-CZN">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="uac-Da-vJ8"/>
+                        <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="uac-Da-vJ8"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="hAg-cW-mGw" id="R4c-iF-GeV"/>
