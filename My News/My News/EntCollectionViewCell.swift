@@ -11,7 +11,9 @@ import UIKit
 class EntCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var photoImage: UIImageView!
+    
     @IBOutlet weak var titleLbl: UILabel!
+    
     @IBOutlet weak var descriptionLbl: UILabel!
     
     func updateImageCell(cellData: EntArticle){
