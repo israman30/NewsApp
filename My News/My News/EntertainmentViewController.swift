@@ -72,6 +72,12 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "entWeb" {
+            let destinationVC = segue.destination as! WebEntViewController
+            let indexPath = self.collectionView.indexPathsForSelectedItems!
+            
+        }
         // TODO
     }
     
