@@ -488,7 +488,29 @@
                     <view key="view" contentMode="scaleToFill" id="M4h-T6-joe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TA1-x5-pmC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="VAH-ey-b1a" customClass="TechTableViewCell" customModule="My_News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VAH-ey-b1a" id="Lhj-ZQ-Tbw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TA1-x5-pmC" firstAttribute="top" secondItem="jsJ-Yc-9jU" secondAttribute="bottom" id="7g2-vu-iST"/>
+                            <constraint firstAttribute="trailing" secondItem="TA1-x5-pmC" secondAttribute="trailing" id="SYq-QD-8Xs"/>
+                            <constraint firstItem="ZOC-NM-xQR" firstAttribute="top" secondItem="TA1-x5-pmC" secondAttribute="bottom" id="ZRp-n1-Csh"/>
+                            <constraint firstItem="TA1-x5-pmC" firstAttribute="leading" secondItem="M4h-T6-joe" secondAttribute="leading" id="fV4-9P-cIT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GdM-Td-iYr">
                         <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="VZH-Bv-Dd5"/>
