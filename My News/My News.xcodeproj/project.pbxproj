@@ -24,6 +24,7 @@
 		8D1AF37C1F364A2600939FEE /* WebEntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF37B1F364A2600939FEE /* WebEntViewController.swift */; };
 		8D1AF37E1F3A31B900939FEE /* TechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF37D1F3A31B900939FEE /* TechViewController.swift */; };
 		8D1AF3811F3A342800939FEE /* TechTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF3801F3A342800939FEE /* TechTableViewCell.swift */; };
+		8D1AF3831F3A373D00939FEE /* WebTechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF3821F3A373D00939FEE /* WebTechViewController.swift */; };
 		8D4099991F34E424004B0622 /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4099981F34E424004B0622 /* EntertainmentViewController.swift */; };
 		8D40999C1F3559BE004B0622 /* EntModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40999B1F3559BE004B0622 /* EntModel.swift */; };
 		8D40999E1F355B68004B0622 /* EntArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40999D1F355B68004B0622 /* EntArticle.swift */; };
@@ -53,6 +54,7 @@
 		8D1AF37B1F364A2600939FEE /* WebEntViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebEntViewController.swift; sourceTree = "<group>"; };
 		8D1AF37D1F3A31B900939FEE /* TechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechViewController.swift; sourceTree = "<group>"; };
 		8D1AF3801F3A342800939FEE /* TechTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechTableViewCell.swift; sourceTree = "<group>"; };
+		8D1AF3821F3A373D00939FEE /* WebTechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebTechViewController.swift; sourceTree = "<group>"; };
 		8D4099981F34E424004B0622 /* EntertainmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
 		8D40999B1F3559BE004B0622 /* EntModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntModel.swift; sourceTree = "<group>"; };
 		8D40999D1F355B68004B0622 /* EntArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntArticle.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				8D1AF37D1F3A31B900939FEE /* TechViewController.swift */,
 				8D1AF3801F3A342800939FEE /* TechTableViewCell.swift */,
+				8D1AF3821F3A373D00939FEE /* WebTechViewController.swift */,
 			);
 			name = Tech;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				8D1AF3811F3A342800939FEE /* TechTableViewCell.swift in Sources */,
 				8D0443741F2EC311007B081D /* SecondViewController.swift in Sources */,
 				8D14E9921E2C1F70003A354F /* NewsModel.swift in Sources */,
+				8D1AF3831F3A373D00939FEE /* WebTechViewController.swift in Sources */,
 				8D14E9941E2C201F003A354F /* NewsArticle.swift in Sources */,
 				8DFEF53E1E8852FB0093B6A7 /* Date.swift in Sources */,
 				8D1AF37A1F3606ED00939FEE /* EntCollectionViewCell.swift in Sources */,

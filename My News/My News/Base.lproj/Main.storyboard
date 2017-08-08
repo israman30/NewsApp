@@ -489,15 +489,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="197" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TA1-x5-pmC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TA1-x5-pmC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="VAH-ey-b1a" customClass="TechTableViewCell" customModule="My_News" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="197"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="200" id="VAH-ey-b1a" customClass="TechTableViewCell" customModule="My_News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VAH-ey-b1a" id="Lhj-ZQ-Tbw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="196.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsK-hJ-BKZ">
@@ -520,6 +520,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MrQ-NI-fGX" kind="push" id="t0h-IU-qUn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -543,6 +546,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWd-Cc-Pdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3760.8000000000002" y="-1255.3223388305848"/>
+        </scene>
+        <!--Web Tech View Controller-->
+        <scene sceneID="dkz-7s-J0B">
+            <objects>
+                <viewController id="MrQ-NI-fGX" customClass="WebTechViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C2Z-UQ-i9e"/>
+                        <viewControllerLayoutGuide type="bottom" id="bGB-G3-g8I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NER-fp-FYg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcz-ey-i7e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bGB-G3-g8I" firstAttribute="top" secondItem="kcz-ey-i7e" secondAttribute="bottom" id="Sv3-y1-fb7"/>
+                            <constraint firstAttribute="trailing" secondItem="kcz-ey-i7e" secondAttribute="trailing" id="al4-YC-xlB"/>
+                            <constraint firstItem="kcz-ey-i7e" firstAttribute="top" secondItem="NER-fp-FYg" secondAttribute="top" id="jnw-Hc-ad3"/>
+                            <constraint firstItem="kcz-ey-i7e" firstAttribute="leading" secondItem="NER-fp-FYg" secondAttribute="leading" id="yO5-8H-TLu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wen-wj-TBJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uA4-1L-MwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4573" y="-1232"/>
         </scene>
         <!--Web Ent View Controller-->
         <scene sceneID="lHk-ws-oSi">
