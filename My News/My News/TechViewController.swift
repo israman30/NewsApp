@@ -23,6 +23,11 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        closure.fetchData { (article) in
+            self.technologyArticles = article!
+            self.tableView.reloadData()
+        }
 
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
