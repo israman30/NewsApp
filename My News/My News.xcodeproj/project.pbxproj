@@ -25,6 +25,8 @@
 		8D1AF37E1F3A31B900939FEE /* TechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF37D1F3A31B900939FEE /* TechViewController.swift */; };
 		8D1AF3811F3A342800939FEE /* TechTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF3801F3A342800939FEE /* TechTableViewCell.swift */; };
 		8D1AF3831F3A373D00939FEE /* WebTechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF3821F3A373D00939FEE /* WebTechViewController.swift */; };
+		8D1AF3871F3A49BD00939FEE /* TechModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF3861F3A49BD00939FEE /* TechModel.swift */; };
+		8D1AF3891F3A49D700939FEE /* TechArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AF3881F3A49D700939FEE /* TechArticle.swift */; };
 		8D4099991F34E424004B0622 /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4099981F34E424004B0622 /* EntertainmentViewController.swift */; };
 		8D40999C1F3559BE004B0622 /* EntModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40999B1F3559BE004B0622 /* EntModel.swift */; };
 		8D40999E1F355B68004B0622 /* EntArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40999D1F355B68004B0622 /* EntArticle.swift */; };
@@ -55,6 +57,8 @@
 		8D1AF37D1F3A31B900939FEE /* TechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechViewController.swift; sourceTree = "<group>"; };
 		8D1AF3801F3A342800939FEE /* TechTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechTableViewCell.swift; sourceTree = "<group>"; };
 		8D1AF3821F3A373D00939FEE /* WebTechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebTechViewController.swift; sourceTree = "<group>"; };
+		8D1AF3861F3A49BD00939FEE /* TechModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechModel.swift; sourceTree = "<group>"; };
+		8D1AF3881F3A49D700939FEE /* TechArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechArticle.swift; sourceTree = "<group>"; };
 		8D4099981F34E424004B0622 /* EntertainmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
 		8D40999B1F3559BE004B0622 /* EntModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntModel.swift; sourceTree = "<group>"; };
 		8D40999D1F355B68004B0622 /* EntArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntArticle.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				8D1AF37D1F3A31B900939FEE /* TechViewController.swift */,
 				8D1AF3801F3A342800939FEE /* TechTableViewCell.swift */,
 				8D1AF3821F3A373D00939FEE /* WebTechViewController.swift */,
+				8D1AF3861F3A49BD00939FEE /* TechModel.swift */,
+				8D1AF3881F3A49D700939FEE /* TechArticle.swift */,
 			);
 			name = Tech;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 				8D1AF37E1F3A31B900939FEE /* TechViewController.swift in Sources */,
 				8D0443721F2EBDE4007B081D /* NextVC.swift in Sources */,
 				8D04436D1F2EAF69007B081D /* SWRevealViewController.m in Sources */,
+				8D1AF3871F3A49BD00939FEE /* TechModel.swift in Sources */,
 				8D14E9961E2C3CC2003A354F /* NewsTableViewCell.swift in Sources */,
 				8D14E9821E2C1CD8003A354F /* ViewController.swift in Sources */,
 				8D0443771F300117007B081D /* NextTableViewCell.swift in Sources */,
@@ -303,6 +310,7 @@
 				8D0443701F2EB7C7007B081D /* NextViewController.swift in Sources */,
 				8D4099991F34E424004B0622 /* EntertainmentViewController.swift in Sources */,
 				8D14E9801E2C1CD8003A354F /* AppDelegate.swift in Sources */,
+				8D1AF3891F3A49D700939FEE /* TechArticle.swift in Sources */,
 				8D40999C1F3559BE004B0622 /* EntModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
