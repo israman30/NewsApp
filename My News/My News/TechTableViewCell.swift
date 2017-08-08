@@ -10,6 +10,12 @@ import UIKit
 
 class TechTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imagePhoto: UIImageView!
+    
+    @IBOutlet weak var titleLbl: UILabel!
+    
+    @IBOutlet weak var dateLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

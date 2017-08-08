@@ -521,6 +521,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLbl" destination="iJq-Sd-RBU" id="e1Z-Mg-YM8"/>
+                                            <outlet property="imagePhoto" destination="XsK-hJ-BKZ" id="63A-yA-8Kp"/>
+                                            <outlet property="titleLbl" destination="OCl-41-IxP" id="Prg-r5-9ed"/>
                                             <segue destination="MrQ-NI-fGX" kind="push" id="t0h-IU-qUn"/>
                                         </connections>
                                     </tableViewCell>
