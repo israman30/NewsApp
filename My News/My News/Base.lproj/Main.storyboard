@@ -517,6 +517,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menu" destination="VZH-Bv-Dd5" id="wbI-bH-qeq"/>
+                        <outlet property="tableView" destination="TA1-x5-pmC" id="OhU-do-A9o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWd-Cc-Pdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
