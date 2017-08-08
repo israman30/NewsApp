@@ -52,6 +52,13 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.dateLbl.text = technologyArticles[indexPath.row].title
         cell.titleLbl.text = technologyArticles[indexPath.row].title
         
+        cell.layer.cornerRadius = 9
+        cell.layer.borderWidth = 3.5
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.clipsToBounds = true
+        cell.layer.shadowOpacity = 0.23
+        cell.layer.shadowRadius = 4
+        
         let photo = technologyArticles[indexPath.row]
         cell.updateImageCell(cellData: photo)
         
