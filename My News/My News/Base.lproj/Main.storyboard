@@ -497,7 +497,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VAH-ey-b1a" id="Lhj-ZQ-Tbw">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsK-hJ-BKZ">
@@ -573,6 +573,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wen-wj-TBJ"/>
+                    <connections>
+                        <outlet property="webView" destination="kcz-ey-i7e" id="JqE-C1-Adb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uA4-1L-MwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

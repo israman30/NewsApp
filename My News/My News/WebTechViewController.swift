@@ -10,6 +10,8 @@ import UIKit
 
 class WebTechViewController: UIViewController {
     
+    @IBOutlet weak var webView: UIWebView!
+    
     var webSite: String?
 
     override func viewDidLoad() {
