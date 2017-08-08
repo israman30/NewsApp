@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -493,32 +494,55 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="200" id="VAH-ey-b1a" customClass="TechTableViewCell" customModule="My_News" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="200" id="VAH-ey-b1a" customClass="TechTableViewCell" customModule="My_News" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VAH-ey-b1a" id="Lhj-ZQ-Tbw">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsK-hJ-BKZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XsK-hJ-BKZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCl-41-IxP">
-                                                    <rect key="frame" x="8" y="157" width="359" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCl-41-IxP">
+                                                    <rect key="frame" x="8" y="157" width="359" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="hEH-a6-rnz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJq-Sd-RBU">
-                                                    <rect key="frame" x="310" y="8" width="57" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJq-Sd-RBU">
+                                                    <rect key="frame" x="257" y="8" width="110" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Ezp-6k-dXT"/>
+                                                        <constraint firstAttribute="width" constant="110" id="Wf6-y4-667"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="XsK-hJ-BKZ" secondAttribute="trailing" id="3kQ-ZW-qJn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OCl-41-IxP" secondAttribute="bottom" constant="-0.5" id="BMc-ug-w7k"/>
+                                                <constraint firstAttribute="bottom" secondItem="XsK-hJ-BKZ" secondAttribute="bottom" id="Ins-WO-J4g"/>
+                                                <constraint firstItem="XsK-hJ-BKZ" firstAttribute="leading" secondItem="Lhj-ZQ-Tbw" secondAttribute="leading" id="SaP-dC-ljJ"/>
+                                                <constraint firstItem="iJq-Sd-RBU" firstAttribute="trailing" secondItem="Lhj-ZQ-Tbw" secondAttribute="trailingMargin" id="Svs-SW-Udf"/>
+                                                <constraint firstItem="OCl-41-IxP" firstAttribute="trailing" secondItem="Lhj-ZQ-Tbw" secondAttribute="trailingMargin" id="Wi7-id-G2T"/>
+                                                <constraint firstItem="XsK-hJ-BKZ" firstAttribute="leading" secondItem="Lhj-ZQ-Tbw" secondAttribute="leading" id="bw9-DF-Gqz"/>
+                                                <constraint firstItem="XsK-hJ-BKZ" firstAttribute="top" secondItem="Lhj-ZQ-Tbw" secondAttribute="top" id="dYT-8M-X66"/>
+                                                <constraint firstAttribute="bottom" secondItem="XsK-hJ-BKZ" secondAttribute="bottom" id="gMv-Du-aSy"/>
+                                                <constraint firstItem="OCl-41-IxP" firstAttribute="leading" secondItem="Lhj-ZQ-Tbw" secondAttribute="leadingMargin" id="i5y-jf-9Pg"/>
+                                                <constraint firstAttribute="trailing" secondItem="XsK-hJ-BKZ" secondAttribute="trailing" id="iIc-3H-Cqd"/>
+                                                <constraint firstItem="iJq-Sd-RBU" firstAttribute="top" secondItem="Lhj-ZQ-Tbw" secondAttribute="topMargin" id="z6a-RN-C8u"/>
+                                                <constraint firstItem="XsK-hJ-BKZ" firstAttribute="top" secondItem="Lhj-ZQ-Tbw" secondAttribute="top" id="zbc-UW-IkI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLbl" destination="iJq-Sd-RBU" id="e1Z-Mg-YM8"/>

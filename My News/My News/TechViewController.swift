@@ -49,7 +49,7 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell") as! TechTableViewCell
         
-        cell.dateLbl.text = technologyArticles[indexPath.row].title
+        cell.dateLbl.text = technologyArticles[indexPath.row].publishedAt
         cell.titleLbl.text = technologyArticles[indexPath.row].title
         
         cell.layer.cornerRadius = 9
