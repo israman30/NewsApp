@@ -18,6 +18,9 @@ class TechViewController: UIViewController {
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
+        menu.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
     }
 
