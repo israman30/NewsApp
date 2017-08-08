@@ -14,6 +14,10 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var menu: UIBarButtonItem!
     
+    var technologyArticles = [TechArticle]()
+    
+    var closure = TechModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
