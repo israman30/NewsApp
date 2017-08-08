@@ -52,6 +52,9 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.dateLbl.text = technologyArticles[indexPath.row].title
         cell.titleLbl.text = technologyArticles[indexPath.row].title
         
+        let photo = technologyArticles[indexPath.row]
+        cell.updateImageCell(cellData: photo)
+        
         return cell
     }
 
