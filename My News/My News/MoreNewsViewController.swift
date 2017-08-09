@@ -18,7 +18,6 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
     
     var closure = MoreNewsModel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +45,7 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
     }
     
+    // MARK: - Delegate Functions
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -82,6 +82,7 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    // MARK: - Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "moreNews" {
             let destinationVC = segue.destination as! MoreNewsWebViewController

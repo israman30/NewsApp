@@ -22,10 +22,5 @@ class MoreNewsWebViewController: UIViewController {
             let request = URLRequest(url: url!)
             webView.loadRequest(request)
         }
-
-        
     }
-
-   
-
 }
