@@ -48,16 +48,28 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell") as! TechTableViewCell
-        
-        cell.dateLbl.text = technologyArticles[indexPath.row].publishedAt
-        cell.titleLbl.text = technologyArticles[indexPath.row].title
-        
+
         cell.layer.cornerRadius = 9
         cell.layer.borderWidth = 3.5
         cell.layer.borderColor = UIColor.black.cgColor
         cell.clipsToBounds = true
         cell.layer.shadowOpacity = 0.23
         cell.layer.shadowRadius = 4
+        
+        cell.titleLbl.text = technologyArticles[indexPath.row].title
+        
+        cell.dateLbl.text = technologyArticles[indexPath.row].publishedAt
+        
+        // MARK: Date formatting - String to Date block
+        let publishDate = technologyArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+        
+        //"2016-12-15T22:05:24Z"
+        let date = dateFormatter.date(from: publishDate!)
+        
+        let date2 = Date()
+        cell.dateLbl.text = date2.offset(from: date!) + " " + "ago."
         
         let photo = technologyArticles[indexPath.row]
         cell.updateImageCell(cellData: photo)
