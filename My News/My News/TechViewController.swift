@@ -77,5 +77,13 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tech" {
+            let destination = segue.destination as! WebTechViewController
+            let myIndexPath = self.tableView.indexPathForSelectedRow!
+            let row = myIndexPath.row
+            destination.webSite = technologyArticles[row].url
+        }
+    }
    
 }
