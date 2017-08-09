@@ -32,7 +32,7 @@ class TechModel {
     
     func fetchData(with closure: @escaping([TechArticle]?)->()){
         
-        let url = "https://newsapi.org/v1/articles?source=new-scientist&sortBy=top&apiKey=219d19ee586b4a049fafb28d3ecb7707"
+        let url = "https://newsapi.org/v1/articles?source=techradar&sortBy=top&apiKey=219d19ee586b4a049fafb28d3ecb7707"
         let request = URL(string: url)!
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in

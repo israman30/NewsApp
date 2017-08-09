@@ -607,7 +607,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q67-so-BB1">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q67-so-BB1">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="196.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOM-6p-K3x">
@@ -655,7 +655,7 @@
                                             <outlet property="dateLbl" destination="qOM-6p-K3x" id="VKN-ba-fuv"/>
                                             <outlet property="imagePhoto" destination="q67-so-BB1" id="yiO-wA-Bdc"/>
                                             <outlet property="titleLbl" destination="WSM-vs-dWT" id="spn-fy-dzn"/>
-                                            <segue destination="x50-DG-jYm" kind="push" id="1qg-kL-Qoz"/>
+                                            <segue destination="x50-DG-jYm" kind="push" identifier="moreNews" id="1qg-kL-Qoz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -707,6 +707,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rg3-y7-psm"/>
+                    <connections>
+                        <outlet property="webView" destination="mgl-9F-N8J" id="XZh-xz-310"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxn-Q3-jwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

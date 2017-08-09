@@ -83,7 +83,7 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
+        if segue.identifier == "moreNews" {
             let destinationVC = segue.destination as! MoreNewsWebViewController
             let myIndexPath = self.tableView.indexPathForSelectedRow!
             let row = myIndexPath.row

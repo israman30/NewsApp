@@ -65,7 +65,7 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.titleLbl.text = technologyArticles[indexPath.row].title
         
-        cell.dateLbl.text = technologyArticles[indexPath.row].publishedAt
+//        cell.dateLbl.text = technologyArticles[indexPath.row].publishedAt
         
         // MARK: Date formatting - String to Date block
         let publishDate = technologyArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
