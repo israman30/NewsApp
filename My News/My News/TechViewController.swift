@@ -38,6 +38,12 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Technology"
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
