@@ -38,6 +38,7 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
     }
     
+    // MARK: - Delegate Functions
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = "Technology"
@@ -83,6 +84,7 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 
+    // MARK: - Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tech" {
             let destination = segue.destination as! WebTechViewController
@@ -91,5 +93,4 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
             destination.webSite = technologyArticles[row].url
         }
     }
-   
 }

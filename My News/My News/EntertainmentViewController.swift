@@ -45,6 +45,7 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
     }
     
+    // MARK: - Delegate Functions
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -79,6 +80,7 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         return cell
     }
     
+    // MARK: - PRepare for segue from collection view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "entWeb" {
             if let indexPath = self.collectionView.indexPath(for: sender as! UICollectionViewCell) {
