@@ -9,5 +9,22 @@
 import Foundation
 
 class SportsArticle {
+    
+    var author: String?
+    var title: String?
+    var description: String?
+    var url: String?
+    var imageURL: String?
+    var publishedAt: String?
+    init(data: [String:Any]){
+        author = data["author"] as?  String ?? "unknown"
+        title = data["title"] as? String ?? "unknonw"
+        description = data["description"] as?  String ?? "unknown"
+        url = data["url"] as? String ?? "unknown"
+        imageURL = data["urlToImage"] as? String ?? "unknown"
+        print(imageURL ?? "")
+        publishedAt = data["publishedAt"] as? String ?? "unknown"
+    }
+
 
 }
