@@ -60,6 +60,9 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.titleLbl.text = moreNews[indexPath.row].title
         cell.dateLbl.text = moreNews[indexPath.row].publishedAt
         
+        let imageNews = moreNews[indexPath.row]
+        cell.imageUpdateCell(cellData: imageNews)
+        
         return cell
     }
 

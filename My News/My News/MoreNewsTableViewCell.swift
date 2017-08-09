@@ -16,6 +16,21 @@ class MoreNewsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateLbl: UILabel!
     
+    func imageUpdateCell(cellData: MoreNewsArticles){
+    
+        let url = URL(string: cellData.imageURL!)
+        DispatchQueue.global().async {
+            do {
+                let urlData = try Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    self.imagePhoto.image = UIImage(data: urlData)
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
