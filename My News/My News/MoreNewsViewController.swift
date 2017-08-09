@@ -14,6 +14,7 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var menu: UIBarButtonItem!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,8 +46,9 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MoreNewsTableViewCell
+        
+        return cell
     }
 
 }

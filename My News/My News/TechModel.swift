@@ -43,9 +43,7 @@ class TechModel {
             self.parseJson(data: dataResponse, completion: closure)
         }
         task.resume()
-    
     }
-
-
-    
 }
+
+
