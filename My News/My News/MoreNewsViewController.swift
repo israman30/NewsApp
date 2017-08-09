@@ -65,12 +65,30 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.layer.shadowRadius = 4
         
         cell.titleLbl.text = moreNews[indexPath.row].title
-        cell.dateLbl.text = moreNews[indexPath.row].publishedAt
+        // MARK: Date formatting - String to Date block
+        let publishDate = moreNews[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+        
+        //"2016-12-15T22:05:24Z"
+        let date = dateFormatter.date(from: publishDate!)
+        
+        let date2 = Date()
+        cell.dateLbl.text = date2.offset(from: date!) + " " + "ago."
         
         let imageNews = moreNews[indexPath.row]
         cell.imageUpdateCell(cellData: imageNews)
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "" {
+            let destinationVC = segue.destination as! MoreNewsWebViewController
+            let myIndexPath = self.tableView.indexPathForSelectedRow!
+            let row = myIndexPath.row
+            destinationVC.webSite = moreNews[row].url
+        }
     }
 
 }
