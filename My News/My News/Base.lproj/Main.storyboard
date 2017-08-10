@@ -150,38 +150,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yo7-qg-7mW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="eYN-pC-4xw">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYN-pC-4xw" id="VcK-z7-fm4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bu5-8r-ajf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="391"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="391" id="Qbh-Gs-oxK"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bII-K5-1Te">
+                                    <size key="itemSize" width="250" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="vhD-uC-EsO" customClass="SportsCollectionViewCell" customModule="My_News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="38.5" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Bv-Jc-V4j">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRF-na-xyg">
+                                                    <rect key="frame" x="147" y="14" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUb-x2-hMF">
+                                                    <rect key="frame" x="9" y="207" width="232" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
                                         <connections>
-                                            <segue destination="yR3-iu-maa" kind="push" id="7rc-gV-5Lu"/>
+                                            <outlet property="dateLbl" destination="iRF-na-xyg" id="AJe-i8-yVn"/>
+                                            <outlet property="imagePhoto" destination="7Bv-Jc-V4j" id="1uR-RQ-mFi"/>
+                                            <outlet property="titleLbl" destination="hUb-x2-hMF" id="ezn-zA-NCh"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DRO-Bl-rPN" firstAttribute="top" secondItem="yo7-qg-7mW" secondAttribute="bottom" id="DgR-V0-Ppz"/>
-                            <constraint firstItem="yo7-qg-7mW" firstAttribute="leading" secondItem="ZsG-MB-4M3" secondAttribute="leading" id="MLq-UT-Fn2"/>
-                            <constraint firstAttribute="trailing" secondItem="yo7-qg-7mW" secondAttribute="trailing" id="umx-W0-A0a"/>
-                            <constraint firstItem="yo7-qg-7mW" firstAttribute="top" secondItem="G6Z-eT-Zrw" secondAttribute="bottom" id="xgb-0F-kaW"/>
+                            <constraint firstAttribute="trailing" secondItem="bu5-8r-ajf" secondAttribute="trailing" id="XJM-Ve-Xft"/>
+                            <constraint firstItem="bu5-8r-ajf" firstAttribute="leading" secondItem="ZsG-MB-4M3" secondAttribute="leading" id="pvk-yA-xX3"/>
+                            <constraint firstItem="bu5-8r-ajf" firstAttribute="top" secondItem="ZsG-MB-4M3" secondAttribute="top" id="r1t-Aa-g7k"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UvE-YX-5Do">
                         <barButtonItem key="leftBarButtonItem" image="icons8-menu_filled" id="ZBo-AW-h8c"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="bu5-8r-ajf" id="Oox-W8-Xmn"/>
                         <outlet property="menu" destination="ZBo-AW-h8c" id="tHK-ji-hrP"/>
-                        <outlet property="tableView" destination="yo7-qg-7mW" id="uQq-FV-6YR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAO-0Z-Yjs" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -39,7 +39,7 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
-    g}
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {

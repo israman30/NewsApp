@@ -8,17 +8,27 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet weak var tableView: UITableView!
+   
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var menu: UIBarButtonItem!
+    
+    var sportArticles = [SportsArticle]()
+    
+    var closure = SportModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        closure.fetData { (articles) in
+            self.sportArticles = articles!
+            self.collectionView.reloadData()
+        }
         
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -30,17 +40,34 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Sports"
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return sportArticles.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = "Hello World"
-        return cell!
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SportsCollectionViewCell
+        
+        cell.layer.cornerRadius = 9
+        
+        
+        cell.titleLbl.text = sportArticles[indexPath.row].title
+        cell.dateLbl.text = sportArticles[indexPath.row].publishedAt
+        
+        let imageSport = sportArticles[indexPath.row]
+        cell.updateImageCell(cellData: imageSport)
+        
+        return cell
     }
+    
+    
 }

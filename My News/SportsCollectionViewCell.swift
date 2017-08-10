@@ -1,33 +1,33 @@
 //
-//  EntCollectionViewCell.swift
+//  SportsCollectionViewCell.swift
 //  My News
 //
-//  Created by Israel Manzo on 8/5/17.
+//  Created by Israel Manzo on 8/10/17.
 //  Copyright © 2017 Israel Manzo. All rights reserved.
 //
 
 import UIKit
 
-class EntCollectionViewCell: UICollectionViewCell {
+class SportsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var photoImage: UIImageView!
-    
+    @IBOutlet weak var imagePhoto: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
-    
     @IBOutlet weak var dateLbl: UILabel!
     
-    func updateImageCell(cellData: EntArticle){
+    func updateImageCell(cellData: SportsArticle){
         let url = URL(string: cellData.imageURL!)
         
         DispatchQueue.global().async {
             do {
                 let urlData = try Data(contentsOf: url!)
                 DispatchQueue.main.async {
-                    self.photoImage.image = UIImage(data: urlData)
+                    self.imagePhoto.image = UIImage(data: urlData)
                 }
             } catch {
                 print(error.localizedDescription)
             }
         }
     }
+    
+    
 }
