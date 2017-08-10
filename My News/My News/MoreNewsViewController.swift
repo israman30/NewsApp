@@ -18,6 +18,8 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
     
     var closure = MoreNewsModel()
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,7 +39,8 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
-    }
+    g}
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
