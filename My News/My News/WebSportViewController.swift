@@ -10,15 +10,18 @@ import UIKit
 
 class WebSportViewController: UIViewController {
     
+    @IBOutlet weak var webView: UIWebView!
+    
     var webSite: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        if let address = webSite {
+            let url = URL(string: address)
+            let request = URLRequest(url: url!)
+            webView.loadRequest(request)
+            
+        }
     }
-
-
-    
-
 }

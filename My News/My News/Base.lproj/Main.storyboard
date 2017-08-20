@@ -213,7 +213,7 @@
                                             <outlet property="dateLbl" destination="iRF-na-xyg" id="AJe-i8-yVn"/>
                                             <outlet property="imagePhoto" destination="7Bv-Jc-V4j" id="1uR-RQ-mFi"/>
                                             <outlet property="titleLbl" destination="hUb-x2-hMF" id="ezn-zA-NCh"/>
-                                            <segue destination="yR3-iu-maa" kind="push" id="zZh-7S-WrO"/>
+                                            <segue destination="yR3-iu-maa" kind="push" identifier="toSport" id="zZh-7S-WrO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -946,10 +946,10 @@
             </objects>
             <point key="canvasLocation" x="2823" y="-1967"/>
         </scene>
-        <!--View Controller-->
+        <!--Web Sport View Controller-->
         <scene sceneID="5dd-4d-gTU">
             <objects>
-                <viewController id="yR3-iu-maa" sceneMemberID="viewController">
+                <viewController id="yR3-iu-maa" customClass="WebSportViewController" customModule="My_News" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jLR-Ns-zff"/>
                         <viewControllerLayoutGuide type="bottom" id="KZC-LA-8Ss"/>
@@ -959,7 +959,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xa-JX-nl2">
-                                <rect key="frame" x="0.0" y="-44" width="375" height="711"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -972,6 +972,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uEb-Bq-4Xa"/>
+                    <connections>
+                        <outlet property="webView" destination="8Xa-JX-nl2" id="Huf-93-XJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYv-am-Ngb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -40,12 +40,14 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
     }
     
+    // MARK: - Navigations controller setup
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = "Sports"
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
     }
     
+    // MARK: - Delegate Functions
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -61,7 +63,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         
         cell.titleLbl.text = sportArticles[indexPath.row].title
-//        cell.dateLbl.text = sportArticles[indexPath.row].publishedAt
+
         let publishDate = sportArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
@@ -78,5 +80,13 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         return cell
     }
     
-    
+    // MARK: - Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSport" {
+            if let indexPath = self.collectionView.indexPath(for: sender as! UICollectionViewCell){
+                let detailSports = segue.destination as! WebSportViewController
+                detailSports.webSite = self.sportArticles[indexPath.row].url
+            }
+        }
+    }
 }

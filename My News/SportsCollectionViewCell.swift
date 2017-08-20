@@ -11,7 +11,9 @@ import UIKit
 class SportsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imagePhoto: UIImageView!
+    
     @IBOutlet weak var titleLbl: UILabel!
+    
     @IBOutlet weak var dateLbl: UILabel!
     
     func updateImageCell(cellData: SportsArticle){
@@ -19,15 +21,16 @@ class SportsCollectionViewCell: UICollectionViewCell {
         
         DispatchQueue.global().async {
             do {
+                
                 let urlData = try Data(contentsOf: url!)
                 DispatchQueue.main.async {
+                    
                     self.imagePhoto.image = UIImage(data: urlData)
                 }
+                
             } catch {
                 print(error.localizedDescription)
             }
         }
     }
-    
-    
 }
