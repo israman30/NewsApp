@@ -156,7 +156,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="667" id="Qbh-Gs-oxK"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bII-K5-1Te">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="bII-K5-1Te">
                                     <size key="itemSize" width="364" height="221"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -213,6 +213,7 @@
                                             <outlet property="dateLbl" destination="iRF-na-xyg" id="AJe-i8-yVn"/>
                                             <outlet property="imagePhoto" destination="7Bv-Jc-V4j" id="1uR-RQ-mFi"/>
                                             <outlet property="titleLbl" destination="hUb-x2-hMF" id="ezn-zA-NCh"/>
+                                            <segue destination="yR3-iu-maa" kind="push" id="zZh-7S-WrO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
