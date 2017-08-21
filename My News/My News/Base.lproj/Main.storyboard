@@ -157,24 +157,24 @@
                                     <constraint firstAttribute="height" constant="667" id="Qbh-Gs-oxK"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="bII-K5-1Te">
-                                    <size key="itemSize" width="364" height="221"/>
+                                    <size key="itemSize" width="367" height="221"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="vhD-uC-EsO" customClass="SportsCollectionViewCell" customModule="My_News" customModuleProvider="target">
-                                        <rect key="frame" x="5.5" y="5" width="364" height="221"/>
+                                        <rect key="frame" x="4" y="5" width="367" height="221"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="364" height="221"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="221"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Bv-Jc-V4j">
-                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="221"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="367" height="221"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRF-na-xyg">
-                                                    <rect key="frame" x="261" y="14" width="94" height="21"/>
+                                                    <rect key="frame" x="264" y="14" width="94" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="9bQ-Xn-zKP"/>
                                                         <constraint firstAttribute="width" constant="94" id="wxj-Uo-bZQ"/>
@@ -186,7 +186,7 @@
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUb-x2-hMF">
-                                                    <rect key="frame" x="9" y="178" width="346" height="34"/>
+                                                    <rect key="frame" x="9" y="178" width="349" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="k31-yZ-VOi"/>
                                                     </constraints>

@@ -10,7 +10,6 @@ import UIKit
 
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-   
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var menu: UIBarButtonItem!
