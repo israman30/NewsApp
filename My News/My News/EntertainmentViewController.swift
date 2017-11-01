@@ -69,10 +69,11 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
         //"2016-12-15T22:05:24Z"
-        let date = dateFormatter.date(from: publishDate!)
-        
-        let date2 = Date()
-        cell.dateLbl.text = date2.offset(from: date!) + " " + "ago."
+//        let date = dateFormatter.date(from: publishDate!)
+//
+//        let date2 = Date()
+//        cell.dateLbl.text = date2.offset(from: date!) + " " + "ago."
+        cell.dateLbl.text = "On Date"
         
         let photo = entertainmentArticles[indexPath.row]
         cell.updateImageCell(cellData: photo)
