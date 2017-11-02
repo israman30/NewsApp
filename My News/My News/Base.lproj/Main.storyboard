@@ -185,10 +185,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="367" height="221"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRF-na-xyg">
-                                                    <rect key="frame" x="256" y="26" width="94" height="21"/>
+                                                    <rect key="frame" x="332" y="26" width="18" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="9bQ-Xn-zKP"/>
-                                                        <constraint firstAttribute="width" constant="94" id="wxj-Uo-bZQ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -215,6 +214,7 @@
                                             <constraint firstItem="hUb-x2-hMF" firstAttribute="leading" secondItem="vhD-uC-EsO" secondAttribute="leadingMargin" constant="1" id="Bv9-x4-uVp"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="hUb-x2-hMF" secondAttribute="bottom" constant="1" id="LuB-bh-h0j"/>
                                             <constraint firstItem="iRF-na-xyg" firstAttribute="top" secondItem="vhD-uC-EsO" secondAttribute="topMargin" constant="6" id="Xcn-9m-08R"/>
+                                            <constraint firstItem="iRF-na-xyg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vhD-uC-EsO" secondAttribute="leadingMargin" id="ap7-fw-8Bt"/>
                                             <constraint firstAttribute="bottom" secondItem="7Bv-Jc-V4j" secondAttribute="bottom" id="jPB-fl-0BY"/>
                                             <constraint firstItem="7Bv-Jc-V4j" firstAttribute="leading" secondItem="vhD-uC-EsO" secondAttribute="leading" id="l3D-Zv-Dpo"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="iRF-na-xyg" secondAttribute="trailing" constant="1" id="nH9-vg-h4M"/>
