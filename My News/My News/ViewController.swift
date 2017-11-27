@@ -73,7 +73,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     // MARK: View Will Appear - Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white
+        ]
         navigationController?.navigationBar.barTintColor = UIColor.black
         
     }
