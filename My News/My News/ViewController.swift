@@ -55,6 +55,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .black
         
         // MARK: - Create a Refresh Controller block
         refreshControl = UIRefreshControl()
