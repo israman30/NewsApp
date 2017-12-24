@@ -18,7 +18,6 @@ class EntCollectionViewCell: UICollectionViewCell {
     
     func updateImageCell(cellData: EntArticle){
         let url = URL(string: cellData.imageURL!)
-        
         DispatchQueue.global().async {
             do {
                 let urlData = try Data(contentsOf: url!)

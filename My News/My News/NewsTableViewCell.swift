@@ -17,8 +17,6 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var timeLabel: UILabel!
-    
-    
    
     // MARK: Converting data to image
     func updateImageCell(cellData: NewsArticle){
