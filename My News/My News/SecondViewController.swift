@@ -63,15 +63,15 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         cell.titleLbl.text = sportArticles[indexPath.row].title
 
-        let publishDate = sportArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
-        
-        //"2016-12-15T22:05:24Z"
-        let date = dateFormatter.date(from: publishDate!)
-        
-        let date2 = Date()
-        cell.dateLbl.text = date2.offset(from: date!) + " " + "ago."
+//        let publishDate = sportArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+//        
+//        //"2016-12-15T22:05:24Z"
+//        let date = dateFormatter.date(from: publishDate!)
+//        
+//        let date2 = Date()
+////        cell.dateLbl.text = date2.offset(from: date!) + " " + "ago."
         
         let imageSport = sportArticles[indexPath.row]
         cell.updateImageCell(cellData: imageSport)
