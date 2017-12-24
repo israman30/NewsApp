@@ -14,9 +14,9 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let cell = "cell"
     
-    var icons = ["home.png", "soccer.png", "tv.png", "a.png", "contact.png"]
+    var icons = ["home.png", "tv.png", "a.png", "contact.png"]
     
-    var titleNames = ["Home", "Sports", "Entertainment", "More News", "Contact"]
+    var titleNames = ["Home", "Entertainment", "More News", "Contact"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,13 +54,6 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if cell.title1Lbl.text! == "Home" {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as! ViewController
-            let frontController = UINavigationController.init(rootViewController: viewController)
-            revealVC.pushFrontViewController(frontController, animated: true)
-        }
-        
-        if cell.title1Lbl.text! == "Sports" {
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SecondVC") as! SecondViewController
             let frontController = UINavigationController.init(rootViewController: viewController)
             revealVC.pushFrontViewController(frontController, animated: true)
         }
