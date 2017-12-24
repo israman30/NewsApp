@@ -13,6 +13,7 @@ class WebViewViewController: UIViewController {
     var webSite: String?
   
     @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,10 +22,5 @@ class WebViewViewController: UIViewController {
             let urlRequest = URLRequest(url: webURL)
             webView.loadRequest(urlRequest)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
