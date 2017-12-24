@@ -41,11 +41,12 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = "More News"
-        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white
+        ]
     }
     
     // MARK: - Delegate Functions
@@ -68,6 +69,7 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.layer.shadowRadius = 4
         
         cell.titleLbl.text = moreNews[indexPath.row].title
+        
         // MARK: Date formatting - String to Date block
         let publishDate = moreNews[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
         let dateFormatter = DateFormatter()
@@ -94,5 +96,4 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
             destinationVC.webSite = moreNews[row].url
         }
     }
-
 }
