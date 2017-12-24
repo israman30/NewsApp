@@ -56,7 +56,6 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as! ViewController
             let frontController = UINavigationController.init(rootViewController: viewController)
             revealVC.pushFrontViewController(frontController, animated: true)
-            
         }
         
         if cell.title1Lbl.text! == "Sports" {
@@ -64,7 +63,6 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SecondVC") as! SecondViewController
             let frontController = UINavigationController.init(rootViewController: viewController)
             revealVC.pushFrontViewController(frontController, animated: true)
-            
         }
         
         if cell.title1Lbl.text! == "Entertainment" {
@@ -72,23 +70,13 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "EntVC") as! EntertainmentViewController
             let frontController = UINavigationController.init(rootViewController: viewController)
             revealVC.pushFrontViewController(frontController, animated: true)
-            
         }
-        
-//        if cell.title1Lbl.text! == "Technology" {
-//            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "tech") as! TechViewController
-//            let frontController = UINavigationController.init(rootViewController: viewController)
-//            revealVC.pushFrontViewController(frontController, animated: true)
-//            
-//        }
         
         if cell.title1Lbl.text! == "More News" {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "news") as! MoreNewsViewController
             let frontController = UINavigationController.init(rootViewController: viewController)
             revealVC.pushFrontViewController(frontController, animated: true)
-            
         }
         
         if cell.title1Lbl.text! == "Contact" {
@@ -96,7 +84,6 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "NextVC") as! NextVC
             let frontController = UINavigationController.init(rootViewController: viewController)
             revealVC.pushFrontViewController(frontController, animated: true)
-            
         }
     }
 }
