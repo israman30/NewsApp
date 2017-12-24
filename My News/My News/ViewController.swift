@@ -43,7 +43,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         // MARK: - Slide Menu block
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
-        menu.tintColor = UIColor.white
+        menu.tintColor = .white
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
@@ -78,7 +78,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white
         ]
         navigationController?.navigationBar.barTintColor = .black
-        
     }
 
     // MARK: Search bar function
@@ -101,7 +100,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
-        // MARK: This block gives the degin to the table view cell
+        // Sub.MARK: This block gives the degin to the table view cell
         cell.layer.cornerRadius = 9
         cell.layer.borderWidth = 3.5
         cell.layer.borderColor = UIColor.black.cgColor
@@ -112,14 +111,12 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         let articles: NewsArticle
         
         if searchController.isActive && searchController.searchBar.text != "" {
-            
             articles = filterNews[indexPath.row]
         } else {
-            
             articles  = newsArticle[indexPath.row]
         }
         
-        // MARK: Date formatting - String to Date block
+        // Sub.MARK: Date formatting - String to Date block
         let publishDate = newsArticle[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
