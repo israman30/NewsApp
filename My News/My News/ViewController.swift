@@ -59,15 +59,15 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         // MARK: - Create a Refresh Controller block
         refreshControl = UIRefreshControl()
-        refreshControl.tintColor = UIColor.white
-        refreshControl.backgroundColor = UIColor.black
+        refreshControl.tintColor = .white
+        refreshControl.backgroundColor = .black
         tableView.addSubview(refreshControl)
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.barTintColor = UIColor.black
+        searchController.searchBar.barTintColor = .black
         
     }
     
@@ -77,7 +77,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         navigationController?.navigationBar.titleTextAttributes = [
             NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white
         ]
-        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = .black
         
     }
 
