@@ -17,10 +17,12 @@ class EntCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dateLbl: UILabel!
     
     func updateImageCell(cellData: EntArticle){
-        let url = URL(string: cellData.imageURL!)
+        guard let cell = cellData.imageURL else {return}
+        let url = URL(string: cell)
         DispatchQueue.global().async {
             do {
-                let urlData = try Data(contentsOf: url!)
+                guard let url = url else {return}
+                let urlData = try Data(contentsOf: url)
                 DispatchQueue.main.async {
                     self.photoImage.image = UIImage(data: urlData)
                 }

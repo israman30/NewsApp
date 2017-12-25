@@ -17,11 +17,12 @@ class MoreNewsTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLbl: UILabel!
     
     func imageUpdateCell(cellData: MoreNewsArticles){
-    
-        let url = URL(string: cellData.imageURL!)
+        guard let cell = cellData.imageURL else {return}
+        let url = URL(string: cell)
         DispatchQueue.global().async {
             do {
-                let urlData = try Data(contentsOf: url!)
+                guard let url = url else {return}
+                let urlData = try Data(contentsOf: url)
                 DispatchQueue.main.async {
                     self.imagePhoto.image = UIImage(data: urlData)
                 }

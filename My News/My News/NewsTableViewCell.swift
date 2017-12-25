@@ -20,11 +20,12 @@ class NewsTableViewCell: UITableViewCell {
    
     // MARK: Converting data to image
     func updateImageCell(cellData: NewsArticle){
-        let url = URL(string: cellData.imageURL!)
-        
+        guard let cell = cellData.imageURL else {return}
+        let url = URL(string: cell)
         DispatchQueue.global().async {
             do {
-                let urlData = try Data(contentsOf: url!)
+                guard let url = url else {return}
+                let urlData = try Data(contentsOf: url)
                 DispatchQueue.main.async {
                     self.newsImage.image = UIImage(data: urlData)
                 }
