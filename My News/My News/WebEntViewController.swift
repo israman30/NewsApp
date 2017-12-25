@@ -18,8 +18,8 @@ class WebEntViewController: UIViewController {
         super.viewDidLoad()
 
         if let address = webSite {
-            let url = URL(string: address)
-            let request = URLRequest(url: url!)
+            guard let url = URL(string: address) else {return}
+            let request = URLRequest(url: url)
             webView.loadRequest(request)
         }
     }
