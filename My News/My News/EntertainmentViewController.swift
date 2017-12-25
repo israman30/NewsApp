@@ -32,8 +32,8 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         menu.target = revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
-        navigationController?.navigationBar.barTintColor = UIColor.black
-        menu.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = .black
+        menu.tintColor = .white
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
@@ -64,7 +64,7 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         cell.dateLbl.text = entertainmentArticles[indexPath.row].publishedAt
         
         // MARK: Date formatting - String to Date block
-        let publishDate = entertainmentArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
+//        let publishDate = entertainmentArticles[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
