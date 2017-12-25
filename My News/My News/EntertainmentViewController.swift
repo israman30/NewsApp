@@ -45,6 +45,7 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
         navigationController?.navigationBar.titleTextAttributes = [
             NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white
         ]
+        navigationController?.navigationBar.tintColor = .white
     }
     
     // MARK: - Delegate Functions

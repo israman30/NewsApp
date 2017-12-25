@@ -78,6 +78,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white
         ]
         navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.tintColor = .white
     }
 
     // MARK: Search bar function
