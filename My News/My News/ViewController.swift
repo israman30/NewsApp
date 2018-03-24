@@ -28,8 +28,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var menu: UIBarButtonItem!
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,8 +101,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             destinationVC.webSite = newsArticle[row].url
         }
     }
-    
-    
 }
 
 
