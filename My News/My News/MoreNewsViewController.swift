@@ -50,7 +50,22 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.navigationBar.tintColor = .white
     }
     
-    // MARK: - Delegate Functions
+    
+    
+    // MARK: - Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "moreNews" {
+            let destinationVC = segue.destination as! MoreNewsWebViewController
+            let myIndexPath = self.tableView.indexPathForSelectedRow!
+            let row = myIndexPath.row
+            destinationVC.webSite = moreNews[row].url
+        }
+    }
+}
+
+// MARK: - Delegate Functions
+extension MoreNewsViewController {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -87,14 +102,5 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
-    
-    // MARK: - Prepare for segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "moreNews" {
-            let destinationVC = segue.destination as! MoreNewsWebViewController
-            let myIndexPath = self.tableView.indexPathForSelectedRow!
-            let row = myIndexPath.row
-            destinationVC.webSite = moreNews[row].url
-        }
-    }
 }
+
