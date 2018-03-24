@@ -9,11 +9,30 @@
 import Foundation
 import UIKit
 
-//MARK: Search extension
+//MARK: - Search extension controller
 extension ViewController: UISearchResultsUpdating {
     @available(iOS 8.0, *)
     public func updateSearchResults(for searchController: UISearchController) {
         filterContentSearch(searchext: searchController.searchBar.text!)
+    }
+    
+    // MARK: Refresh controller functions
+    func doSomething() {
+        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(ViewController.endWork), userInfo: nil, repeats: true)
+    }
+    
+    func endWork(){
+        refreshControl.endRefreshing()
+        timer.invalidate()
+        timer = nil
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if refreshControl.isRefreshing {
+            if !isAnimating {
+                doSomething()
+            }
+        }
     }
 }
 

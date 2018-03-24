@@ -79,7 +79,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         navigationController?.navigationBar.tintColor = .white
     }
 
-    // MARK: Search bar function
+    // MARK: Search bar functions
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterNews = newsArticle.filter({ (articles) -> Bool in
             return (articles.title?.lowercased().contains(searchText.lowercased()))!
@@ -104,24 +104,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
     }
     
-    // MARK: Refresh controller functions
-    func doSomething() {
-        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(ViewController.endWork), userInfo: nil, repeats: true)
-    }
     
-    func endWork(){
-        refreshControl.endRefreshing()
-        timer.invalidate()
-        timer = nil
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if refreshControl.isRefreshing {
-            if !isAnimating {
-                doSomething()
-            }
-        }
-    }
 }
 
 
