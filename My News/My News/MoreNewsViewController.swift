@@ -50,8 +50,6 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.navigationBar.tintColor = .white
     }
     
-    
-    
     // MARK: - Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "moreNews" {
