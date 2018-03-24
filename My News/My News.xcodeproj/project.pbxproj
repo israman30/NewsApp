@@ -172,6 +172,15 @@
 			name = "Ent-Model-Network";
 			sourceTree = "<group>";
 		};
+		8D236EFA2066B51F0006B58C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8D14E9811E2C1CD8003A354F /* ViewController.swift */,
+				8DCA32401E2D24080033F0CE /* WebViewViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		8DCA32421E2D2CA40033F0CE /* UIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +194,7 @@
 		8DF687101FF0537100E8BF8E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D14E9811E2C1CD8003A354F /* ViewController.swift */,
-				8DCA32401E2D24080033F0CE /* WebViewViewController.swift */,
+				8D236EFA2066B51F0006B58C /* Home */,
 				8D1AF38A1F3A8C9500939FEE /* MoreNewsViewController.swift */,
 				8D1AF38D1F3A964200939FEE /* MoreNewsWebViewController.swift */,
 				8D4099981F34E424004B0622 /* EntertainmentViewController.swift */,
