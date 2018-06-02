@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5uM-dV-IRz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5uM-dV-IRz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -523,10 +523,7 @@
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXz-go-Ilc">
-                                                    <rect key="frame" x="196" y="6" width="157" height="16"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="157" id="ufL-Qx-5Oq"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="331" y="6" width="22" height="16"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -543,6 +540,7 @@
                                             <constraint firstItem="ZPD-Yf-nVf" firstAttribute="leading" secondItem="hbl-8y-skh" secondAttribute="leading" id="7tb-aD-8CG"/>
                                             <constraint firstItem="ibD-v6-Q8t" firstAttribute="leading" secondItem="hbl-8y-skh" secondAttribute="leading" constant="10" id="8vg-g7-gJS"/>
                                             <constraint firstItem="bXz-go-Ilc" firstAttribute="top" secondItem="hbl-8y-skh" secondAttribute="top" constant="6" id="cMs-Yi-wTt"/>
+                                            <constraint firstItem="bXz-go-Ilc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hbl-8y-skh" secondAttribute="leading" symbolic="YES" id="ggL-Zh-30l"/>
                                             <constraint firstAttribute="trailing" secondItem="bXz-go-Ilc" secondAttribute="trailing" constant="10" id="m1L-O4-axG"/>
                                             <constraint firstAttribute="bottom" secondItem="ibD-v6-Q8t" secondAttribute="bottom" constant="6" id="mpp-pN-MYp"/>
                                         </constraints>
@@ -603,10 +601,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJq-Sd-RBU">
-                                                    <rect key="frame" x="211" y="11" width="149" height="21"/>
+                                                    <rect key="frame" x="334.5" y="11" width="25.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Ezp-6k-dXT"/>
-                                                        <constraint firstAttribute="width" constant="149" id="Wf6-y4-667"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -641,6 +638,7 @@
                                                 <constraint firstItem="XsK-hJ-BKZ" firstAttribute="leading" secondItem="Lhj-ZQ-Tbw" secondAttribute="leading" id="SaP-dC-ljJ"/>
                                                 <constraint firstItem="iJq-Sd-RBU" firstAttribute="trailing" secondItem="Lhj-ZQ-Tbw" secondAttribute="trailingMargin" id="Svs-SW-Udf"/>
                                                 <constraint firstItem="OCl-41-IxP" firstAttribute="trailing" secondItem="Lhj-ZQ-Tbw" secondAttribute="trailingMargin" id="Wi7-id-G2T"/>
+                                                <constraint firstItem="iJq-Sd-RBU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lhj-ZQ-Tbw" secondAttribute="leadingMargin" id="beq-Wy-m2U"/>
                                                 <constraint firstItem="XsK-hJ-BKZ" firstAttribute="leading" secondItem="Lhj-ZQ-Tbw" secondAttribute="leading" id="bw9-DF-Gqz"/>
                                                 <constraint firstItem="IhU-3h-hXT" firstAttribute="leading" secondItem="Lhj-ZQ-Tbw" secondAttribute="leading" id="cp4-KJ-93L"/>
                                                 <constraint firstItem="XsK-hJ-BKZ" firstAttribute="top" secondItem="Lhj-ZQ-Tbw" secondAttribute="top" id="dYT-8M-X66"/>
@@ -709,10 +707,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="196.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOM-6p-K3x">
-                                                    <rect key="frame" x="229" y="11" width="131" height="21"/>
+                                                    <rect key="frame" x="338" y="11" width="22" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="67S-hd-ecX"/>
-                                                        <constraint firstAttribute="width" constant="131" id="GRz-8q-ljI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -741,6 +738,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="qUn-1a-V35" secondAttribute="trailing" id="5SB-xj-ZHw"/>
+                                                <constraint firstItem="qOM-6p-K3x" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Chy-0z-elf" secondAttribute="leadingMargin" id="6a8-s0-bxS"/>
                                                 <constraint firstItem="q67-so-BB1" firstAttribute="top" secondItem="Chy-0z-elf" secondAttribute="top" id="BLl-dE-ihm"/>
                                                 <constraint firstAttribute="trailing" secondItem="q67-so-BB1" secondAttribute="trailing" id="DpI-nC-Kpf"/>
                                                 <constraint firstItem="q67-so-BB1" firstAttribute="leading" secondItem="Chy-0z-elf" secondAttribute="leading" id="Her-sp-9xY"/>
