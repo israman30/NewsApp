@@ -21,7 +21,7 @@ extension ViewController: UISearchResultsUpdating {
         timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(ViewController.endWork), userInfo: nil, repeats: true)
     }
     
-    func endWork(){
+    @objc func endWork(){
         refreshControl.endRefreshing()
         timer.invalidate()
         timer = nil

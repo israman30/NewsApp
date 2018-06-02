@@ -45,7 +45,7 @@ class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
         navigationItem.title = "More News"
         navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white
+            NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:20.0)!, NSAttributedStringKey.foregroundColor:UIColor.white
         ]
         navigationController?.navigationBar.tintColor = .white
     }
