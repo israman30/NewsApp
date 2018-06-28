@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
     var newsArticle = [NewsArticle]()
     
@@ -45,12 +45,17 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             self.tableView.reloadData()
         })
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        view.backgroundColor = .black
+        setMainView()
         
         // Sub.MARK: - Create a Refresh Controller
         resfreshControllerSetUp()
+        
+    }
+    
+    fileprivate func setMainView(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        view.backgroundColor = .black
         
     }
     
