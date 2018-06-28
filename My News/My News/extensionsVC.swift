@@ -38,6 +38,9 @@ extension ViewController: UISearchResultsUpdating {
 
 // MARK: - Delegates functions extension
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if searchController.isActive && searchController.searchBar.text != "" {

@@ -56,10 +56,9 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         view.backgroundColor = .black
-        
     }
     
-    private func resfreshControllerSetUp(){
+    fileprivate func resfreshControllerSetUp(){
         refreshControl = UIRefreshControl()
         refreshControl.tintColor = .white
         refreshControl.backgroundColor = .black
