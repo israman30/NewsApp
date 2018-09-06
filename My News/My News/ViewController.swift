@@ -24,13 +24,14 @@ class ViewController: UIViewController {
     var menuIsOpen = false
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var menu: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         // MARK: - Slide Menu block
         menu.target = revealViewController()
@@ -50,25 +51,6 @@ class ViewController: UIViewController {
         // Sub.MARK: - Create a Refresh Controller
         resfreshControllerSetUp()
         
-    }
-    
-    fileprivate func setMainView(){
-        tableView.delegate = self
-        tableView.dataSource = self
-        view.backgroundColor = .black
-    }
-    
-    fileprivate func resfreshControllerSetUp(){
-        refreshControl = UIRefreshControl()
-        refreshControl.tintColor = .white
-        refreshControl.backgroundColor = .black
-        tableView.addSubview(refreshControl)
-        
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.barTintColor = .black
     }
     
     // MARK: View Will Appear - Navigaton controller edit font and color text
@@ -106,6 +88,7 @@ class ViewController: UIViewController {
         }
     }
 }
+
 
 
 
