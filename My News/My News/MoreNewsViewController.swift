@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreNewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MoreNewsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
