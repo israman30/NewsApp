@@ -11,10 +11,6 @@ import UIKit
 // MARK: - Delegate Functions
 extension MoreNewsViewController {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moreNews.count
     }
