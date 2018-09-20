@@ -43,33 +43,5 @@ class EntertainmentViewController: UIViewController, UICollectionViewDelegate, U
     }
 }
 
-extension EntertainmentViewController {
-    
-    func collectionDelegates(){
-        collectionView.delegate = self
-        collectionView.dataSource = self
-    }
-    
-    func revealEntertainmentController(){
-        menu.target = revealViewController()
-        menu.action = #selector(SWRevealViewController.revealToggle(_:))
-        
-        navigationController?.navigationBar.barTintColor = .black
-        menu.tintColor = .white
-        
-        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
-    }
-    
-    func enternaimentNavBarSetUp(){
-        navigationItem.title = "Entertainment"
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:20.0)!, NSAttributedStringKey.foregroundColor:UIColor.white
-        ]
-        navigationController?.navigationBar.tintColor = .white
-    }
-    
-}
-
-
 
 

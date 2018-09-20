@@ -35,6 +35,7 @@
 		8DCA32411E2D24080033F0CE /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA32401E2D24080033F0CE /* WebViewViewController.swift */; };
 		8DCA35C521540F8800BEC108 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA35C421540F8800BEC108 /* HomeView.swift */; };
 		8DCA35C7215411B000BEC108 /* MoreNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA35C6215411B000BEC108 /* MoreNewsView.swift */; };
+		8DCA35C92154132900BEC108 /* EntView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA35C82154132900BEC108 /* EntView.swift */; };
 		8DE0F58D2140BE7700A5F7C1 /* DataSource+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0F58C2140BE7700A5F7C1 /* DataSource+Delegates.swift */; };
 		8DFEF53E1E8852FB0093B6A7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFEF53D1E8852FB0093B6A7 /* Date.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		8DCA32401E2D24080033F0CE /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		8DCA35C421540F8800BEC108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8DCA35C6215411B000BEC108 /* MoreNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreNewsView.swift; sourceTree = "<group>"; };
+		8DCA35C82154132900BEC108 /* EntView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntView.swift; sourceTree = "<group>"; };
 		8DE0F58C2140BE7700A5F7C1 /* DataSource+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSource+Delegates.swift"; sourceTree = "<group>"; };
 		8DFEF53D1E8852FB0093B6A7 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				8D14E9951E2C3CC2003A354F /* NewsTableViewCell.swift */,
 				8D1AF38F1F3A980600939FEE /* MoreNewsTableViewCell.swift */,
 				8D1AF3791F3606ED00939FEE /* EntCollectionViewCell.swift */,
+				8DCA35C82154132900BEC108 /* EntView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			files = (
 				8D14E9921E2C1F70003A354F /* NewsModel.swift in Sources */,
 				8D1AF3901F3A980600939FEE /* MoreNewsTableViewCell.swift in Sources */,
+				8DCA35C92154132900BEC108 /* EntView.swift in Sources */,
 				8D1AF3921F3A98E400939FEE /* MoreNewsArticle.swift in Sources */,
 				8D14E9941E2C201F003A354F /* NewsArticle.swift in Sources */,
 				8D1AF38B1F3A8C9500939FEE /* MoreNewsViewController.swift in Sources */,
