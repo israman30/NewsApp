@@ -22,32 +22,23 @@ class MoreNewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        revealController()
+        tableViewDelegates()
 
-        tableView.delegate = self
-        tableView.dataSource = self
-        
         closure.fetchData { (article) in
             self.moreNews = article!
             self.tableView.reloadData()
         }
-        
-        menu.target = revealViewController()
-        menu.action = #selector(SWRevealViewController.revealToggle(_:))
-        
-        menu.tintColor = UIColor.white
-        navigationController?.navigationBar.barTintColor = UIColor.black
-        
-        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
-        
+    }
+    
+    func tableViewDelegates(){
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = "More News"
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:20.0)!, NSAttributedStringKey.foregroundColor:UIColor.white
-        ]
-        navigationController?.navigationBar.tintColor = .white
+        setUpMoreNewsNavBar()
     }
     
     // MARK: - Prepare for segue
@@ -60,6 +51,8 @@ class MoreNewsViewController: UIViewController {
         }
     }
 }
+
+
 
 
 
