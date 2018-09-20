@@ -1,25 +1,22 @@
 //
-//  NewsTableViewCell.swift
+//  EntCollectionViewCell.swift
 //  My News
 //
-//  Created by Israel Manzo on 1/15/17.
+//  Created by Israel Manzo on 8/5/17.
 //  Copyright © 2017 Israel Manzo. All rights reserved.
 //
 
 import UIKit
 
-class NewsTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var newsImage: UIImageView!
+class EntCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var photoImage: UIImageView!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
     
-    @IBOutlet weak var timeLabel: UILabel!
-   
-    // MARK: Converting data to image
-    func updateImageCell(cellData: NewsArticle){
+    @IBOutlet weak var dateLbl: UILabel!
+    
+    func updateImageCell(cellData: EntArticle){
         guard let cell = cellData.imageURL else {return}
         let url = URL(string: cell)
         DispatchQueue.global().async {
@@ -27,7 +24,7 @@ class NewsTableViewCell: UITableViewCell {
                 guard let url = url else {return}
                 let urlData = try Data(contentsOf: url)
                 DispatchQueue.main.async {
-                    self.newsImage.image = UIImage(data: urlData)
+                    self.photoImage.image = UIImage(data: urlData)
                 }
             } catch {
                 print(error.localizedDescription)

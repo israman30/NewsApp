@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
     var newsArticle = [NewsArticle]()
     
@@ -21,83 +21,29 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var filterNews:[NewsArticle] = []
     var searchController = UISearchController(searchResultsController: nil)
     
+    var menuIsOpen = false
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    func filterContentSearch(searchext: String, scoope: String = "All"){
-        filterNews = newsArticle.filter({ (car) -> Bool in
-            return (car.description?.lowercased().contains(searchext.lowercased()))!
-        })
-        tableView.reloadData()
-    }
+    @IBOutlet weak var menu: UIBarButtonItem!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        slideMenu()
+        setMainView()
+        resfreshControllerSetUp()
+        
+        // MARK: - Closure: Articles Data
         closure.fetchData(with: {listArticles in
             self.newsArticle = listArticles!
             self.tableView.reloadData()
         })
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        //        searchBar.delegate = self
-        refreshControl = UIRefreshControl()
-        tableView.addSubview(refreshControl)
-        
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.barTintColor = UIColor.black
     }
     
-    // MARK: Navigaton controller edit font and color text
+    // MARK: View Will Appear - Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
-        
-    }
-
-    // MARK: Search bar function
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filterNews = newsArticle.filter({ (articles) -> Bool in
-            return (articles.title?.lowercased().contains(searchText.lowercased()))!
-        })
-        self.tableView.reloadData()
-    }
-    
-    
-    // MARK: Delegates functions
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if searchController.isActive && searchController.searchBar.text != "" {
-            return filterNews.count
-        }
-        return newsArticle.count
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
-        
-        let articles: NewsArticle
-        
-        if searchController.isActive && searchController.searchBar.text != "" {
-            
-            articles = filterNews[indexPath.row]
-        } else {
-            
-            articles  = newsArticle[indexPath.row]
-        }
-
-        cell.titleLabel.text = articles.title
-        cell.timeLabel.text = articles.publishedAt
-        cell.descriptionLabel.text = articles.description
-        let newPhoto = articles
-        cell.updateImageCell(cellData: newPhoto)
-  
-        return cell
+        setNavController()
     }
     
     // MARK: Prepare for segue
@@ -109,33 +55,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             destinationVC.webSite = newsArticle[row].url
         }
     }
-    
-    // MARK: Refresh controller functions
-    func doSomething() {
-        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(ViewController.endWork), userInfo: nil, repeats: true)
-    }
-    
-    func endWork(){
-        refreshControl.endRefreshing()
-        timer.invalidate()
-        timer = nil
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if refreshControl.isRefreshing {
-            if !isAnimating {
-                doSomething()
-            }
-        }
-    }
 }
 
-//MARK: extension
-extension ViewController: UISearchResultsUpdating {
-    @available(iOS 8.0, *)
-    public func updateSearchResults(for searchController: UISearchController) {
-        filterContentSearch(searchext: searchController.searchBar.text!)
-    }
-    
-}
+
+
 
