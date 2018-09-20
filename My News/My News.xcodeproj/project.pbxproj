@@ -143,7 +143,6 @@
 				8D1AF3971F3B4BD800939FEE /* Ent-Model-Network */,
 				8D1AF3951F3B4BA900939FEE /* MoreNews-Model-Network */,
 				8D14E99A1E2C43C8003A354F /* Newtwork */,
-				8D14E9931E2C201F003A354F /* NewsArticle.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -165,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				8D14E9911E2C1F70003A354F /* NewsModel.swift */,
+				8D14E9931E2C201F003A354F /* NewsArticle.swift */,
 				8DFEF53D1E8852FB0093B6A7 /* Date.swift */,
 			);
 			name = Newtwork;
