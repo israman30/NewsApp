@@ -31,4 +31,9 @@ class EntCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
+    func setCell(title: String, time: String){
+        titleLbl.text = title
+        dateLbl.text = time
+    }
 }

@@ -25,7 +25,8 @@ extension MoreNewsViewController:UITableViewDelegate, UITableViewDataSource {
         cell.layer.shadowOpacity = 0.23
         cell.layer.shadowRadius = 4
         
-        cell.titleLbl.text = moreNews[indexPath.row].title
+        let moreNewsTitle = moreNews[indexPath.row]
+        let imageNews = moreNews[indexPath.row]
         
         // MARK: Date formatting - String to Date block
         let publishDate = moreNews[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
@@ -34,11 +35,9 @@ extension MoreNewsViewController:UITableViewDelegate, UITableViewDataSource {
         
         //"2016-12-15T22:05:24Z"
         let date = dateFormatter.date(from: publishDate!)
-        
         let date2 = Date()
-        cell.dateLbl.text = date2.offset(from: date!) + " " + "ago."
         
-        let imageNews = moreNews[indexPath.row]
+        cell.setCell(title: moreNewsTitle.title!, time: date2.offset(from: date!) + " " + "ago.")
         cell.imageUpdateCell(cellData: imageNews)
         
         return cell

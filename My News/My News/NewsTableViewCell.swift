@@ -34,4 +34,10 @@ class NewsTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    func setCell(title: String, description: String, time: String){
+        titleLabel.text = title
+        descriptionLabel.text = description
+        timeLabel.text = time
+    }
 }

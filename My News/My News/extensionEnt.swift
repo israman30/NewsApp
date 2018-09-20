@@ -19,8 +19,7 @@ extension EntertainmentViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! EntCollectionViewCell
         
         cell.layer.cornerRadius = 9
-        
-        cell.titleLbl.text = entertainmentArticles[indexPath.row].title
+        let entTitle = entertainmentArticles[indexPath.row]
         
         cell.dateLbl.text = entertainmentArticles[indexPath.row].publishedAt
         
@@ -28,7 +27,7 @@ extension EntertainmentViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
-        cell.dateLbl.text = "On Date"
+        cell.setCell(title: entTitle.title!, time: "On Date")
         
         let photo = entertainmentArticles[indexPath.row]
         cell.updateImageCell(cellData: photo)

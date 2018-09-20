@@ -47,10 +47,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let date = dateFormatter.date(from: publishDate!)
         let date2 = Date()
         
-        cell.timeLabel.text = date2.offset(from: date!) + " " + "ago."
-        
-        cell.titleLabel.text = articles.title
-        cell.descriptionLabel.text = articles.description
+        cell.setCell(title: articles.title!, description: articles.description!, time: date2.offset(from: date!) + " " + "ago.")
         
         let newPhoto = articles
         cell.updateImageCell(cellData: newPhoto)

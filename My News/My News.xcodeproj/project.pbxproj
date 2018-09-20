@@ -241,10 +241,10 @@
 		8DF687101FF0537100E8BF8E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D236EFA2066B51F0006B58C /* Home */,
 				8D236EFF2066B76A0006B58C /* NextMenu */,
 				8D236EFE2066B7300006B58C /* Ent */,
 				8D236EFD2066B7150006B58C /* MoreNews */,
-				8D236EFA2066B51F0006B58C /* Home */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
