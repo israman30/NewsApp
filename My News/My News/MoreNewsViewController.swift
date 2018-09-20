@@ -11,13 +11,10 @@ import UIKit
 class MoreNewsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
     @IBOutlet weak var menu: UIBarButtonItem!
     
     var moreNews = [MoreNewsArticles]()
-    
     var closure = MoreNewsModel()
-    
     let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {

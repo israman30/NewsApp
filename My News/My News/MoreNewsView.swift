@@ -16,7 +16,6 @@ extension MoreNewsViewController {
         
         menu.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor.black
-        
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
     }
