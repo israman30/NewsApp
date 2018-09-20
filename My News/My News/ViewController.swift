@@ -29,56 +29,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         slideMenu()
-        
-        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        setMainView()
+        resfreshControllerSetUp()
         
         // MARK: - Closure: Articles Data
         closure.fetchData(with: {listArticles in
             self.newsArticle = listArticles!
             self.tableView.reloadData()
         })
-        
-        setMainView()
-        
-        // Sub.MARK: - Create a Refresh Controller
-        resfreshControllerSetUp()
-        
-    }
-    
-    func slideMenu(){
-        // MARK: - Slide Menu block
-        menu.target = revealViewController()
-        menu.action = #selector(SWRevealViewController.revealToggle(_:))
-        menu.tintColor = .white
     }
     
     // MARK: View Will Appear - Navigaton controller edit font and color text
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:20.0)!, NSAttributedStringKey.foregroundColor:UIColor.white
-        ]
-        navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.tintColor = .white
-    }
-
-    // MARK: Search bar functions
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filterNews = newsArticle.filter({ (articles) -> Bool in
-            return (articles.title?.lowercased().contains(searchText.lowercased()))!
-        })
-        self.tableView.reloadData()
-    }
-    
-    func filterContentSearch(searchext: String, scoope: String = "All"){
-        filterNews = newsArticle.filter({ (news) -> Bool in
-            return (news.description?.lowercased().contains(searchext.lowercased()))!
-        })
-        tableView.reloadData()
+        setNavController()
     }
     
     // MARK: Prepare for segue

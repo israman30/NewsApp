@@ -1,5 +1,5 @@
 //
-//  extensionsVC.swift
+//  SearchHelper+Ext.swift
 //  My News
 //
 //  Created by Israel Manzo on 3/24/18.
@@ -10,6 +10,21 @@ import UIKit
 
 //MARK: - Search extension controller
 extension ViewController: UISearchResultsUpdating {
+    
+    // MARK: Search bar functions
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterNews = newsArticle.filter({ (articles) -> Bool in
+            return (articles.title?.lowercased().contains(searchText.lowercased()))!
+        })
+        self.tableView.reloadData()
+    }
+    
+    func filterContentSearch(searchext: String, scoope: String = "All"){
+        filterNews = newsArticle.filter({ (news) -> Bool in
+            return (news.description?.lowercased().contains(searchext.lowercased()))!
+        })
+        tableView.reloadData()
+    }
     
     @available(iOS 8.0, *)
     public func updateSearchResults(for searchController: UISearchController) {
@@ -36,24 +51,4 @@ extension ViewController: UISearchResultsUpdating {
     }
 }
 
-extension ViewController {
-    
-    func setMainView(){
-        view.backgroundColor = .black
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-    
-    func resfreshControllerSetUp(){
-        refreshControl = UIRefreshControl()
-        refreshControl.tintColor = .white
-        refreshControl.backgroundColor = .black
-        tableView.addSubview(refreshControl)
-        
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.barTintColor = .black
-    }
-}
+
