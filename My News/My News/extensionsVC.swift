@@ -40,6 +40,8 @@ extension ViewController {
     
     func setMainView(){
         view.backgroundColor = .black
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func resfreshControllerSetUp(){

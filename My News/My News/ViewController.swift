@@ -30,13 +30,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
         
-        // MARK: - Slide Menu block
-        menu.target = revealViewController()
-        menu.action = #selector(SWRevealViewController.revealToggle(_:))
-        menu.tintColor = .white
+        
+        slideMenu()
         
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
@@ -51,6 +47,13 @@ class ViewController: UIViewController {
         // Sub.MARK: - Create a Refresh Controller
         resfreshControllerSetUp()
         
+    }
+    
+    func slideMenu(){
+        // MARK: - Slide Menu block
+        menu.target = revealViewController()
+        menu.action = #selector(SWRevealViewController.revealToggle(_:))
+        menu.tintColor = .white
     }
     
     // MARK: View Will Appear - Navigaton controller edit font and color text
