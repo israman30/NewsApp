@@ -20,16 +20,13 @@ extension EntertainmentViewController {
         
         cell.layer.cornerRadius = 9
         let entTitle = entertainmentArticles[indexPath.row]
-        
-        cell.dateLbl.text = entertainmentArticles[indexPath.row].publishedAt
+        let photo = entertainmentArticles[indexPath.row]
         
         // MARK: Date formatting - String to Date block
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
         cell.setCell(title: entTitle.title!, time: "On Date")
-        
-        let photo = entertainmentArticles[indexPath.row]
         cell.updateImageCell(cellData: photo)
         
         return cell

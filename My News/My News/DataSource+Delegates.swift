@@ -49,8 +49,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.setCell(title: articles.title!, description: articles.description!, time: date2.offset(from: date!) + " " + "ago.")
         
-        let newPhoto = articles
-        cell.updateImageCell(cellData: newPhoto)
+        if let profileImageUrl = articles.imageURL {
+            cell.newsImage.cacheUrlString(urlString: profileImageUrl)
+        }
         
         return cell
     }
