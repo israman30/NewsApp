@@ -15,24 +15,10 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
    
-    // MARK: Converting data to image
-    func updateImageCell(cellData: NewsArticle){
-        guard let cell = cellData.imageURL else {return}
-        let url = URL(string: cell)
-        DispatchQueue.global().async {
-            do {
-                guard let url = url else {return}
-                let urlData = try Data(contentsOf: url)
-                DispatchQueue.main.async {
-                    self.newsImage.image = UIImage(data: urlData)
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
-    func setCell(title: String, description: String, time: String){
+    func setCell(title: String?, description: String?, time: String?){
+        guard let title = title,
+              let description = description,
+              let time = time else { return }
         titleLabel.text = title
         descriptionLabel.text = description
         timeLabel.text = time
