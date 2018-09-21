@@ -154,6 +154,7 @@
 			children = (
 				8DCA32421E2D2CA40033F0CE /* UIs */,
 				8DCA35C421540F8800BEC108 /* HomeView.swift */,
+				8DCA35C6215411B000BEC108 /* MoreNewsView.swift */,
 				8D14E9951E2C3CC2003A354F /* NewsTableViewCell.swift */,
 				8D1AF38F1F3A980600939FEE /* MoreNewsTableViewCell.swift */,
 				8D1AF3791F3606ED00939FEE /* EntCollectionViewCell.swift */,
@@ -205,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				8D1AF38A1F3A8C9500939FEE /* MoreNewsViewController.swift */,
-				8DCA35C6215411B000BEC108 /* MoreNewsView.swift */,
 				8D236F022066B9790006B58C /* MoreNewsDataSource+Delegates.swift */,
 				8D1AF38D1F3A964200939FEE /* MoreNewsWebViewController.swift */,
 			);

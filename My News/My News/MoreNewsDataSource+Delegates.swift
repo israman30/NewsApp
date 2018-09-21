@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Delegate Functions
-extension MoreNewsViewController:UITableViewDelegate, UITableViewDataSource {
+extension MoreNewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moreNews.count

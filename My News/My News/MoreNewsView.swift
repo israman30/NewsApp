@@ -20,7 +20,6 @@ extension MoreNewsViewController {
         
     }
     
-    
     func setUpMoreNewsNavBar(){
         navigationItem.title = "More News"
         navigationController?.navigationBar.titleTextAttributes = [
