@@ -38,7 +38,10 @@ extension MoreNewsViewController:UITableViewDelegate, UITableViewDataSource {
         let date2 = Date()
         
         cell.setCell(title: moreNewsTitle.title!, time: date2.offset(from: date!) + " " + "ago.")
-        cell.imageUpdateCell(cellData: imageNews)
+        
+        if let imagePhotoUrl = imageNews.imageURL {
+            cell.imagePhoto.cacheUrlString(urlString: imagePhotoUrl)
+        }
         
         return cell
     }

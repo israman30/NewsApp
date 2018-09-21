@@ -11,28 +11,11 @@ import UIKit
 class MoreNewsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imagePhoto: UIImageView!
-
     @IBOutlet weak var titleLbl: UILabel!
-    
     @IBOutlet weak var dateLbl: UILabel!
     
-    func imageUpdateCell(cellData: MoreNewsArticles){
-        guard let cell = cellData.imageURL else {return}
-        let url = URL(string: cell)
-        DispatchQueue.global().async {
-            do {
-                guard let url = url else {return}
-                let urlData = try Data(contentsOf: url)
-                DispatchQueue.main.async {
-                    self.imagePhoto.image = UIImage(data: urlData)
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
-    func setCell(title: String, time: String){
+    func setCell(title: String?, time: String?){
+        guard let title = title, let time = time else { return }
         titleLbl.text = title
         dateLbl.text = time
     }

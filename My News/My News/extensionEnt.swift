@@ -27,7 +27,10 @@ extension EntertainmentViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
         cell.setCell(title: entTitle.title!, time: "On Date")
-        cell.updateImageCell(cellData: photo)
+        
+        if let profilePhotoUrl = photo.imageURL {
+            cell.photoImage.cacheUrlString(urlString: profilePhotoUrl)
+        }
         
         return cell
     }
