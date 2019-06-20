@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeControlle: UIViewController {
+class HomeController: UIViewController {
     
     var newsArticle = [NewsArticle]()
     
@@ -18,7 +18,7 @@ class HomeControlle: UIViewController {
     var timer: Timer!
     var isAnimating = false
     
-    var filterNews:[NewsArticle] = []
+    var filterNews: [NewsArticle] = []
     var searchController = UISearchController(searchResultsController: nil)
     
     var menuIsOpen = false

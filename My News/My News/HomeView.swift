@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension HomeControlle {
+extension HomeController {
     
     func setMainView(){
         view.backgroundColor = .black

@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Delegates functions extension
-extension HomeControlle: UITableViewDelegate, UITableViewDataSource {
+extension HomeController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
