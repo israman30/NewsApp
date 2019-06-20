@@ -9,7 +9,7 @@
 import UIKit
 
 //MARK: - Search extension controller
-extension ViewController: UISearchResultsUpdating {
+extension HomeControlle: UISearchResultsUpdating {
     
     // MARK: Search bar functions
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -33,7 +33,7 @@ extension ViewController: UISearchResultsUpdating {
     
     // MARK: Refresh controller functions
     func doSomething() {
-        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(ViewController.endWork), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(HomeControlle.endWork), userInfo: nil, repeats: true)
     }
     
     @objc func endWork(){

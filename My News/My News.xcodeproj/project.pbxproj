@@ -12,7 +12,7 @@
 		8D0443721F2EBDE4007B081D /* NextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0443711F2EBDE4007B081D /* NextVC.swift */; };
 		8D0443771F300117007B081D /* NextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0443761F300117007B081D /* NextTableViewCell.swift */; };
 		8D14E9801E2C1CD8003A354F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */; };
-		8D14E9821E2C1CD8003A354F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E9811E2C1CD8003A354F /* ViewController.swift */; };
+		8D14E9821E2C1CD8003A354F /* HomeControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E9811E2C1CD8003A354F /* HomeControlle.swift */; };
 		8D14E9851E2C1CD8003A354F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D14E9831E2C1CD8003A354F /* Main.storyboard */; };
 		8D14E9871E2C1CD8003A354F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D14E9861E2C1CD8003A354F /* Assets.xcassets */; };
 		8D14E98A1E2C1CD8003A354F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D14E9881E2C1CD8003A354F /* LaunchScreen.storyboard */; };
@@ -50,7 +50,7 @@
 		8D0443761F300117007B081D /* NextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTableViewCell.swift; sourceTree = "<group>"; };
 		8D14E97C1E2C1CD8003A354F /* My News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D14E9811E2C1CD8003A354F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D14E9811E2C1CD8003A354F /* HomeControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControlle.swift; sourceTree = "<group>"; };
 		8D14E9841E2C1CD8003A354F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D14E9861E2C1CD8003A354F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D14E9891E2C1CD8003A354F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		8D236EFA2066B51F0006B58C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8D14E9811E2C1CD8003A354F /* ViewController.swift */,
+				8D14E9811E2C1CD8003A354F /* HomeControlle.swift */,
 				8DCA32401E2D24080033F0CE /* WebViewViewController.swift */,
 				8D236EFB2066B5B30006B58C /* SearchHelper+Ext.swift */,
 				8DE0F58C2140BE7700A5F7C1 /* DataSource+Delegates.swift */,
@@ -288,20 +288,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Israel Manzo";
 				TargetAttributes = {
 					8D14E97B1E2C1CD8003A354F = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = G9TBJCK73T;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 8D14E9771E2C1CD8003A354F /* Build configuration list for PBXProject "My News" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -353,7 +353,7 @@
 				8D1AF3941F3A993D00939FEE /* MoreNewsModel.swift in Sources */,
 				8D236EFC2066B5B30006B58C /* SearchHelper+Ext.swift in Sources */,
 				8DCA35C521540F8800BEC108 /* HomeView.swift in Sources */,
-				8D14E9821E2C1CD8003A354F /* ViewController.swift in Sources */,
+				8D14E9821E2C1CD8003A354F /* HomeControlle.swift in Sources */,
 				8D0443771F300117007B081D /* NextTableViewCell.swift in Sources */,
 				8DE0F58D2140BE7700A5F7C1 /* DataSource+Delegates.swift in Sources */,
 				8D40999E1F355B68004B0622 /* EntArticle.swift in Sources */,
@@ -393,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -402,6 +403,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -409,6 +411,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -448,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -457,6 +461,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -464,6 +469,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -504,8 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "My News/My News-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -520,8 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.inclass.My-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "My News/My News-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

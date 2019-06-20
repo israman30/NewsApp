@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ViewController {
+extension HomeControlle {
     
     func setMainView(){
         view.backgroundColor = .black
@@ -26,7 +26,7 @@ extension ViewController {
     
     func setNavController(){
         navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:20.0)!, NSAttributedStringKey.foregroundColor:UIColor.white
+            NSAttributedString.Key.font: UIFont(name:"Marker Felt", size:20.0)!, NSAttributedString.Key.foregroundColor:UIColor.white
         ]
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.tintColor = .white
