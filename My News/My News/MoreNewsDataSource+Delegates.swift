@@ -16,7 +16,7 @@ extension MoreNewsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MoreNewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.moreNews.rawValue) as! MoreNewsTableViewCell
         
         cell.layer.cornerRadius = 9
         cell.layer.borderWidth = 3.5

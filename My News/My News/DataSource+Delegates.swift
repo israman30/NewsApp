@@ -6,6 +6,12 @@
 //  Copyright © 2018 Israel Manzo. All rights reserved.
 //
 
+enum CellID: String {
+    case homeCellId = "Cell"
+    case entCellId = "cell"
+    case moreNews = "moreNews"
+}
+
 import UIKit
 
 // MARK: - Delegates functions extension
@@ -20,7 +26,7 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.homeCellId.rawValue, for: indexPath) as! NewsTableViewCell
         
         // Sub.MARK: This block gives the degin to the table view cell
         cell.layer.cornerRadius = 9
