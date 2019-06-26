@@ -17,11 +17,7 @@ class MoreNewsTableViewCell: UITableViewCell {
     var moreNews: MoreNewsArticles? {
         didSet {
             if let dateArticle = moreNews?.publishedAt {
-                
-//                dateLbl.text = dateArticle
                 dateLbl.text = setDateFormat(dateString: dateArticle)
-            } else {
-                dateLbl.text = "Date is uncertain"
             }
             
             guard let titleNews = moreNews?.title else { return }

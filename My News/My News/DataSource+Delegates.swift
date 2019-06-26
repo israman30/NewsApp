@@ -44,4 +44,6 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
 }
+

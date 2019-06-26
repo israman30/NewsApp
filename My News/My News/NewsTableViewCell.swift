@@ -23,4 +23,17 @@ class NewsTableViewCell: UITableViewCell {
         descriptionLabel.text = description
         timeLabel.text = time
     }
+    
 }
+/*
+ // Sub.MARK: Date formatting - String to Date block
+ let publishDate = newsArticle[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
+ let dateFormatter = DateFormatter()
+ dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+ 
+ //"2016-12-15T22:05:24Z"
+ let date = dateFormatter.date(from: publishDate!)
+ let date2 = Date()
+ 
+ cell.setCell(title: articles.title!, description: articles.description!, time: date2.offset(from: date!) + " " + "ago.")
+ */
