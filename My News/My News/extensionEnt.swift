@@ -18,7 +18,7 @@ extension EntertainmentViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID.entCellId.rawValue, for: indexPath) as! EntCollectionViewCell
         
-        cell.layer.cornerRadius = 9
+        cell.roundCorners()
         let entTitle = entertainmentArticles[indexPath.row]
         let photo = entertainmentArticles[indexPath.row]
         

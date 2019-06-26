@@ -19,12 +19,7 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellID.homeCellId.rawValue, for: indexPath) as! NewsTableViewCell
         
         // Sub.MARK: This block gives the degin to the table view cell
-        cell.layer.cornerRadius = 9
-        cell.layer.borderWidth = 3.5
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.clipsToBounds = true
-        cell.layer.shadowOpacity = 0.23
-        cell.layer.shadowRadius = 4
+        cell.roundCorners()
         
         let articles: NewsArticle
         

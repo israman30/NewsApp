@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D87B27F22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */; };
+		4D87B28122C3106F000E5AA3 /* CellViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87B28022C3106F000E5AA3 /* CellViewHelper.swift */; };
 		8D04436D1F2EAF69007B081D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04436C1F2EAF69007B081D /* SWRevealViewController.m */; };
 		8D0443701F2EB7C7007B081D /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04436F1F2EB7C7007B081D /* NextViewController.swift */; };
 		8D0443721F2EBDE4007B081D /* NextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0443711F2EBDE4007B081D /* NextVC.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellIdentifiers+Enum.swift"; sourceTree = "<group>"; };
+		4D87B28022C3106F000E5AA3 /* CellViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewHelper.swift; sourceTree = "<group>"; };
 		8D04436A1F2EAF69007B081D /* My News-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My News-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D04436B1F2EAF69007B081D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8D04436C1F2EAF69007B081D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				8D1AF38F1F3A980600939FEE /* MoreNewsTableViewCell.swift */,
 				8D1AF3791F3606ED00939FEE /* EntCollectionViewCell.swift */,
 				8DCA35C82154132900BEC108 /* EntView.swift */,
+				4D87B28022C3106F000E5AA3 /* CellViewHelper.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				8D04436D1F2EAF69007B081D /* SWRevealViewController.m in Sources */,
 				8D14E9961E2C3CC2003A354F /* NewsTableViewCell.swift in Sources */,
 				8D1AF3941F3A993D00939FEE /* MoreNewsModel.swift in Sources */,
+				4D87B28122C3106F000E5AA3 /* CellViewHelper.swift in Sources */,
 				8DCA35C521540F8800BEC108 /* HomeView.swift in Sources */,
 				8D14E9821E2C1CD8003A354F /* HomeController.swift in Sources */,
 				8D0443771F300117007B081D /* NextTableViewCell.swift in Sources */,

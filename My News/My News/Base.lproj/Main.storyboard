@@ -314,8 +314,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@israman3000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="577-gf-mM3">
-                                <rect key="frame" x="161" y="192" width="92" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@israman30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="577-gf-mM3">
+                                <rect key="frame" x="169" y="192" width="76" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="G0x-CQ-Jch"/>
                                 </constraints>
@@ -332,13 +332,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="xbw-EG-REs">
-                                <rect key="frame" x="143" y="198" width="15" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="T3g-Na-nay"/>
-                                    <constraint firstAttribute="width" constant="15" id="hfU-AH-4QO"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.2.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-Ad-eQz">
                                 <rect key="frame" x="172" y="812" width="61.5" height="21"/>
                                 <constraints>
@@ -363,13 +356,11 @@
                             <constraint firstItem="uto-rD-Uth" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E5K-5n-b4V" secondAttribute="trailing" constant="8" symbolic="YES" id="4o8-X5-G6b"/>
                             <constraint firstAttribute="trailing" secondItem="uto-rD-Uth" secondAttribute="trailing" constant="77" id="7pA-bN-If5"/>
                             <constraint firstItem="E5K-5n-b4V" firstAttribute="centerX" secondItem="bNC-Io-0fg" secondAttribute="centerX" id="8v4-oq-h5t"/>
-                            <constraint firstItem="xbw-EG-REs" firstAttribute="top" secondItem="E5K-5n-b4V" secondAttribute="bottom" constant="6" id="Cmj-AD-QCq"/>
                             <constraint firstItem="uto-rD-Uth" firstAttribute="top" secondItem="ySQ-cL-eRm" secondAttribute="bottom" constant="70" id="JUG-2x-33Y"/>
                             <constraint firstItem="gAQ-Ad-eQz" firstAttribute="centerX" secondItem="bNC-Io-0fg" secondAttribute="centerX" constant="-4.5" id="QLk-qd-keZ"/>
                             <constraint firstItem="BYd-TI-ZND" firstAttribute="top" secondItem="gAQ-Ad-eQz" secondAttribute="bottom" constant="29" id="QiN-0H-IF4"/>
                             <constraint firstItem="cVW-n5-i89" firstAttribute="centerX" secondItem="bNC-Io-0fg" secondAttribute="centerX" id="VrF-jT-yB5"/>
                             <constraint firstItem="E5K-5n-b4V" firstAttribute="top" secondItem="ySQ-cL-eRm" secondAttribute="bottom" constant="66" id="hcQ-Kp-7Zv"/>
-                            <constraint firstItem="577-gf-mM3" firstAttribute="leading" secondItem="xbw-EG-REs" secondAttribute="trailing" constant="3" id="m8S-Ur-QHV"/>
                             <constraint firstItem="gAQ-Ad-eQz" firstAttribute="top" secondItem="cVW-n5-i89" secondAttribute="bottom" constant="23" id="mld-FB-phB"/>
                             <constraint firstItem="577-gf-mM3" firstAttribute="top" secondItem="E5K-5n-b4V" secondAttribute="bottom" id="ntH-oO-gUQ"/>
                             <constraint firstItem="577-gf-mM3" firstAttribute="centerX" secondItem="bNC-Io-0fg" secondAttribute="centerX" id="uia-7b-Cg9"/>
@@ -736,7 +727,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="facebook" width="1097" height="1097"/>
         <image name="icons8-menu_filled" width="32" height="32"/>
         <image name="people" width="299" height="168"/>
     </resources>
