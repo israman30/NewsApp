@@ -6,12 +6,6 @@
 //  Copyright © 2018 Israel Manzo. All rights reserved.
 //
 
-enum CellID: String {
-    case homeCellId = "Cell"
-    case entCellId = "cell"
-    case moreNews = "moreNews"
-}
-
 import UIKit
 
 // MARK: - Delegates functions extension

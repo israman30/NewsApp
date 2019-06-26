@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D87B27F22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */; };
 		8D04436D1F2EAF69007B081D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04436C1F2EAF69007B081D /* SWRevealViewController.m */; };
 		8D0443701F2EB7C7007B081D /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04436F1F2EB7C7007B081D /* NextViewController.swift */; };
 		8D0443721F2EBDE4007B081D /* NextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0443711F2EBDE4007B081D /* NextVC.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellIdentifiers+Enum.swift"; sourceTree = "<group>"; };
 		8D04436A1F2EAF69007B081D /* My News-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My News-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D04436B1F2EAF69007B081D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8D04436C1F2EAF69007B081D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				8D1AF3971F3B4BD800939FEE /* Ent-Model-Network */,
 				8D1AF3951F3B4BA900939FEE /* MoreNews-Model-Network */,
 				8D14E99A1E2C43C8003A354F /* Newtwork */,
+				4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				8D4099991F34E424004B0622 /* EntertainmentViewController.swift in Sources */,
 				8D14E9801E2C1CD8003A354F /* AppDelegate.swift in Sources */,
 				8DCA35C7215411B000BEC108 /* MoreNewsView.swift in Sources */,
+				4D87B27F22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift in Sources */,
 				8D40999C1F3559BE004B0622 /* EntModel.swift in Sources */,
 				8D1AF38E1F3A964200939FEE /* MoreNewsWebViewController.swift in Sources */,
 			);
