@@ -12,10 +12,6 @@ import UIKit
 extension HomeController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if searchController.isActive && searchController.searchBar.text != "" {
-            return filterNews.count
-        }
         return newsArticle.count
     }
     
@@ -32,11 +28,7 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         
         let articles: NewsArticle
         
-        if searchController.isActive && searchController.searchBar.text != "" {
-            articles = filterNews[indexPath.row]
-        } else {
-            articles  = newsArticle[indexPath.row]
-        }
+        articles  = newsArticle[indexPath.row]
         
         // Sub.MARK: Date formatting - String to Date block
         let publishDate = newsArticle[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")

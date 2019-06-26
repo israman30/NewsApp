@@ -14,13 +14,6 @@ class HomeController: UIViewController {
     
     var closure = NewsModel()
     
-    var refreshControl: UIRefreshControl!
-    var timer: Timer!
-    var isAnimating = false
-    
-    var filterNews: [NewsArticle] = []
-    var searchController = UISearchController(searchResultsController: nil)
-    
     var menuIsOpen = false
     
     @IBOutlet weak var tableView: UITableView!
@@ -31,7 +24,6 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         slideMenu()
         setMainView()
-        resfreshControllerSetUp()
         
         // MARK: - Closure: Articles Data
         closure.fetchData(with: {listArticles in
