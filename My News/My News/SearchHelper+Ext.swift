@@ -16,7 +16,7 @@ extension HomeController: UISearchResultsUpdating {
         filterNews = newsArticle.filter({ (articles) -> Bool in
             return (articles.title?.lowercased().contains(searchText.lowercased()))!
         })
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     func filterContentSearch(searchext: String, scoope: String = "All"){
