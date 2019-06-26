@@ -19,6 +19,7 @@ extension EntertainmentViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID.entCellId.rawValue, for: indexPath) as! EntCollectionViewCell
         
         cell.roundCorners()
+        // TODO: - Clean Home controller reusable cell method
         let entTitle = entertainmentArticles[indexPath.row]
         let photo = entertainmentArticles[indexPath.row]
         

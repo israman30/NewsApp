@@ -17,11 +17,8 @@ extension MoreNewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellID.moreNews.rawValue) as! MoreNewsTableViewCell
-        
         cell.roundCorners()
-        
         cell.moreNews = moreNews[indexPath.row]
-        
         return cell
     }
 }

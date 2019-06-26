@@ -21,6 +21,8 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         // Sub.MARK: This block gives the degin to the table view cell
         cell.roundCorners()
         
+        // TODO: - Clean Home controller reusable cell method
+        
         let articles: NewsArticle
         
         articles  = newsArticle[indexPath.row]
