@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Delegate Functions
-extension EntertainmentViewController {
+extension EntertainmentViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return entertainmentArticles.count

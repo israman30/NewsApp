@@ -10,13 +10,30 @@ import UIKit
 
 class MoreNewsTableViewCell: UITableViewCell {
     
+    var moreNews: MoreNewsArticles? {
+        didSet {
+            if let dateArticle = moreNews?.publishedAt {
+                dateLbl.text = dateArticle
+            } else {
+                dateLbl.text = " Date is uncertain"
+            }
+            
+            guard let titleNews = moreNews?.title else { return }
+            titleLbl.text = titleNews
+            
+            if let articleImage = moreNews?.imageURL {
+                imagePhoto.cacheUrlString(urlString: articleImage)
+            }
+            
+        }
+    }
+    
     @IBOutlet weak var imagePhoto: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     
-    func setCell(title: String?, time: String?){
-        guard let title = title, let time = time else { return }
+    func setCell(title: String?){
+        guard let title = title else { return }
         titleLbl.text = title
-        dateLbl.text = time
     }
 }
