@@ -14,9 +14,23 @@ class MoreNewsTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     
-    func setCell(title: String?, time: String?){
-        guard let title = title, let time = time else { return }
-        titleLbl.text = title
-        dateLbl.text = time
+    var moreNews: MoreNewsArticles? {
+        didSet {
+            if let dateArticle = moreNews?.publishedAt {
+                // TODO: Handle Date formatter
+                dateLbl.text = dateArticle
+            } else {
+                dateLbl.text = "Date is uncertain"
+            }
+            
+            guard let titleNews = moreNews?.title else { return }
+            titleLbl.text = titleNews
+            
+            if let articleImage = moreNews?.imageURL {
+                imagePhoto.cacheUrlString(urlString: articleImage)
+            }
+        }
     }
+    
+    
 }

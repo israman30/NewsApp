@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension HomeControlle {
+extension HomeController {
     
     func setMainView(){
         view.backgroundColor = .black
@@ -30,18 +30,5 @@ extension HomeControlle {
         ]
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.tintColor = .white
-    }
-    
-    func resfreshControllerSetUp(){
-        refreshControl = UIRefreshControl()
-        refreshControl.tintColor = .white
-        refreshControl.backgroundColor = .black
-        tableView.addSubview(refreshControl)
-        
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.barTintColor = .black
     }
 }

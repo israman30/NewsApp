@@ -19,10 +19,11 @@ class MoreNewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         revealController()
         tableViewDelegates()
 
-        closure.fetchData { (article) in
+        closure.fetchData { article in
             self.moreNews = article!
             self.tableView.reloadData()
         }

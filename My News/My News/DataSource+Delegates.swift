@@ -9,34 +9,23 @@
 import UIKit
 
 // MARK: - Delegates functions extension
-extension HomeControlle: UITableViewDelegate, UITableViewDataSource {
+extension HomeController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if searchController.isActive && searchController.searchBar.text != "" {
-            return filterNews.count
-        }
         return newsArticle.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.homeCellId.rawValue, for: indexPath) as! NewsTableViewCell
         
         // Sub.MARK: This block gives the degin to the table view cell
-        cell.layer.cornerRadius = 9
-        cell.layer.borderWidth = 3.5
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.clipsToBounds = true
-        cell.layer.shadowOpacity = 0.23
-        cell.layer.shadowRadius = 4
+        cell.roundCorners()
+        
+        // TODO: - Clean Home controller reusable cell method
         
         let articles: NewsArticle
         
-        if searchController.isActive && searchController.searchBar.text != "" {
-            articles = filterNews[indexPath.row]
-        } else {
-            articles  = newsArticle[indexPath.row]
-        }
+        articles  = newsArticle[indexPath.row]
         
         // Sub.MARK: Date formatting - String to Date block
         let publishDate = newsArticle[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")

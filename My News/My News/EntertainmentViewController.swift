@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EntertainmentViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class EntertainmentViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var menu: UIBarButtonItem!

@@ -8,18 +8,11 @@
 
 import UIKit
 
-class HomeControlle: UIViewController {
+class HomeController: UIViewController {
     
     var newsArticle = [NewsArticle]()
     
     var closure = NewsModel()
-    
-    var refreshControl: UIRefreshControl!
-    var timer: Timer!
-    var isAnimating = false
-    
-    var filterNews:[NewsArticle] = []
-    var searchController = UISearchController(searchResultsController: nil)
     
     var menuIsOpen = false
     
@@ -31,7 +24,6 @@ class HomeControlle: UIViewController {
         super.viewDidLoad()
         slideMenu()
         setMainView()
-        resfreshControllerSetUp()
         
         // MARK: - Closure: Articles Data
         closure.fetchData(with: {listArticles in

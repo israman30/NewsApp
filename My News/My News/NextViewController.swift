@@ -53,7 +53,7 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if cell.title1Lbl.text! == "Home" {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as! HomeControlle
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as! HomeController
             let frontController = UINavigationController.init(rootViewController: viewController)
             revealVC.pushFrontViewController(frontController, animated: true)
         }

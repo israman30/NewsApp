@@ -9,16 +9,17 @@
 import UIKit
 
 // MARK: - Delegate Functions
-extension EntertainmentViewController {
+extension EntertainmentViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return entertainmentArticles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! EntCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID.entCellId.rawValue, for: indexPath) as! EntCollectionViewCell
         
-        cell.layer.cornerRadius = 9
+        cell.roundCorners()
+        // TODO: - Clean Home controller reusable cell method
         let entTitle = entertainmentArticles[indexPath.row]
         let photo = entertainmentArticles[indexPath.row]
         
