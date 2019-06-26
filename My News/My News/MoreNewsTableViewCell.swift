@@ -17,8 +17,9 @@ class MoreNewsTableViewCell: UITableViewCell {
     var moreNews: MoreNewsArticles? {
         didSet {
             if let dateArticle = moreNews?.publishedAt {
-                // TODO: Handle Date formatter
-                dateLbl.text = dateArticle
+                
+//                dateLbl.text = dateArticle
+                dateLbl.text = setDateFormat(dateString: dateArticle)
             } else {
                 dateLbl.text = "Date is uncertain"
             }
@@ -30,6 +31,14 @@ class MoreNewsTableViewCell: UITableViewCell {
                 imagePhoto.cacheUrlString(urlString: articleImage)
             }
         }
+    }
+    func setDateFormat(dateString: String)-> String {
+        let format = DateFormatter()
+        format.dateFormat = "MMM d, YYYY"
+        if let date = format.date(from: dateString) {
+            return format.string(from: date)
+        }
+        return "Uncertain date"
     }
     
     
