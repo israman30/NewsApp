@@ -37,5 +37,5 @@ class MoreNewsTableViewCell: UITableViewCell {
         return "Uncertain date"
     }
     
-    
 }
+
