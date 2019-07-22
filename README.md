@@ -1,5 +1,5 @@
 # NewsApp
-Check the latest news with the news app :news:
+Check the latest news with the news app :newspaper:
 
 
 ## This app provides the latest news
