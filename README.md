@@ -16,7 +16,7 @@ Check the latest news with the news app :newspaper:
 
 - URL 
 
-- No framework used
+- Side Menu framework
 
 ### Launch :rocket:
 First release on early 2017
