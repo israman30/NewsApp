@@ -14,9 +14,9 @@ My New News presents you with the latest news stories. Tap a story to see and re
 
 - Xcode & Swift
 
-- UIKit, CoreData, User defaults, Date Picker, User  Notifications
+- UIKit
 
-- Alert Controller Extension
+- URL 
 
 - No framework used
 
@@ -25,7 +25,7 @@ First release on early 2017
 
 Second release on later 2019
 
-Download click [My New News](https://itunes.apple.com/us/app/my-new-news/id1210234219?mt=8).
+[My New News](https://itunes.apple.com/us/app/my-new-news/id1210234219?mt=8).
 
 ## Author
 -  [Israel Manzo ®](http://israelmanzo.com)
