@@ -1,5 +1,5 @@
 # NewsApp
-This is a news app project
+Check the latest news with the news app :news:
 
 
 ## This app provides the latest news
