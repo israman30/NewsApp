@@ -12,4 +12,24 @@ My New News presents you with the latest news stories. Tap a story to see and re
 <img src="/images/one.png" width="200"> <img src="/images/two.png" width="200"> <img src="/images/three.png" width="200">
 </p>
 
+## Thecnology
+
+- Xcode & Swift
+
+- UIKit, CoreData, User defaults, Date Picker, User  Notifications
+
+- Alert Controller Extension
+
+- No framework used
+
+### Launch :rocket:
+First release on early 2017
+
+Second release on later 2019
+
+## Author
+-  [Israel Manzo ®](http://israelmanzo.com)
+- [LinkedIn](https://www.linkedin.com/in/israel-manzo/) 
+- [Twitter](https://twitter.com/israman30)
+
 
