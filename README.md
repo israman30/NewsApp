@@ -16,7 +16,7 @@ Check the latest news with the news app :newspaper:
 
 - URL 
 
-- Side Menu framework
+- Side Menu framework - Obj C
 
 ### Launch :rocket:
 First release on early 2017
