@@ -130,7 +130,6 @@
 		8D14E97E1E2C1CD8003A354F /* My News */ = {
 			isa = PBXGroup;
 			children = (
-				8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */,
 				8DF687121FF0566700E8BF8E /* Helpers */,
 				8D14E9971E2C3F57003A354F /* Model */,
 				8DF687101FF0537100E8BF8E /* Controllers */,
@@ -198,6 +197,7 @@
 		8D236EFA2066B51F0006B58C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8D14E97F1E2C1CD8003A354F /* AppDelegate.swift */,
 				8D14E9811E2C1CD8003A354F /* HomeController.swift */,
 				8DCA32401E2D24080033F0CE /* WebViewViewController.swift */,
 				8DE0F58C2140BE7700A5F7C1 /* DataSource+Delegates.swift */,
