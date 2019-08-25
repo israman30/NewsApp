@@ -213,7 +213,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-Gw-E8Y">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-Gw-E8Y">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="iCG-Ba-GUj">
@@ -671,7 +671,7 @@
         <!--Navigation Controller-->
         <scene sceneID="05W-M2-OEV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OhQ-wh-Q0r" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="App" automaticallyAdjustsScrollViewInsets="NO" id="OhQ-wh-Q0r" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="day-Dn-nek">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
