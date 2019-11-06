@@ -11,9 +11,7 @@ import UIKit
 class HomeController: UIViewController {
     
     var newsArticle = [NewsArticle]()
-    
     var closure = NewsModel()
-    
     var menuIsOpen = false
     
     @IBOutlet weak var tableView: UITableView!
@@ -26,10 +24,12 @@ class HomeController: UIViewController {
         setMainView()
         
         // MARK: - Closure: Articles Data
-        closure.fetchData(with: {listArticles in
-            self.newsArticle = listArticles!
-            self.tableView.reloadData()
-        })
+        closure.fetchData { articles in
+            if let articles = articles {
+                self.newsArticle = articles
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: View Will Appear - Navigaton controller edit font and color text

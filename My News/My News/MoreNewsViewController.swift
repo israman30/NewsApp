@@ -23,9 +23,11 @@ class MoreNewsViewController: UIViewController {
         revealController()
         tableViewDelegates()
 
-        closure.fetchData { article in
-            self.moreNews = article!
-            self.tableView.reloadData()
+        closure.fetchData { articles in
+            if let articles = articles {
+                self.moreNews = articles
+                self.tableView.reloadData()
+            }
         }
     }
     

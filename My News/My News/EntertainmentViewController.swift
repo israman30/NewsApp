@@ -21,9 +21,11 @@ class EntertainmentViewController: UIViewController {
         collectionDelegates()
         revealEntertainmentController()
         
-        closure.fetchData { (article) in
-            self.entertainmentArticles = article!
-            self.collectionView.reloadData()
+        closure.fetchData { articles in
+            if let articles = articles {
+                self.entertainmentArticles = articles
+                self.collectionView.reloadData()
+            }
         }
     }
     
