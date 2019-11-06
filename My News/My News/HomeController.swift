@@ -40,7 +40,7 @@ class HomeController: UIViewController {
     
     // MARK: Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ToWebView" {
+        if segue.identifier == Segue.home.rawValue {
             let destinationVC = segue.destination as! WebViewViewController
             let myIndexPath = self.tableView.indexPathForSelectedRow!
             let row = myIndexPath.row

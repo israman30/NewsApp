@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D571FF523726AAD00CA68CE /* TimeString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D571FF423726AAD00CA68CE /* TimeString+Ext.swift */; };
+		4D571FF723726BAF00CA68CE /* Segue-identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D571FF623726BAF00CA68CE /* Segue-identifiers.swift */; };
 		4D87B27F22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */; };
 		4D87B28122C3106F000E5AA3 /* CellViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87B28022C3106F000E5AA3 /* CellViewHelper.swift */; };
 		8D04436D1F2EAF69007B081D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04436C1F2EAF69007B081D /* SWRevealViewController.m */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D571FF423726AAD00CA68CE /* TimeString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeString+Ext.swift"; sourceTree = "<group>"; };
+		4D571FF623726BAF00CA68CE /* Segue-identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Segue-identifiers.swift"; sourceTree = "<group>"; };
 		4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellIdentifiers+Enum.swift"; sourceTree = "<group>"; };
 		4D87B28022C3106F000E5AA3 /* CellViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewHelper.swift; sourceTree = "<group>"; };
 		8D04436A1F2EAF69007B081D /* My News-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My News-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				8D1AF3951F3B4BA900939FEE /* MoreNews-Model-Network */,
 				8D14E99A1E2C43C8003A354F /* Newtwork */,
 				4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */,
+				4D571FF623726BAF00CA68CE /* Segue-identifiers.swift */,
+				4D571FF423726AAD00CA68CE /* TimeString+Ext.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 				8D2EEDA22154775200F63872 /* CatchPhot+Ext.swift in Sources */,
 				8D1AF3901F3A980600939FEE /* MoreNewsTableViewCell.swift in Sources */,
 				8DCA35C92154132900BEC108 /* EntView.swift in Sources */,
+				4D571FF523726AAD00CA68CE /* TimeString+Ext.swift in Sources */,
 				8D1AF3921F3A98E400939FEE /* MoreNewsArticle.swift in Sources */,
 				8D14E9941E2C201F003A354F /* NewsArticle.swift in Sources */,
 				8D1AF38B1F3A8C9500939FEE /* MoreNewsViewController.swift in Sources */,
@@ -351,6 +358,7 @@
 				8D1AF37C1F364A2600939FEE /* WebEntViewController.swift in Sources */,
 				8D236F012066B8ED0006B58C /* extensionEnt.swift in Sources */,
 				8D0443721F2EBDE4007B081D /* NextVC.swift in Sources */,
+				4D571FF723726BAF00CA68CE /* Segue-identifiers.swift in Sources */,
 				8D04436D1F2EAF69007B081D /* SWRevealViewController.m in Sources */,
 				8D14E9961E2C3CC2003A354F /* NewsTableViewCell.swift in Sources */,
 				8D1AF3941F3A993D00939FEE /* MoreNewsModel.swift in Sources */,
