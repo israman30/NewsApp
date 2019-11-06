@@ -17,26 +17,11 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellID.homeCellId.rawValue, for: indexPath) as! NewsTableViewCell
-        
-        // Sub.MARK: This block gives the degin to the table view cell
+        let articles: NewsArticle = newsArticle[indexPath.row]
         cell.roundCorners()
-        
-        // TODO: - Clean Home controller reusable cell method
-        
-        let articles: NewsArticle
-        
-        articles  = newsArticle[indexPath.row]
-        
-        // Sub.MARK: Date formatting - String to Date block
         let publishDate = newsArticle[indexPath.row].publishedAt?.replacingOccurrences(of: "T", with: " ")
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
         
-        //"2016-12-15T22:05:24Z"
-        let date = dateFormatter.date(from: publishDate!)
-        let date2 = Date()
-        
-        cell.setCell(title: articles.title!, description: articles.description!, time: date2.offset(from: date!) + " " + "ago.")
+        cell.setCell(title: articles.title!, description: articles.description!, time: TimeString.setDateString(date: publishDate!))
         
         if let profileImageUrl = articles.imageURL {
             cell.newsImage.cacheUrlString(urlString: profileImageUrl)
@@ -45,5 +30,15 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+}
+
+class TimeString {
+    static func setDateString(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+        let date = dateFormatter.date(from: date)
+        let date2 = Date()
+        return date2.offset(from: date!) + " " + "ago."
+    }
 }
 
