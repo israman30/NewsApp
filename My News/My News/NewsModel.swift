@@ -30,9 +30,9 @@ class NewsModel {
     func fetchData(with closure: @escaping ([NewsArticle]?)-> ()){
         
         let urlString = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=066d82458ed84eeeac28a86095ec88b9"
-        let urlRequest = URL(string: urlString)!
+        guard let urlRequest = URL(string: urlString) else { return }
         let task = URLSession.shared.dataTask(with: urlRequest) { rawData, response, error in
-            
+            if let error = error { fatalError("No data could be received: \(error)") }
             guard let data = rawData else {
                 closure(nil)
                 return
