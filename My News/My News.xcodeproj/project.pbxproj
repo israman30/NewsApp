@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D571FF523726AAD00CA68CE /* TimeString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D571FF423726AAD00CA68CE /* TimeString+Ext.swift */; };
 		4D571FF723726BAF00CA68CE /* Segue-identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D571FF623726BAF00CA68CE /* Segue-identifiers.swift */; };
+		4D5720162377379A00CA68CE /* API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5720152377379A00CA68CE /* API_KEY.swift */; };
 		4D87B27F22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */; };
 		4D87B28122C3106F000E5AA3 /* CellViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87B28022C3106F000E5AA3 /* CellViewHelper.swift */; };
 		8D04436D1F2EAF69007B081D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04436C1F2EAF69007B081D /* SWRevealViewController.m */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		4D571FF423726AAD00CA68CE /* TimeString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeString+Ext.swift"; sourceTree = "<group>"; };
 		4D571FF623726BAF00CA68CE /* Segue-identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Segue-identifiers.swift"; sourceTree = "<group>"; };
+		4D5720152377379A00CA68CE /* API_KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_KEY.swift; sourceTree = "<group>"; };
 		4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellIdentifiers+Enum.swift"; sourceTree = "<group>"; };
 		4D87B28022C3106F000E5AA3 /* CellViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewHelper.swift; sourceTree = "<group>"; };
 		8D04436A1F2EAF69007B081D /* My News-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My News-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */,
 				4D571FF623726BAF00CA68CE /* Segue-identifiers.swift */,
 				4D571FF423726AAD00CA68CE /* TimeString+Ext.swift */,
+				4D5720152377379A00CA68CE /* API_KEY.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				8D1AF37A1F3606ED00939FEE /* EntCollectionViewCell.swift in Sources */,
 				8D236F032066B9790006B58C /* MoreNewsDataSource+Delegates.swift in Sources */,
 				8D1AF37C1F364A2600939FEE /* WebEntViewController.swift in Sources */,
+				4D5720162377379A00CA68CE /* API_KEY.swift in Sources */,
 				8D236F012066B8ED0006B58C /* extensionEnt.swift in Sources */,
 				8D0443721F2EBDE4007B081D /* NextVC.swift in Sources */,
 				4D571FF723726BAF00CA68CE /* Segue-identifiers.swift in Sources */,
