@@ -21,9 +21,11 @@ class EntertainmentViewController: UIViewController {
         collectionDelegates()
         revealEntertainmentController()
         
-        closure.fetchData { (article) in
-            self.entertainmentArticles = article!
-            self.collectionView.reloadData()
+        closure.fetchData { articles in
+            if let articles = articles {
+                self.entertainmentArticles = articles
+                self.collectionView.reloadData()
+            }
         }
     }
     
@@ -34,7 +36,7 @@ class EntertainmentViewController: UIViewController {
     
     // MARK: - PRepare for segue from collection view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "entWeb" {
+        if segue.identifier == Segue.entertainment.rawValue {
             if let indexPath = self.collectionView.indexPath(for: sender as! UICollectionViewCell) {
                 let detailVC = segue.destination as! WebEntViewController
                 detailVC.webSite = self.entertainmentArticles[indexPath.row].url

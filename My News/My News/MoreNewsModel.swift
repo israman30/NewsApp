@@ -10,7 +10,7 @@ import Foundation
 
 class MoreNewsModel {
 
-    func parseJson(data: Data, completion: @escaping([MoreNewsArticles]?)->()){
+    func parseJson(with data: Data, completion: @escaping([MoreNewsArticles]?)->()){
         
         var newsArticle:[MoreNewsArticles] = []
         
@@ -18,7 +18,7 @@ class MoreNewsModel {
             
             let readArticle = jsonObject["articles"] as! [[String:Any]]
             
-            for newArticle in readArticle {
+            readArticle.forEach { newArticle in
                 let articles = MoreNewsArticles(data: newArticle)
                 newsArticle.append(articles)
             }
@@ -34,11 +34,14 @@ class MoreNewsModel {
         let request = URL(string: url)!
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error { fatalError("No data could be received: \(error)") }
+            
             guard let dataResponse = data else {
                 closure(nil)
                 return
             }
-            self.parseJson(data: dataResponse, completion: closure)
+            self.parseJson(with: dataResponse, completion: closure)
         }
         task.resume()
     }

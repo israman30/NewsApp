@@ -23,9 +23,11 @@ class MoreNewsViewController: UIViewController {
         revealController()
         tableViewDelegates()
 
-        closure.fetchData { article in
-            self.moreNews = article!
-            self.tableView.reloadData()
+        closure.fetchData { articles in
+            if let articles = articles {
+                self.moreNews = articles
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -41,7 +43,7 @@ class MoreNewsViewController: UIViewController {
     
     // MARK: - Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "moreNews" {
+        if segue.identifier == Segue.moreNews.rawValue {
             let destinationVC = segue.destination as! MoreNewsWebViewController
             let myIndexPath = self.tableView.indexPathForSelectedRow!
             let row = myIndexPath.row

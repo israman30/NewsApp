@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5uM-dV-IRz">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5uM-dV-IRz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -245,7 +243,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="njk-9n-cxh" id="6If-mX-ePL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-Sf-BMI">
@@ -256,20 +254,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0N-Qg-IQW">
-                                                    <rect key="frame" x="73" y="20" width="306" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="gCv-25-MxN"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="85" y="20" width="54" height="40"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="e0N-Qg-IQW" firstAttribute="leading" secondItem="IgJ-Sf-BMI" secondAttribute="trailing" constant="27" id="azy-cC-UJA"/>
                                                 <constraint firstItem="IgJ-Sf-BMI" firstAttribute="centerY" secondItem="6If-mX-ePL" secondAttribute="centerY" id="etb-sk-URf"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="e0N-Qg-IQW" secondAttribute="trailing" constant="15" id="mFB-4D-5sG"/>
-                                                <constraint firstItem="e0N-Qg-IQW" firstAttribute="centerY" secondItem="6If-mX-ePL" secondAttribute="centerY" id="rrJ-ej-jVm"/>
-                                                <constraint firstItem="e0N-Qg-IQW" firstAttribute="leading" secondItem="IgJ-Sf-BMI" secondAttribute="trailing" constant="15" id="ujD-7s-QR6"/>
+                                                <constraint firstItem="e0N-Qg-IQW" firstAttribute="top" secondItem="IgJ-Sf-BMI" secondAttribute="top" id="gJS-xv-6Bk"/>
+                                                <constraint firstItem="e0N-Qg-IQW" firstAttribute="bottom" secondItem="IgJ-Sf-BMI" secondAttribute="bottom" id="s19-Ms-9KQ"/>
                                                 <constraint firstItem="IgJ-Sf-BMI" firstAttribute="leading" secondItem="6If-mX-ePL" secondAttribute="leading" constant="18" id="zcG-GL-F3Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -492,11 +487,11 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vkh-1e-it2" id="Chy-0z-elf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="196.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q67-so-BB1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="196.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="197"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOM-6p-K3x">
                                                     <rect key="frame" x="372" y="11" width="22" height="21"/>
@@ -510,7 +505,7 @@
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
                                                 <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUn-1a-V35">
-                                                    <rect key="frame" x="0.0" y="147.5" width="414" height="48"/>
+                                                    <rect key="frame" x="0.0" y="148" width="414" height="48"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="zyA-fB-dZo"/>
