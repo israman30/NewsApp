@@ -10,7 +10,7 @@ import Foundation
 
 class EntertainnmentModel {
 
-    func parseJSON(with data: Data, conpletion: @escaping ([EntArticle]?)->()){
+    private func parseJSON(with data: Data, conpletion: @escaping ([EntArticle]?)->()) {
         
         var entArticles: [EntArticle] = []
         
@@ -29,7 +29,7 @@ class EntertainnmentModel {
     
     private let api_key = API_KEY()
 
-    func fetchData(with closure: @escaping([EntArticle]?)->()){
+    func fetchData(with closure: @escaping([EntArticle]?)->()) {
         
         let url = "https://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=\(api_key.ENTERTAINMENT)"
         guard let request = URL(string: url) else { return }

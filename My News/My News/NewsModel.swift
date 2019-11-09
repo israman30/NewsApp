@@ -34,7 +34,9 @@ class NewsModel {
         let urlString = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=\(api_key.HOME)"
         guard let urlRequest = URL(string: urlString) else { return }
         let task = URLSession.shared.dataTask(with: urlRequest) { rawData, response, error in
+            
             if let error = error { fatalError("No data could be received: \(error)") }
+            
             guard let data = rawData else {
                 closure(nil)
                 return
@@ -45,35 +47,6 @@ class NewsModel {
     }
 }
 
-
-class API_KEY {
-    
-    private var _HOME: String
-    private var _ENTERTAINMENT: String
-    private var _MORE_NEWS: String
-    
-    init(){
-        _HOME = "066d82458ed84eeeac28a86095ec88b9"
-        _ENTERTAINMENT = "219d19ee586b4a049fafb28d3ecb7707"
-        _MORE_NEWS = "219d19ee586b4a049fafb28d3ecb7707"
-    }
-    
-    var HOME: String {
-        get {
-            return _HOME
-        }
-    }
-    var ENTERTAINMENT: String {
-        get {
-            return _ENTERTAINMENT
-        }
-    }
-    var MORE_NEWS: String {
-        get {
-            return _MORE_NEWS
-        }
-    }
-}
 
 
 

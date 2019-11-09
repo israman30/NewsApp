@@ -10,7 +10,7 @@ import Foundation
 
 class MoreNewsModel {
 
-    func parseJson(with data: Data, completion: @escaping([MoreNewsArticles]?)->()){
+    private func parseJson(with data: Data, completion: @escaping([MoreNewsArticles]?)->()){
         
         var newsArticle:[MoreNewsArticles] = []
         
