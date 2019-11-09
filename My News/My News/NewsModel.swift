@@ -10,19 +10,19 @@ import Foundation
 
 class NewsModel {
 
-    func parseJson(data: Data, completionHandler: @escaping ([NewsArticle]?)-> ()){
+    func parseJson(with data: Data, completion: @escaping ([NewsArticle]?)-> ()){
         
         var newsArticles: [NewsArticle] = []
         
         if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String:Any] {
-            let readArticles = jsonObject["articles"] as![[String:Any]]
+            let readArticles = jsonObject["articles"] as! [[String:Any]]
             
-            for newArticle in readArticles {
-                let articles = NewsArticle(data: newArticle)
+            readArticles.forEach { newArticles in
+                let articles = NewsArticle(data: newArticles)
                 newsArticles.append(articles)
             }
             DispatchQueue.main.async {
-                completionHandler(newsArticles)
+                completion(newsArticles)
             }
         }
     }
@@ -33,11 +33,11 @@ class NewsModel {
         let urlRequest = URL(string: urlString)!
         let task = URLSession.shared.dataTask(with: urlRequest) { rawData, response, error in
             
-            guard let responseData = rawData else {
+            guard let data = rawData else {
                 closure(nil)
                 return
             }
-            self.parseJson(data: responseData, completionHandler: closure)
+            self.parseJson(with: data, completion: closure)
         }
         task.resume()
     }
