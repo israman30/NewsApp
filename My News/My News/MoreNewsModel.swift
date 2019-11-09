@@ -28,9 +28,11 @@ class MoreNewsModel {
         }
     }
     
+    private let api_key = API_KEY()
+    
     func fetchData(with closure: @escaping([MoreNewsArticles]?)->()){
     
-        let url = "https://newsapi.org/v1/articles?source=reuters&sortBy=top&apiKey=219d19ee586b4a049fafb28d3ecb7707"
+        let url = "https://newsapi.org/v1/articles?source=reuters&sortBy=top&apiKey=\(api_key.MORE_NEWS)"
         let request = URL(string: url)!
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
