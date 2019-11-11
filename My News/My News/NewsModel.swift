@@ -45,9 +45,8 @@ class NewsModel {
         }
         task.resume()
     }
+    
 }
-
-
 
 
 
