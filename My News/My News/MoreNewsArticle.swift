@@ -21,7 +21,6 @@ class MoreNewsArticles {
         description = data["description"] as?  String ?? "unknown"
         url = data["url"] as? String ?? "unknown"
         imageURL = data["urlToImage"] as? String ?? "unknown"
-        print(imageURL ?? "")
         publishedAt = data["publishedAt"] as? String ?? "unknown"
     }
 

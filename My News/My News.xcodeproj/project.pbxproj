@@ -152,7 +152,6 @@
 				8D1AF3971F3B4BD800939FEE /* Ent-Model-Network */,
 				8D1AF3951F3B4BA900939FEE /* MoreNews-Model-Network */,
 				8D14E99A1E2C43C8003A354F /* Newtwork */,
-				4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */,
 				4D571FF623726BAF00CA68CE /* Segue-identifiers.swift */,
 				4D571FF423726AAD00CA68CE /* TimeString+Ext.swift */,
 				4D5720152377379A00CA68CE /* API_KEY.swift */,
@@ -181,6 +180,7 @@
 				8D14E9911E2C1F70003A354F /* NewsModel.swift */,
 				8D14E9931E2C201F003A354F /* NewsArticle.swift */,
 				8DFEF53D1E8852FB0093B6A7 /* Date.swift */,
+				4D87B27E22C2FF11000E5AA3 /* CellIdentifiers+Enum.swift */,
 			);
 			name = Newtwork;
 			sourceTree = "<group>";
