@@ -14,7 +14,7 @@ class NewsModel {
         
         var newsArticles: [NewsArticle] = []
         
-        if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String:Any] {
+        if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any] {
             let readArticles = jsonObject["articles"] as! [[String:Any]]
             
             readArticles.forEach { newArticles in
