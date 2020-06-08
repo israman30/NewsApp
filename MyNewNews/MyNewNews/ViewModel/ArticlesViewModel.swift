@@ -14,7 +14,7 @@ class ArticlesViewModel {
     let description: String?
     let url: String?
     var urlToImage: String?
-    let publishedAt: String?
+    var publishedAt: String?
     
     init(articles: ModelArticles) {
         self.title = articles.title
@@ -29,7 +29,7 @@ class ArticlesViewModel {
         } else {
             publishedAt = "No time displayed"
         }
-    }    
+    }
     
 }
 
