@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D341442248B16F100596BD3 /* MyNewNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D341441248B16F100596BD3 /* MyNewNewsTests.swift */; };
 		4D46D8C923E0946400A1D97D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46D8C823E0946400A1D97D /* AppDelegate.swift */; };
 		4D46D8CB23E0946400A1D97D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46D8CA23E0946400A1D97D /* SceneDelegate.swift */; };
 		4D46D8CD23E0946400A1D97D /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46D8CC23E0946400A1D97D /* MainController.swift */; };
@@ -33,7 +34,20 @@
 		4DFF0C2923E29C7B0011EC4F /* API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF0C2823E29C7B0011EC4F /* API_KEY.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4D341444248B16F100596BD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D46D8BD23E0946400A1D97D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D46D8C423E0946400A1D97D;
+			remoteInfo = MyNewNews;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4D34143F248B16F100596BD3 /* MyNewNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNewNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D341441248B16F100596BD3 /* MyNewNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewNewsTests.swift; sourceTree = "<group>"; };
+		4D341443248B16F100596BD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D46D8C523E0946400A1D97D /* MyNewNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNewNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D46D8C823E0946400A1D97D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D46D8CA23E0946400A1D97D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4D34143C248B16F100596BD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D46D8C223E0946400A1D97D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,10 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D341440248B16F100596BD3 /* MyNewNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D341441248B16F100596BD3 /* MyNewNewsTests.swift */,
+				4D341443248B16F100596BD3 /* Info.plist */,
+			);
+			path = MyNewNewsTests;
+			sourceTree = "<group>";
+		};
 		4D46D8BC23E0946400A1D97D = {
 			isa = PBXGroup;
 			children = (
 				4D46D8C723E0946400A1D97D /* MyNewNews */,
+				4D341440248B16F100596BD3 /* MyNewNewsTests */,
 				4D46D8C623E0946400A1D97D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				4D46D8C523E0946400A1D97D /* MyNewNews.app */,
+				4D34143F248B16F100596BD3 /* MyNewNewsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,6 +228,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4D34143E248B16F100596BD3 /* MyNewNewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D341448248B16F100596BD3 /* Build configuration list for PBXNativeTarget "MyNewNewsTests" */;
+			buildPhases = (
+				4D34143B248B16F100596BD3 /* Sources */,
+				4D34143C248B16F100596BD3 /* Frameworks */,
+				4D34143D248B16F100596BD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D341445248B16F100596BD3 /* PBXTargetDependency */,
+			);
+			name = MyNewNewsTests;
+			productName = MyNewNewsTests;
+			productReference = 4D34143F248B16F100596BD3 /* MyNewNewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4D46D8C423E0946400A1D97D /* MyNewNews */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D46D8D923E0946B00A1D97D /* Build configuration list for PBXNativeTarget "MyNewNews" */;
@@ -219,10 +269,14 @@
 		4D46D8BD23E0946400A1D97D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Israel Manzo";
 				TargetAttributes = {
+					4D34143E248B16F100596BD3 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 4D46D8C423E0946400A1D97D;
+					};
 					4D46D8C423E0946400A1D97D = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -242,11 +296,19 @@
 			projectRoot = "";
 			targets = (
 				4D46D8C423E0946400A1D97D /* MyNewNews */,
+				4D34143E248B16F100596BD3 /* MyNewNewsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4D34143D248B16F100596BD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D46D8C323E0946400A1D97D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +322,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4D34143B248B16F100596BD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D341442248B16F100596BD3 /* MyNewNewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D46D8C123E0946400A1D97D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +360,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4D341445248B16F100596BD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D46D8C423E0946400A1D97D /* MyNewNews */;
+			targetProxy = 4D341444248B16F100596BD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4D46D8CE23E0946400A1D97D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -310,6 +388,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4D341446248B16F100596BD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DC9LP75VX;
+				INFOPLIST_FILE = MyNewNewsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.israelmanzo.map.MyNewNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyNewNews.app/MyNewNews";
+			};
+			name = Debug;
+		};
+		4D341447248B16F100596BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DC9LP75VX;
+				INFOPLIST_FILE = MyNewNewsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.israelmanzo.map.MyNewNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyNewNews.app/MyNewNews";
+			};
+			name = Release;
+		};
 		4D46D8D723E0946B00A1D97D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,6 +583,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4D341448248B16F100596BD3 /* Build configuration list for PBXNativeTarget "MyNewNewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D341446248B16F100596BD3 /* Debug */,
+				4D341447248B16F100596BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4D46D8C023E0946400A1D97D /* Build configuration list for PBXProject "MyNewNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
