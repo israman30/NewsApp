@@ -19,7 +19,7 @@ class MainController: UIViewController {
         return cv
     }()
     
-    let bodyClosure = Network()
+    let network: Network = .shared
     
     var articles = [ArticlesViewModel]()
     
@@ -30,18 +30,17 @@ class MainController: UIViewController {
         setCollectionView()
 
         renderBody()
-        
     }
     
     fileprivate func renderBody() {
-        bodyClosure.getData { (articles, error) in
-            if let error = error {
-                print("Error rendering header", error.localizedDescription)
-                return
+        network.jsonObject { result in
+            switch result {
+            case .success(let articlesList):
+                self.articles = articlesList.map { return ArticlesViewModel(articles: $0) }
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
             }
-            guard let jsonObject = articles else { return }
-            self.articles = jsonObject.map { return ArticlesViewModel(articles: $0) }
-            self.collectionView.reloadData()
         }
     }
     

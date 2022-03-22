@@ -21,11 +21,13 @@ class MyNewNewsTests: XCTestCase {
     
     var articlesTest: ModelArticles!
     func testCourses() {
-        let network = Network()
-        network.getData { (articles, error) in
-            guard let articlesObject = articles else { return }
-            for article in articlesObject {
-                self.articlesTest = article
+        let network: Network = .shared
+        network.getData { result in
+            switch result {
+            case .success(let _):
+                break
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
             }
         }
         guard let articles = articlesTest else { return }
