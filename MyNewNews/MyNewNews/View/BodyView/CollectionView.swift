@@ -25,6 +25,13 @@ extension MainController {
             right: view.rightAnchor
         )
         registerCollectionViewCellWithDelegatesDataSource()
+        setEmptyListLabel()
+    }
+    
+    func setEmptyListLabel() {
+        emptyListLabelMessage.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.addSubview(emptyListLabelMessage)
+        emptyListLabelMessage.centerInSuperview(size: .init(width: 300, height: 50))
     }
     
     func registerCollectionViewCellWithDelegatesDataSource() {

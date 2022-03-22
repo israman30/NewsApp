@@ -38,7 +38,7 @@ class HeaderController: UIViewController {
         headerNetwork.getData { result in
             switch result {
             case .success(let articlesList):
-                self.articlesHeader = articlesList.map { return ArticlesViewModel(articles: $0) }
+                self.articlesHeader = articlesList.map { ArticlesViewModel(articles: $0) }
                 self.collectionView.reloadData()
             case .failure(let error):
                 print(error)
