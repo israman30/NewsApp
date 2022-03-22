@@ -19,7 +19,15 @@ class MainController: UIViewController {
         return cv
     }()
     
-    let bodyClosure = Network()
+    let emptyListLabelMessage: UILabel = {
+        let label = UILabel()
+        label.textColor = .systemRed
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let network: Network = .shared
     
     var articles = [ArticlesViewModel]()
     
@@ -28,20 +36,21 @@ class MainController: UIViewController {
         
         setNavigationController()
         setCollectionView()
-
         renderBody()
-        
     }
     
     fileprivate func renderBody() {
-        bodyClosure.getData { (articles, error) in
-            if let error = error {
-                print("Error rendering header", error.localizedDescription)
-                return
+        network.jsonObject { result in
+            switch result {
+            case .success(let articlesList):
+                self.articles = articlesList.map { ArticlesViewModel(articles: $0) }
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
+                DispatchQueue.main.async {
+                    self.emptyListLabelMessage.text = "Something went wrong..! CONNECTION NOT FOUND"
+                }
             }
-            guard let jsonObject = articles else { return }
-            self.articles = jsonObject.map { return ArticlesViewModel(articles: $0) }
-            self.collectionView.reloadData()
         }
     }
     

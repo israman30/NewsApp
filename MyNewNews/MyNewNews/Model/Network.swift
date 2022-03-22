@@ -8,42 +8,60 @@
 
 import UIKit
 
+protocol NetworkProtocol {
+    func fetchData(_ urlString: String, completion:@escaping(Result<[ModelArticles], APIError>)->())
+}
+
+enum APIError: Error {
+    case responseProblem
+    case decodingProblem(Error)
+    case errorWithWrongURL(Error)
+}
+
 // MARK: =================== NETWORK CALL ===================
-class Network {
+class Network: NetworkProtocol {
     
     private let api_key = API_KEY()
     
-    func getData(completion: @escaping([ModelArticles]?, Error?)->()) {
+    static let shared = Network()
+    
+    func getData(completion: @escaping(Result<[ModelArticles], APIError>)->()) {
         let endpoint = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=\(api_key.BODY)"
         fetchData(endpoint, completion: completion)
     }
     
-    func jsonObject(completion: @escaping([ModelArticles]?, Error?)->()) {
+    func jsonObject(completion: @escaping(Result<[ModelArticles], APIError>)->()) {
        let endpoint = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=\(api_key.HEADER)"
         fetchData(endpoint, completion: completion)
     }
     
-    private func fetchData(_ urlString: String, completion:@escaping([ModelArticles]?, Error?)->()) {
+    func fetchData(_ urlString: String, completion: @escaping(Result<[ModelArticles], APIError>)->()) {
         guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (data, res, error) in
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
-             completion(nil, error)
+                completion(.failure(.errorWithWrongURL(error)))
                 print("Error getting data", error.localizedDescription)
+                return
+            }
+            guard let response = response as? HTTPURLResponse,
+                  (200...299).contains(response.statusCode), let data = data else {
+                completion(.failure(.responseProblem))
                 return
             }
 
             do {
-             guard let data = data else { return }
              let jsonData = try JSONDecoder().decode(Articles.self, from: data)
 
              DispatchQueue.main.async {
-                 completion(jsonData.articles, nil)
+                 completion(.success(jsonData.articles))
              }
 
-            } catch {
+            } catch let error {
+                completion(.failure(.decodingProblem(error)))
                 print("Error parsing json")
             }
-        }.resume()
+        }
+        task.resume()
 
     }
     

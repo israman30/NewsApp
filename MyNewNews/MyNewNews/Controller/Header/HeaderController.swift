@@ -20,11 +20,10 @@ class HeaderController: UIViewController {
         return cv
     }()
     
-    let headerClosure = Network()
+    let headerNetwork: Network = .shared
     
     let titleHeader = UILabel()
     
-//    var articles = [ModelArticles]()
     var articlesHeader = [ArticlesViewModel]()
     
     override func viewDidLoad() {
@@ -36,16 +35,14 @@ class HeaderController: UIViewController {
     }
     
     fileprivate func renderHeader() {
-        headerClosure.jsonObject { (articles, error) in
-            if let error = error {
-                print("Error rendering header", error.localizedDescription)
-                return
+        headerNetwork.getData { result in
+            switch result {
+            case .success(let articlesList):
+                self.articlesHeader = articlesList.map { ArticlesViewModel(articles: $0) }
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
             }
-            guard let articlesJson = articles else { return }
-            
-            self.articlesHeader = articlesJson.map { return ArticlesViewModel(articles: $0) }
-//            self.articles = articlesJson
-            self.collectionView.reloadData()
         }
     }
     
