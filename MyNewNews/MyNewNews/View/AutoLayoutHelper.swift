@@ -20,6 +20,13 @@ extension UIView {
     func addSubViews(_ views: UIView...) {
         views.forEach { addSubview($0) }
     }
+    
+    func dropShadow() {
+        layer.masksToBounds = false
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowRadius = 1
+        layer.shadowOpacity = 0.5
+      }
 }
 
 struct AnchoredConstraints {
