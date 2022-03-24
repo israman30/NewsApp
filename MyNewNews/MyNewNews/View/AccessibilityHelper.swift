@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 extension UILabel {
-    
     func makeTextDynamic(textStyle: UIFont.TextStyle) {
         font = .preferredFont(forTextStyle: textStyle)
         adjustsFontForContentSizeCategory = true
