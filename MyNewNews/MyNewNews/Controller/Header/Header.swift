@@ -23,9 +23,9 @@ class Header: UICollectionReusableView {
         
         addSubViews(headerLineView, headerTitle, headerView.view)
         
-        headerTitle.text = "NEWS AND MORE"
+        headerTitle.text = NSLocalizedString("NEWS AND MORE", comment: "New and more header two") 
         headerTitle.textColor = .darkGray
-        headerTitle.font = .boldSystemFont(ofSize: 15)
+        headerTitle.makeTextDynamic(textStyle: .body)
         headerLineView.backgroundColor = .rgb(red: 245, green: 244, blue: 244)
         
         headerLineView.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, padding: .zero, size: .init(width: 0, height: 0.4))

@@ -44,7 +44,7 @@ class MainCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 18)
+        label.makeTextDynamic(textStyle: .headline)
         label.textColor = .white
         label.layer.shadowColor = UIColor.black.cgColor
         label.layer.shadowRadius = 3.0
@@ -56,7 +56,7 @@ class MainCell: UICollectionViewCell {
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12)
+        label.makeTextDynamic(textStyle: .caption1)
         label.numberOfLines = 3
         label.textColor = .white
         return label
@@ -66,7 +66,7 @@ class MainCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Monday, 23 June"
         label.textColor = .white
-        label.font = .systemFont(ofSize: 10)
+        label.makeTextDynamic(textStyle: .caption1)
         label.textAlignment = .right
         return label
     }()

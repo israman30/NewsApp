@@ -54,7 +54,7 @@ class HeaderCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 15)
+        label.makeTextDynamic(textStyle: .subheadline)
         label.backgroundColor = .black
         label.textColor = .white
         return label
