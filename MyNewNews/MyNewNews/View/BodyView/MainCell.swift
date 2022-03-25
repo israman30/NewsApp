@@ -25,6 +25,11 @@ class MainCell: UICollectionViewCell {
         }
     }
     
+    let cardContainer: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
     let mainPhotoImage: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -39,7 +44,7 @@ class MainCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 18)
+        label.makeTextDynamic(textStyle: .headline)
         label.textColor = .white
         label.layer.shadowColor = UIColor.black.cgColor
         label.layer.shadowRadius = 3.0
@@ -51,7 +56,7 @@ class MainCell: UICollectionViewCell {
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12)
+        label.makeTextDynamic(textStyle: .caption1)
         label.numberOfLines = 3
         label.textColor = .white
         return label
@@ -61,7 +66,7 @@ class MainCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Monday, 23 June"
         label.textColor = .white
-        label.font = .systemFont(ofSize: 10)
+        label.makeTextDynamic(textStyle: .caption1)
         label.textAlignment = .right
         return label
     }()
@@ -71,18 +76,23 @@ class MainCell: UICollectionViewCell {
         
         backgroundColor = .rgb(red: 245, green: 244, blue: 244)
         
-        addSubview(mainPhotoImage)
-        mainPhotoImage.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
+        addSubview(cardContainer)
+        cardContainer.backgroundColor = .yellow
+        cardContainer.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, padding: .init(top: 5, left: 5, bottom: 5, right: 5))
+        cardContainer.dropShadow()
         
+        cardContainer.addSubview(mainPhotoImage)
+        mainPhotoImage.anchor(top: cardContainer.topAnchor, left: cardContainer.leftAnchor, bottom: cardContainer.bottomAnchor, right: cardContainer.rightAnchor)
+
         mainPhotoImage.addSubview(containerLabel)
-        containerLabel.anchor(top: nil, left: mainPhotoImage.leftAnchor, bottom: mainPhotoImage.bottomAnchor, right: mainPhotoImage.rightAnchor, padding: .zero, size: .init(width: 0, height: 60))
-        
+        containerLabel.anchor(top: nil, left: mainPhotoImage.leftAnchor, bottom: mainPhotoImage.bottomAnchor, right: mainPhotoImage.rightAnchor, padding: .zero, size: .init(width: 0, height: 80))
+
         let stackView = UIStackView(arrangedSubviews:
             [titleLabel, descriptionLabel, timeLabel]
         )
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
-        
+
         containerLabel.addSubview(stackView)
         stackView.anchor(top: nil, left: containerLabel.leftAnchor, bottom: containerLabel.bottomAnchor, right: containerLabel.rightAnchor, padding: .init(top: 5, left: 5, bottom: 5, right: 5), size: .init(width: 0, height: 70))
         

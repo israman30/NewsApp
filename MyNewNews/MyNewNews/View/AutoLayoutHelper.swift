@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    // Method returns a custom color
     static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return .init(red: blue / 255, green: green / 255, blue: blue / 255, alpha: 1.0)
     }
@@ -20,6 +19,13 @@ extension UIView {
     func addSubViews(_ views: UIView...) {
         views.forEach { addSubview($0) }
     }
+    
+    func dropShadow() {
+        layer.masksToBounds = false
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowRadius = 1
+        layer.shadowOpacity = 0.5
+      }
 }
 
 struct AnchoredConstraints {
