@@ -22,20 +22,6 @@ class HeaderCell: UICollectionViewCell {
         }
     }
     
-//    var headerArticles: ModelArticles? {
-//        didSet {
-//            guard let titleHeader = headerArticles?.title else { return }
-//
-//            titleLabel.text = titleHeader
-//
-//            if let headerPhoto = headerArticles?.urlToImage {
-//                photoImageHeader.cacheUrlString(urlString: headerPhoto)
-//            } else {
-//                photoImageHeader.image = #imageLiteral(resourceName: "placeholder")
-//            }
-//        }
-//    }
-    
     let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -54,7 +40,7 @@ class HeaderCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 15)
+        label.makeTextDynamic(textStyle: .subheadline)
         label.backgroundColor = .black
         label.textColor = .white
         return label

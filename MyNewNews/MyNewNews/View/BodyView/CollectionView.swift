@@ -11,7 +11,7 @@ import UIKit
 extension MainController {
     
     func setNavigationController() {
-        navigationItem.title = "My New News"
+        navigationItem.title = NSLocalizedString("My New News", comment: "Title header for application") 
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     

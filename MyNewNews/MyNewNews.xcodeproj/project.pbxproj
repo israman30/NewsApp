@@ -32,6 +32,7 @@
 		4DCC749923F4825300945E70 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCC749823F4825300945E70 /* ArticlesViewModel.swift */; };
 		4DFF0C2723E298A20011EC4F /* Cellid+enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF0C2623E298A20011EC4F /* Cellid+enum.swift */; };
 		4DFF0C2923E29C7B0011EC4F /* API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF0C2823E29C7B0011EC4F /* API_KEY.swift */; };
+		8D5D3D6627EC056700E95F17 /* AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D3D6527EC056700E95F17 /* AccessibilityHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		4DCC749823F4825300945E70 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
 		4DFF0C2623E298A20011EC4F /* Cellid+enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cellid+enum.swift"; sourceTree = "<group>"; };
 		4DFF0C2823E29C7B0011EC4F /* API_KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_KEY.swift; sourceTree = "<group>"; };
+		8D5D3D6527EC056700E95F17 /* AccessibilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				4D46D8D123E0946B00A1D97D /* Assets.xcassets */,
 				4D46D8D323E0946B00A1D97D /* LaunchScreen.storyboard */,
 				4D46D8DC23E0951B00A1D97D /* AutoLayoutHelper.swift */,
+				8D5D3D6527EC056700E95F17 /* AccessibilityHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5D3D6627EC056700E95F17 /* AccessibilityHelper.swift in Sources */,
 				4D46D8DD23E0951B00A1D97D /* AutoLayoutHelper.swift in Sources */,
 				4D62E55723E24A7B008C0799 /* HeaderDetail.swift in Sources */,
 				4DB7B44223E0A7B8002B162A /* CollectionView.swift in Sources */,
