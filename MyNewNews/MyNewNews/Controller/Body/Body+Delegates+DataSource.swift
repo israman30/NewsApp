@@ -13,23 +13,24 @@ extension MainController: UICollectionViewDelegateFlowLayout, UICollectionViewDe
     
     // MARK: ============================ BODY ===============================
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return articles.count
+        return articlesList.articles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.body.rawValue, for: indexPath) as! MainCell
-        cell.articlesViewModel = articles[indexPath.item]
+        let vm = articlesList.articlesViewModel(at: indexPath.item)
+        cell.configure(vm: vm)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailViewController = DetailController()
-        detailViewController.articlePage = articles[indexPath.item].url
+        detailViewController.articlePage = articlesList.articles[indexPath.item].url
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 250)
+        return .init(width: view.frame.width, height: 260)
     }
     
     // MARK: ============================ HEADER ===============================

@@ -29,7 +29,7 @@ class MainController: UIViewController {
     
     let network: Network = .shared
     
-    var articles = [ArticlesViewModel]()
+    var articlesList = ArticlesListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class MainController: UIViewController {
         network.jsonObject { result in
             switch result {
             case .success(let articlesList):
-                self.articles = articlesList.map { ArticlesViewModel(articles: $0) }
+                self.articlesList.articles = articlesList.map { ArticlesViewModel(article: $0) }
                 self.collectionView.reloadData()
             case .failure(let error):
                 print(error)
