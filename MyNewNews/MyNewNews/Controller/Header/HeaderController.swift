@@ -28,10 +28,8 @@ class HeaderController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         setCollectionViewHeader()
         renderHeader()
-        
     }
     
     fileprivate func renderHeader() {
@@ -45,7 +43,6 @@ class HeaderController: UIViewController {
             }
         }
     }
-    
 }
 
 
