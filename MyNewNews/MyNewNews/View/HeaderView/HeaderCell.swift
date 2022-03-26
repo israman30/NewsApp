@@ -71,6 +71,16 @@ class HeaderCell: UICollectionViewCell {
         titleLabel.anchor(top: nil, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, padding: .init(top: 0, left: 5, bottom: 5, right: 5), size: .init(width: 0, height: 20))
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        photoImageHeader.image = nil
+        titleLabel.text = ""
+    }
+    
+    deinit {
+        photoImageHeader.image = nil
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

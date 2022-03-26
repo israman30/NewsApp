@@ -93,6 +93,18 @@ class MainCell: UICollectionViewCell {
         stackView.anchor(top: containerLabel.topAnchor, left: containerLabel.leftAnchor, bottom: containerLabel.bottomAnchor, right: containerLabel.rightAnchor, padding: .init(top: 5, left: 5, bottom: 5, right: 5))
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        mainPhotoImage.image = nil
+        titleLabel.text = ""
+        descriptionLabel.text = ""
+        timeLabel.text = ""
+    }
+    
+    deinit {
+        mainPhotoImage.image = nil
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
