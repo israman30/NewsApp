@@ -24,7 +24,7 @@ class HeaderController: UIViewController {
     
     let titleHeader = UILabel()
     
-    var articlesHeader = [ArticlesViewModel]()
+    var articlesList = ArticlesListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class HeaderController: UIViewController {
         headerNetwork.getData { result in
             switch result {
             case .success(let articlesList):
-                self.articlesHeader = articlesList.map { ArticlesViewModel(articles: $0) }
+                self.articlesList.articles = articlesList.map { ArticlesViewModel(article: $0) }
                 self.collectionView.reloadData()
             case .failure(let error):
                 print(error)

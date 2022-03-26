@@ -7,29 +7,46 @@
 //
 
 import UIKit
-import WebKit
 
-class ArticlesViewModel {
-    let title: String?
-    let description: String?
-    let url: String?
-    var urlToImage: String?
-    let publishedAt: String?
+class ArticlesListViewModel {
+    var articles: [ArticlesViewModel]
     
-    init(articles: ModelArticles) {
-        self.title = articles.title
-        self.description = articles.description
-        self.url = articles.url
-        self.urlToImage = articles.urlToImage
-        
-        // MARK: - Time display with Date Formatter
-        if let time = articles.publishedAt {
-            let newTime = time.replacingOccurrences(of: "T", with: " ")
-            publishedAt = TimeString.setDateString(date: newTime)
-        } else {
-            publishedAt = "No time displayed"
-        }
-    }    
+    init() {
+        self.articles = [ArticlesViewModel]()
+    }
+    
+    func articlesViewModel(at index: Int) -> ArticlesViewModel {
+        return articles[index]
+    }
     
 }
 
+struct ArticlesViewModel {
+    
+    let article: ModelArticles
+    
+    var title: String {
+        return article.title ?? "NOT TITLE"
+    }
+    
+    var description: String {
+        return article.description ?? "NO DESCRIPTION"
+    }
+    
+    var publishedAt: String {
+        if let time = article.publishedAt {
+            let newTime = time.replacingOccurrences(of: "T", with: " ")
+            return TimeString.setDateString(date: newTime)
+        } else {
+            return "No time displayed"
+        }
+    }
+    
+    var url: String {
+        return article.url ?? ""
+    }
+    
+    var urlToImage: String {
+        article.urlToImage ?? ""
+    }
+}
