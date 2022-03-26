@@ -11,18 +11,11 @@ import UIKit
 // MARK: - MAIN CELL - Display the list of articles from API call
 class MainCell: UICollectionViewCell {
     
-    var articlesViewModel: ArticlesViewModel? {
-        didSet {
-            guard let titleBody = articlesViewModel?.title,
-                  let descriptionBody = articlesViewModel?.description else { return }
-            titleLabel.text = titleBody
-            descriptionLabel.text = descriptionBody
-            if let bodyThumbnail = articlesViewModel?.urlToImage {
-                mainPhotoImage.cacheUrlString(urlString: bodyThumbnail)
-            }
-            guard let time = articlesViewModel?.publishedAt else { return }
-            timeLabel.text = time
-        }
+    func configure(vm: ArticlesViewModel) {
+        titleLabel.text = vm.title
+        descriptionLabel.text = vm.description
+        mainPhotoImage.cacheUrlString(urlString: vm.urlToImage)
+        timeLabel.text = vm.publishedAt
     }
     
     let cardContainer: UIView = {
@@ -108,4 +101,7 @@ class MainCell: UICollectionViewCell {
     }
 }
 
+class HostCollectionViewCell: UICollectionViewCell {
+    
+}
 

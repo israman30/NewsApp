@@ -22,6 +22,11 @@ class HeaderCell: UICollectionViewCell {
         }
     }
     
+    func configure(vm: ArticlesViewModel) {
+        titleLabel.text = vm.title
+        photoImageHeader.cacheUrlString(urlString: vm.urlToImage)
+    }
+    
     let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
