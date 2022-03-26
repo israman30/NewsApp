@@ -32,6 +32,7 @@
 		4DCC749923F4825300945E70 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCC749823F4825300945E70 /* ArticlesViewModel.swift */; };
 		4DFF0C2723E298A20011EC4F /* Cellid+enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF0C2623E298A20011EC4F /* Cellid+enum.swift */; };
 		4DFF0C2923E29C7B0011EC4F /* API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF0C2823E29C7B0011EC4F /* API_KEY.swift */; };
+		8D29B64F27EF7A4A003C0B4D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29B64E27EF7A4A003C0B4D /* CardView.swift */; };
 		8D5D3D6627EC056700E95F17 /* AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D3D6527EC056700E95F17 /* AccessibilityHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		4DCC749823F4825300945E70 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
 		4DFF0C2623E298A20011EC4F /* Cellid+enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cellid+enum.swift"; sourceTree = "<group>"; };
 		4DFF0C2823E29C7B0011EC4F /* API_KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_KEY.swift; sourceTree = "<group>"; };
+		8D29B64E27EF7A4A003C0B4D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8D5D3D6527EC056700E95F17 /* AccessibilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 			children = (
 				4DBF834023E212C60088331D /* MainCell.swift */,
 				4DB7B44123E0A7B8002B162A /* CollectionView.swift */,
+				8D29B64E27EF7A4A003C0B4D /* CardView.swift */,
 			);
 			path = BodyView;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				4DFF0C2923E29C7B0011EC4F /* API_KEY.swift in Sources */,
 				4DFF0C2723E298A20011EC4F /* Cellid+enum.swift in Sources */,
 				4D62E55923E251AC008C0799 /* HeaderController.swift in Sources */,
+				8D29B64F27EF7A4A003C0B4D /* CardView.swift in Sources */,
 				4DBF834123E212C60088331D /* MainCell.swift in Sources */,
 				4DBF834323E238010088331D /* DetailController.swift in Sources */,
 				4D46D8CB23E0946400A1D97D /* SceneDelegate.swift in Sources */,

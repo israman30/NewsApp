@@ -38,12 +38,8 @@ class MainCell: UICollectionViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.makeTextDynamic(textStyle: .headline)
-        label.textColor = .white
-        label.layer.shadowColor = UIColor.black.cgColor
-        label.layer.shadowRadius = 3.0
-        label.layer.shadowOpacity = 1.0
-        label.layer.shadowOffset = CGSize(width: 4, height: 4)
-        label.layer.masksToBounds = false
+        label.textColor = .black
+        label.numberOfLines = 0
         return label
     }()
     
@@ -51,14 +47,14 @@ class MainCell: UICollectionViewCell {
         let label = UILabel()
         label.makeTextDynamic(textStyle: .caption1)
         label.numberOfLines = 3
-        label.textColor = .white
+        label.textColor = .black
         return label
     }()
     
     let timeLabel: UILabel = {
         let label = UILabel()
         label.text = "Monday, 23 June"
-        label.textColor = .white
+        label.textColor = .darkGray
         label.makeTextDynamic(textStyle: .caption1)
         label.textAlignment = .right
         return label
@@ -70,30 +66,31 @@ class MainCell: UICollectionViewCell {
         backgroundColor = .rgb(red: 245, green: 244, blue: 244)
         
         addSubview(cardContainer)
-        cardContainer.backgroundColor = .yellow
         cardContainer.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, padding: .init(top: 5, left: 5, bottom: 5, right: 5))
         cardContainer.dropShadow()
         
         cardContainer.addSubview(mainPhotoImage)
-        mainPhotoImage.anchor(top: cardContainer.topAnchor, left: cardContainer.leftAnchor, bottom: cardContainer.bottomAnchor, right: cardContainer.rightAnchor)
-
-        mainPhotoImage.addSubview(containerLabel)
-        containerLabel.anchor(top: nil, left: mainPhotoImage.leftAnchor, bottom: mainPhotoImage.bottomAnchor, right: mainPhotoImage.rightAnchor, padding: .zero, size: .init(width: 0, height: 80))
+        mainPhotoImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            mainPhotoImage.leftAnchor.constraint(equalTo: cardContainer.leftAnchor),
+            mainPhotoImage.topAnchor.constraint(equalTo: cardContainer.topAnchor),
+            mainPhotoImage.rightAnchor.constraint(equalTo: cardContainer.rightAnchor),
+            mainPhotoImage.heightAnchor.constraint(equalTo: cardContainer.heightAnchor, multiplier: 3/4)
+        ])
+        
+        cardContainer.addSubview(containerLabel)
+        containerLabel.backgroundColor = .white
+        containerLabel.anchor(top: mainPhotoImage.bottomAnchor, left: cardContainer.leftAnchor, bottom: cardContainer.bottomAnchor, right: cardContainer.rightAnchor)
 
         let stackView = UIStackView(arrangedSubviews:
-            [titleLabel, descriptionLabel, timeLabel]
+            [titleLabel, timeLabel]
         )
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
+        stackView.spacing = -5
 
         containerLabel.addSubview(stackView)
-        stackView.anchor(top: nil, left: containerLabel.leftAnchor, bottom: containerLabel.bottomAnchor, right: containerLabel.rightAnchor, padding: .init(top: 5, left: 5, bottom: 5, right: 5), size: .init(width: 0, height: 70))
-        
-    }
-    // MARK: - Gradient subView for display label title
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        containerLabel.gradientBackground(from: UIColor.clear, to: UIColor.black, direction: GradientDirection.topToBottom)
+        stackView.anchor(top: containerLabel.topAnchor, left: containerLabel.leftAnchor, bottom: containerLabel.bottomAnchor, right: containerLabel.rightAnchor, padding: .init(top: 5, left: 5, bottom: 5, right: 5))
     }
     
     required init?(coder: NSCoder) {
