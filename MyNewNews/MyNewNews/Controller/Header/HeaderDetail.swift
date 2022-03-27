@@ -22,9 +22,7 @@ class HeaderDetail: UIViewController {
         view.backgroundColor = .white
         view.addSubview(webView)
         webView.fillSuperview()
-        
         loadWebView(articlePage)
-        
     }
     
     func loadWebView(_ urlString: String? = nil) {
@@ -35,6 +33,5 @@ class HeaderDetail: UIViewController {
                 self.webView.load(request)
             }
         }
-        
     }
 }

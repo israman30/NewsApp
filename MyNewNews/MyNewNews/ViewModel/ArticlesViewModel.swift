@@ -18,7 +18,6 @@ class ArticlesListViewModel {
     func articlesViewModel(at index: Int) -> ArticlesViewModel {
         return articles[index]
     }
-    
 }
 
 struct ArticlesViewModel {
