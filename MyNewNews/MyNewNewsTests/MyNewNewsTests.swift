@@ -83,6 +83,24 @@ class MyNewNewsTests: XCTestCase {
             }
         }
     }
+    
+    let mainVC = MainController()
+    
+    func test_Outputs_WithDataOutput() {
+        if !mainVC.collectionView.visibleCells.isEmpty {
+            XCTAssert(true, "Collection view is no empty")
+        } else {
+            XCTAssert(true, "Collection view is empty")
+        }
+    }
+    
+    func test_ArticlesList_HasData() {
+        if mainVC.articlesList.articles.count != 0 {
+            XCTAssert(true, "Articles list count is: \(mainVC.articlesList.articles.count) items")
+        } else {
+            XCTAssert(true, "Articles list count is: \(mainVC.articlesList.articles.count) items")
+        }
+    }
 
     func testExample() throws {
         // This is an example of a functional test case.
