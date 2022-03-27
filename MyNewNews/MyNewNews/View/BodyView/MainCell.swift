@@ -14,6 +14,10 @@ class MainCell: UICollectionViewCell {
     func configure(vm: ArticlesViewModel) {
         titleLabel.text = vm.title
         descriptionLabel.text = vm.description
+        guard mainPhotoImage.image == nil else {
+            mainPhotoImage.image = UIImage(named: "placeholder")
+            return
+        }
         mainPhotoImage.cacheUrlString(urlString: vm.urlToImage)
         timeLabel.text = vm.publishedAt
     }

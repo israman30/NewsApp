@@ -43,10 +43,10 @@ struct ArticlesViewModel {
     }
     
     var url: String {
-        return article.url ?? ""
+        return article.url ?? "404 NOT FOUND"
     }
     
     var urlToImage: String {
-        article.urlToImage ?? ""
+        article.urlToImage ?? "IMAGE IS NIL"
     }
 }
