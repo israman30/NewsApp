@@ -12,21 +12,25 @@ import XCTest
 class MyNewNewsTests: XCTestCase {
     
     var api_key: API_KEY!
+    var articles: ModelArticles!
+    var vmTest: ArticlesViewModel!
     var mainVC: MainController!
     
     override func setUp() {
         api_key = API_KEY()
         mainVC = MainController()
+        articles = ModelArticles(title: "Title article", description: "Some description", url: "https://www.google.com", urlToImage: "", publishedAt: "12/20/22")
+        vmTest = ArticlesViewModel(article: articles)
     }
     
     override func tearDown() {
         api_key = nil
         mainVC = nil
+        articles = nil
+        vmTest = nil
     }
     
     func test_ArticlesViewModel_DataReturn() {
-        let articles = ModelArticles(title: "Title article", description: "Some description", url: "https://www.google.com", urlToImage: "", publishedAt: "12/20/22")
-        let vmTest = ArticlesViewModel(article: articles)
         XCTAssertEqual(articles.title, vmTest.title)
         XCTAssertEqual(articles.description, vmTest.description)
         XCTAssertEqual(articles.url, vmTest.url)
