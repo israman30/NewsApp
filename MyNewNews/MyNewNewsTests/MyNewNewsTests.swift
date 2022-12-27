@@ -10,13 +10,18 @@ import XCTest
 @testable import MyNewNews
 
 class MyNewNewsTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    var api_key: API_KEY!
+    var mainVC: MainController!
+    
+    override func setUp() {
+        api_key = API_KEY()
+        mainVC = MainController()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        api_key = nil
+        mainVC = nil
     }
     
     func test_ArticlesViewModel_DataReturn() {
@@ -30,7 +35,6 @@ class MyNewNewsTests: XCTestCase {
     }
     
     func test_FechRequest_ArticlesData() {
-        let api_key = API_KEY()
         let expectations = expectation(description: "The Response result match the expected results")
         guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=\(api_key.HEADER)") else { return }
         
@@ -84,8 +88,6 @@ class MyNewNewsTests: XCTestCase {
         }
     }
     
-    let mainVC = MainController()
-    
     func test_Outputs_WithDataOutput() {
         if !mainVC.collectionView.visibleCells.isEmpty {
             XCTAssert(true, "Collection view is no empty")
@@ -99,18 +101,6 @@ class MyNewNewsTests: XCTestCase {
             XCTAssert(true, "Articles list count is: \(mainVC.articlesList.articles.count) items")
         } else {
             XCTAssert(true, "Articles list count is: \(mainVC.articlesList.articles.count) items")
-        }
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
         }
     }
 
