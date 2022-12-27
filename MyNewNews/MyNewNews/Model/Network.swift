@@ -26,12 +26,12 @@ class Network: NetworkProtocol {
     static let shared = Network()
     
     func getData(completion: @escaping(Result<[ModelArticles], APIError>)->()) {
-        let endpoint = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=\(api_key.BODY)"
+        let endpoint = Constants.headingEndpoint + api_key.BODY
         fetchData(endpoint, completion: completion)
     }
     
     func jsonObject(completion: @escaping(Result<[ModelArticles], APIError>)->()) {
-       let endpoint = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=\(api_key.HEADER)"
+        let endpoint = Constants.bodyEndpoint + api_key.HEADER
         fetchData(endpoint, completion: completion)
     }
     

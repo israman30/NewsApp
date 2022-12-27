@@ -24,12 +24,13 @@ class HeaderController: UIViewController {
     
     let titleHeader = UILabel()
     
-    var articlesList = ArticlesListViewModel()
+    var articlesList: ArticlesListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionViewHeader()
         renderHeader()
+        articlesList = ArticlesListViewModel()
     }
     
     fileprivate func renderHeader() {
@@ -42,6 +43,10 @@ class HeaderController: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    deinit {
+        articlesList = nil
     }
 }
 

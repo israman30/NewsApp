@@ -65,6 +65,7 @@ extension UICollectionView {
         self.backgroundView = nil
     }
 }
+
 class ErrorNetwork: UIView {
     
     override init(frame: CGRect) {

@@ -13,7 +13,7 @@ class API_KEY {
     private var _BODY: String
     private var _HEADER: String
     
-    init(){
+    init() {
         _BODY = "066d82458ed84eeeac28a86095ec88b9"
         _HEADER = "219d19ee586b4a049fafb28d3ecb7707"
     }
