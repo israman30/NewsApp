@@ -29,7 +29,7 @@ class MainController: UIViewController {
     
     let network: Network = .shared
     
-    var articlesList = ArticlesListViewModel()
+    var articlesList: ArticlesListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,7 @@ class MainController: UIViewController {
         setNavigationController()
         setCollectionView()
         renderBody()
+        articlesList = ArticlesListViewModel()
     }
     
     fileprivate func renderBody() {
@@ -52,6 +53,10 @@ class MainController: UIViewController {
                 }
             }
         }
+    }
+    
+    deinit {
+        articlesList = nil
     }
     
 }

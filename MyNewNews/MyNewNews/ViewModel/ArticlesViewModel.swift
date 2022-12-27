@@ -9,7 +9,7 @@
 import UIKit
 
 class ArticlesListViewModel {
-    var articles: [ArticlesViewModel]
+    var articles: [ArticlesViewModel]!
     
     init() {
         self.articles = [ArticlesViewModel]()
@@ -17,6 +17,10 @@ class ArticlesListViewModel {
     
     func articlesViewModel(at index: Int) -> ArticlesViewModel {
         return articles[index]
+    }
+    
+    deinit {
+        self.articles = nil
     }
 }
 
