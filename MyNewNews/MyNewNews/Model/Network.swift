@@ -26,13 +26,13 @@ class Network: NetworkProtocol {
     static let shared = Network()
     
     func getData(completion: @escaping(Result<[ModelArticles], APIError>)->()) {
-        let endpoint = Constants.headingEndpoint + api_key.BODY
-        fetchData(endpoint, completion: completion)
+//        let endpoint = Constants.headingEndpoint + api_key.BODY
+//        fetchData(endpoint, completion: completion)
     }
     
     func jsonObject(completion: @escaping(Result<[ModelArticles], APIError>)->()) {
-        let endpoint = Constants.bodyEndpoint + api_key.HEADER
-        fetchData(endpoint, completion: completion)
+//        let endpoint = Constants.bodyEndpoint + api_key.HEADER
+//        fetchData(endpoint, completion: completion)
     }
     
     func fetchData(_ urlString: String, completion: @escaping(Result<[ModelArticles], APIError>)->()) {
@@ -66,4 +66,25 @@ class Network: NetworkProtocol {
     }
     
     
+}
+
+protocol ArticlesViewModelProtocol {
+    func fetchArticles() async throws -> [Articles]
+}
+
+final class NetworkServices: ArticlesViewModelProtocol {
+    
+    private let api_key: API_KEY = .shared
+    
+    func fetchArticles() async throws -> [Articles] {
+        let url = URL(string: Constants.headingEndpoint + api_key.HEADER)
+        let (data, response) = try await URLSession.shared.data(from: url!)
+        
+        guard let response = response as? HTTPURLResponse,
+              (200...300).contains(response.statusCode) else {
+            throw APIError.responseProblem
+        }
+                
+        return try JSONDecoder().decode([Articles].self, from: data)
+    }
 }

@@ -13,9 +13,17 @@ class API_KEY {
     private var _BODY: String
     private var _HEADER: String
     
+    static var shared = API_KEY()
+    
     init() {
         _BODY = "066d82458ed84eeeac28a86095ec88b9"
         _HEADER = "219d19ee586b4a049fafb28d3ecb7707"
+    }
+    
+    var NONE: String {
+        get {
+            return ""
+        }
     }
     
     var BODY: String {
