@@ -1,3 +1,3 @@
 .DS_Store
 *.xcuserdata
-Utils/API_KEY
+Utils/API_KEY.swift
