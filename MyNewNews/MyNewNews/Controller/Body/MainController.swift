@@ -29,7 +29,7 @@ class MainController: UIViewController {
     
     let network: Network = .shared
     
-    var articlesList: ArticlesListViewModel!
+    private(set) var articlesList: ArticlesListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,15 +41,15 @@ class MainController: UIViewController {
     }
     
     fileprivate func renderBody() {
-        network.jsonObject { result in
+        network.jsonObject { [weak self] result in
             switch result {
             case .success(let articlesList):
-                self.articlesList.articles = articlesList.map { ArticlesViewModel(article: $0) }
-                self.collectionView.reloadData()
+                self?.articlesList.articles = articlesList.map { ArticlesViewModel(article: $0) }
+                self?.collectionView.reloadData()
             case .failure(let error):
                 print(error)
                 DispatchQueue.main.async {
-                    self.emptyListLabelMessage.text = "Something went wrong..! CONNECTION NOT FOUND"
+                    self?.emptyListLabelMessage.text = "Something went wrong..! CONNECTION NOT FOUND"
                 }
             }
         }

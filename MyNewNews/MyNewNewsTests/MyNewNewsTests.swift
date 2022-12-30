@@ -101,7 +101,8 @@ class MyNewNewsTests: XCTestCase {
     }
     
     func test_ArticlesList_HasData() {
-        if mainVC.articlesList.articles.count != 0 {
+        guard let articlesList = mainVC.articlesList else { return }
+        if articlesList.articles.count != 0 {
             XCTAssert(true, "Articles list count is: \(mainVC.articlesList.articles.count) items")
         } else {
             XCTAssert(true, "Articles list count is: \(mainVC.articlesList.articles.count) items")
