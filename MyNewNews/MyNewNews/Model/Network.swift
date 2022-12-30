@@ -8,8 +8,10 @@
 
 import UIKit
 
+typealias Handler = (Result<[ModelArticles], APIError>) -> Void
+
 protocol NetworkProtocol {
-    func fetchData(_ urlString: String, completion:@escaping(Result<[ModelArticles], APIError>)->())
+    func fetchData(_ urlString: String, completion: @escaping Handler)
 }
 
 enum APIError: Error {
@@ -18,8 +20,6 @@ enum APIError: Error {
     case errorWithWrongURL(Error)
     case invalidData
 }
-
-typealias Handler = (Result<[ModelArticles], APIError>) -> Void
 
 // MARK: =================== NETWORK CALL ===================
 final class Network: NetworkProtocol {
