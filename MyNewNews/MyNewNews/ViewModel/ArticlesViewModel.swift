@@ -9,6 +9,7 @@
 import UIKit
 
 class ArticlesListViewModel {
+    
     var articles: [ArticlesViewModel]!
     
     init() {

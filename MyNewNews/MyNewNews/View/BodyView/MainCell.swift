@@ -11,17 +11,6 @@ import UIKit
 // MARK: - MAIN CELL - Display the list of articles from API call
 class MainCell: UICollectionViewCell {
     
-    func configure(vm: ArticlesViewModel) {
-        titleLabel.text = vm.title
-        descriptionLabel.text = vm.description
-        guard mainPhotoImage.image == nil else {
-            mainPhotoImage.image = UIImage(named: "placeholder")
-            return
-        }
-        mainPhotoImage.cacheUrlString(urlString: vm.urlToImage)
-        timeLabel.text = vm.publishedAt
-    }
-    
     let cardContainer: UIView = {
         let view = UIView()
         return view
@@ -95,6 +84,17 @@ class MainCell: UICollectionViewCell {
 
         containerLabel.addSubview(stackView)
         stackView.anchor(top: containerLabel.topAnchor, left: containerLabel.leftAnchor, bottom: containerLabel.bottomAnchor, right: containerLabel.rightAnchor, padding: .init(top: 5, left: 5, bottom: 5, right: 5))
+    }
+    
+    func configure(vm: ArticlesViewModel) {
+        titleLabel.text = vm.title
+        descriptionLabel.text = vm.description
+        guard mainPhotoImage.image == nil else {
+            mainPhotoImage.image = UIImage(named: "placeholder")
+            return
+        }
+        mainPhotoImage.cacheUrlString(urlString: vm.urlToImage)
+        timeLabel.text = vm.publishedAt
     }
     
     override func prepareForReuse() {

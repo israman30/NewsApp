@@ -22,11 +22,6 @@ class HeaderCell: UICollectionViewCell {
         }
     }
     
-    func configure(vm: ArticlesViewModel) {
-        titleLabel.text = vm.title
-        photoImageHeader.cacheUrlString(urlString: vm.urlToImage)
-    }
-    
     let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -69,6 +64,11 @@ class HeaderCell: UICollectionViewCell {
         photoImageHeader.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom:containerView.bottomAnchor, right: containerView.rightAnchor)
         
         titleLabel.anchor(top: nil, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, padding: .init(top: 0, left: 5, bottom: 5, right: 5), size: .init(width: 0, height: 20))
+    }
+    
+    func configure(vm: ArticlesViewModel) {
+        titleLabel.text = vm.title
+        photoImageHeader.cacheUrlString(urlString: vm.urlToImage)
     }
     
     override func prepareForReuse() {
