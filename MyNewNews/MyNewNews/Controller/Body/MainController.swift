@@ -29,7 +29,7 @@ class MainController: UIViewController {
     
     let network: Network = .shared
     
-    private(set) var articlesList: ArticlesListViewModel!
+    var articlesList: ArticlesListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

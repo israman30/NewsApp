@@ -10,18 +10,6 @@ import UIKit
 
 class HeaderCell: UICollectionViewCell {
     
-    var headerViewModel: ArticlesViewModel? {
-        didSet {
-            guard let titleHeader = headerViewModel?.title else { return }
-            titleLabel.text = titleHeader
-            if let headerPhoto = headerViewModel?.urlToImage {
-                photoImageHeader.cacheUrlString(urlString: headerPhoto)
-            } else {
-                photoImageHeader.image = #imageLiteral(resourceName: "placeholder")
-            }
-        }
-    }
-    
     let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -68,6 +56,10 @@ class HeaderCell: UICollectionViewCell {
     
     func configure(vm: ArticlesViewModel) {
         titleLabel.text = vm.title
+        guard !vm.urlToImage.isEmpty else {
+            photoImageHeader.image = #imageLiteral(resourceName: "placeholder")
+            return
+        }
         photoImageHeader.cacheUrlString(urlString: vm.urlToImage)
     }
     
@@ -79,6 +71,7 @@ class HeaderCell: UICollectionViewCell {
     
     deinit {
         photoImageHeader.image = nil
+        print("Deinit cell")
     }
     
     required init?(coder: NSCoder) {

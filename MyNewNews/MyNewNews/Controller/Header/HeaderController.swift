@@ -34,11 +34,11 @@ class HeaderController: UIViewController {
     }
     
     fileprivate func renderHeader() {
-        headerNetwork.getData { result in
+        headerNetwork.getData { [weak self] result in
             switch result {
             case .success(let articlesList):
-                self.articlesList.articles = articlesList.map { ArticlesViewModel(article: $0) }
-                self.collectionView.reloadData()
+                self?.articlesList.articles = articlesList.map { ArticlesViewModel(article: $0) }
+                self?.collectionView.reloadData()
             case .failure(let error):
                 print(error)
             }
