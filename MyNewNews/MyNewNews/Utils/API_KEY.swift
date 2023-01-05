@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class NNAKEY {
     static var bodyKey: String {
         get {
@@ -43,8 +42,8 @@ class API_KEY {
     private var _HEADER: String
     
     init() {
-        _BODY = "066d82458ed84eeeac28a86095ec88b9"
-        _HEADER = NNAKEY.bodyKey
+        _BODY = NNAKEY.bodyKey
+        _HEADER = NNAKEY.headerKey
     }
     
     var BODY: String {
