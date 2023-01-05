@@ -31,6 +31,7 @@ class MainController: UIViewController {
     
     var articlesList: ArticlesListViewModel!
     
+    let detailView = DetailController()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +39,10 @@ class MainController: UIViewController {
         setCollectionView()
         renderBody()
         articlesList = ArticlesListViewModel()
+        
+        DispatchQueue.main.async {
+            self.detailView.view.setNeedsLayout()
+        }
     }
     
     fileprivate func renderBody() {
