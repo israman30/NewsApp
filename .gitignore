@@ -1,6 +1,6 @@
 .DS_Store
 *.xcuserdata
-/Users/israelmanzo/Documents/Repos/NewsApp/MyNewNews/MyNewNews/Utils/API_KEY.swift
+NNAKEY-Info.plist
 
 #api keys
 API_KEY.swift
