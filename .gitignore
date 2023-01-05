@@ -1,6 +1,6 @@
 .DS_Store
 *.xcuserdata
-NNAKEY-Info.plist
+!*.NNAKEY-Info.plist
 
 #api keys
 API_KEY.swift
