@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 // MARK: - DATA SOURCE & DELEGATES HEADER -
 extension HeaderController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -27,8 +28,11 @@ extension HeaderController: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let headerDetail = HeaderDetail()
-        headerDetail.articlePage = articlesList.articles[indexPath.item].url
-        present(headerDetail, animated: true, completion: nil)
+//        let headerDetail = HeaderDetail()
+//        headerDetail.articlePage = articlesList.articles[indexPath.item].url
+//        present(headerDetail, animated: true, completion: nil)
+        guard let url = URL(string: articlesList.articles[indexPath.item].url) else { return }
+        let safari = SFSafariViewController(url: url)
+        present(safari, animated: true)
     }
 }

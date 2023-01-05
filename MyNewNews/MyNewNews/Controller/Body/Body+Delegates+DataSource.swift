@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 // MARK: - DEATA SOURCE & DELEGATES -
 extension MainController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -24,9 +25,12 @@ extension MainController: UICollectionViewDelegateFlowLayout, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailViewController = DetailController()
-        detailViewController.articlePage = articlesList.articles[indexPath.item].url
-        navigationController?.pushViewController(detailViewController, animated: true)
+//        let detailViewController = DetailController()
+//        detailViewController.articlePage = articlesList.articles[indexPath.item].url
+//        navigationController?.pushViewController(detailViewController, animated: true)
+        guard let url = URL(string: articlesList.articles[indexPath.item].url) else { return }
+        let safari = SFSafariViewController(url: url)
+        present(safari, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
