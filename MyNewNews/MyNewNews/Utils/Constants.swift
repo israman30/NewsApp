@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Constants {
     static let headingEndpoint = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey="
     static let bodyEndpoint = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey="
