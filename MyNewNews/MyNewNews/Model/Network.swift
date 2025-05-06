@@ -28,7 +28,7 @@ final class Network: NetworkProtocol {
     
     static let shared = Network()
     
-    private init() {}
+//    private init() {}
     
     func getData(completion: @escaping Handler) {
         let endpoint = Constants.headingEndpoint + api_key.BODY
@@ -68,6 +68,21 @@ final class Network: NetworkProtocol {
         }
         task.resume()
         
+    }
+    
+    func fetch(_ urlString: String, completion: @escaping Handler) async {
+        guard let url = URL(string: urlString) else {
+            completion(.failure(.errorWithWrongURL("Wring URL address.." as! Error)))
+            return
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let responseData = try JSONDecoder().decode(Articles.self, from: data)
+            
+            completion(.success(responseData.articles))
+        } catch {
+            print(APIError.decodingProblem(error))
+        }
     }
     
 }

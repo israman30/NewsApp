@@ -11,6 +11,7 @@ import UIKit
 class ArticlesListViewModel {
     
     var articles: [ArticlesViewModel]!
+    let network = Network()
     
     init() {
         self.articles = [ArticlesViewModel]()
@@ -18,6 +19,21 @@ class ArticlesListViewModel {
     
     func articlesViewModel(at index: Int) -> ArticlesViewModel {
         return articles[index]
+    }
+    
+    func numberOfRows() -> Int {
+        return articles.count
+    }
+    
+    func render() async {
+        await network.fetch("") { result in
+            switch result {
+            case .success(let articles):
+                self.articles = articles.compactMap(ArticlesViewModel.init)
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
     }
     
     deinit {

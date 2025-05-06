@@ -32,6 +32,7 @@ class MainController: UIViewController {
     var articlesList: ArticlesListViewModel!
     
     let detailView = DetailController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +43,10 @@ class MainController: UIViewController {
         
         DispatchQueue.main.async {
             self.detailView.view.setNeedsLayout()
+        }
+        
+        Task {
+           await articlesList.render()
         }
     }
     
