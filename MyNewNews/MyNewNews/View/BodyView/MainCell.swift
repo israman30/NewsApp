@@ -103,6 +103,9 @@ class MainCell: UICollectionViewCell {
         titleLabel.text = ""
         descriptionLabel.text = ""
         timeLabel.text = ""
+        isHidden = false
+        isSelected = false
+        isHighlighted = false
     }
     
     deinit {
